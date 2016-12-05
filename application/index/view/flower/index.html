@@ -1,0 +1,1500 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>鲜花速递_全国鲜花速递服务_鲜花快递网-中国鲜花礼品网(花礼网)</title>
+    <meta name="description" content="鲜花速递-中国鲜花礼品网(花礼网)专业提供全国鲜花速递服务,服务包括:北京鲜花速递服务,上海鲜花速递业务,深圳鲜花快递上门,广州速递鲜花及全国1000多个城市,鲜花3小时送达!" />
+    <meta name="keywords" content="鲜花速递,全国鲜花速递服务,北京鲜花速递,上海鲜花速递,深圳鲜花速递,广州鲜花速递" />
+    <meta name="author" />
+        <script type="text/javascript" src="__INDEX__STATIC__/js/76eaeb6187fd4f578035147d447a9cbc.js"></script>
+    
+    
+    <meta name="mobile-agent" content="format=xhtml; url=http://m.hua.com/flower/">
+
+
+    <link rel="icon" href="/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+    
+    
+
+    <link type="text/css" rel="stylesheet" href="../css/common.css">
+    <link type="text/css" rel="stylesheet" href="../css/public.css">
+        <link type="text/css" rel="stylesheet" href="../css/mbar.css" />
+    
+
+    
+    <style>
+        .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+            margin-right: -15px;
+        }
+    </style>
+
+
+
+    <!--[if lt IE 9]>
+        <script src="__INDEX__STATIC__/js/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body class="flower">
+    <!-- 顶部导航 -->
+    
+    <div class="site-nav">
+        <div class="container">
+
+            <ul class="site-nav-l">
+                <li class="menu">
+                    <a href="/" onClick="addfavorite();return false;"><span class="ico ico-star"></span>收藏鲜花网(hua.com)</a>
+                </li>
+                <li class="menu dropdown">
+                    <a href="javascript:void(0)" data-hover="dropdown" data-delay="0"><span class="ico ico-weixin"></span>关注微信</a>
+                    <div class="dropdown-menu dropdown-weixin">
+                        <img src="__INDEX__STATIC__/picture/wechat_qrcode.jpg" height="124" width="124">
+                        <p>扫码关注<br>回复"礼物" 更多惊喜！</p>
+                    </div>
+                </li>
+                <li class="menu dropdown">
+                    <a href="/mobile/" data-hover="dropdown" data-delay="0" target="_blank"><span class="ico ico-mobile"></span>手机花礼</a>
+                    <div class="dropdown-menu dropdown-weixin">
+                        <img src="__INDEX__STATIC__/picture/app_qrcode.jpg" height="124" width="124">
+                        <p>首单再减20！<br>(需输入券号9920)</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="site-nav-r">
+                <!--登陆状态信息显示start-->
+                <li class="menu login" id="LoginInfo">
+                    <a href="/Passport/Login/" rel="nofollow" id="btn-login">你好，请登录</a><a href="/Passport/Register/" rel="nofollow" id="btn-reg">注册</a>
+                </li>
+                <!--登陆状态信息显示end-->
+                <li class="site-nav-pipe">|</li>
+                <li class="menu">
+                    <a href="/help/ordercx/" rel="nofollow" target="_blank">订单查询</a>
+                </li>
+                <li class="site-nav-pipe">|</li>
+                <!--我的花礼信息显示start-->
+                <li class="menu dropdown">
+                    <a href="/member/" rel="nofollow" data-hover="dropdown" data-delay="0" target="_blank">我的花礼</a>
+                </li><!--我的花礼信息显示end-->
+                <li class="site-nav-pipe">|</li>
+                <li class="menu dropdown">
+                    <a href="/help/" data-hover="dropdown" data-delay="0" target="_blank">客户服务<span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                    <div class="dropdown-menu dropdown-service">
+                        <a href="/member/payment/balancefill" target="_blank">在线付款</a>
+                        <a href="/help/" target="_blank">帮助中心</a>
+                        <a href="/help/afterservice.htm" target="_blank">售后服务</a>
+                        <a href="/help/sendRange.htm" target="_blank">配送范围</a>
+                        <a href="/chat/" target="_blank">留言反馈</a>
+                    </div>
+                </li>
+                <li class="site-nav-pipe">|</li>
+                <!--购物车信息显示start-->
+                <li class="menu dropdown">
+                    <a href="/shopping/showcart/" data-hover="dropdown" data-delay="0" rel="nofollow" target="_blank"><span class="ico ico-cart"></span>购物车<span class="text-primary" id="gwcCount"></span><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                    <div class="dropdown-menu dropdown-cart" id="CartInfo"></div>
+                </li><!--购物车信息显示end-->
+                <li class="site-nav-pipe">|</li>
+                <li class="menu slogan">
+                    中国领先鲜花速递服务
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 顶部导航 End -->
+    <!-- 头部 -->
+    <header>
+        <div class="logo">
+            <h1><a href="/" class="logo-bd">鲜花速递</a></h1>
+            <i></i>
+            
+        <h2>中国鲜花礼品网 始于2005，简称花礼网</h2>
+    
+
+        </div>
+        <div class="search">
+            <form name="i_search" method="post" action="/search/">
+                <div class="input-group">
+                    <input name="keyword" type="text" class="form-control" placeholder="商品关键词">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button" onClick="this.form.submit()">搜索</button>
+                    </span>
+                </div>
+            </form>
+            
+    
+    <span class="help-block">
+        <a href="/hongmeigui/">红玫瑰</a> | <a href="/flower/JingPinXianHua/">精品鲜花</a> | <a href="/shengriliwu/">生日鲜花</a> | <a href="/worldflora/">港澳台送花</a>
+    </span>
+
+
+        </div>
+        <div class="service">
+            <span class="ico ico-phone"></span>400-889-8188
+            <a href="/chat/" target="_blank"><span class="ico ico-headset"></span>在线客服</a>
+        </div>
+    </header>
+    <!-- 头部 End -->
+    
+<!-- 导航 -->
+<nav class="common">
+    <div class="container">
+        <div class="categorys dropdown">
+            <h3 class="categorys-title" data-hover="dropdown" data-delay="0">
+                <a href="/all.html"><span class="pull-right glyphicon glyphicon-menu-down"></span>全部商品导购</a>
+            </h3>
+            <div class="dropdown-menu dropdown-cate">
+                <h4><a href="/flower/">鲜花</a></h4>
+                <ul class="cate-list list-inline">
+                    <li><a target="_blank" href="/aiqingxianhua/">爱情鲜花</a></li>
+                    <li><a target="_blank" href="/youqingxianhua/">友情鲜花</a></li>
+                    <li><a target="_blank" href="/shengriliwu/">生日鲜花</a></li>
+                    <li><a target="_blank" href="/songzhangbeixianhua/">问候长辈</a></li>
+                    <li><a target="_blank" href="/zhufuqinghexianhua/">祝贺鲜花</a></li>
+                    <li><a target="_blank" href="/hunqingxianhua/">婚庆鲜花</a></li>
+                    <li><a target="_blank" href="/tanbingweiwenxianhua/">探病慰问</a></li>
+                    <li><a target="_blank" href="/daoqianxianhua/">道歉鲜花</a></li>
+                    <li><a target="_blank" href="/businessFlower/kaiyehualan/">开业花篮</a></li>
+                </ul>
+                <h4><a href="/yongshenghua/">永生花</a></h4>
+                <ul class="cate-list list-inline">
+                    <li><a target="_blank" href="/yongshenghua/yongshenghua_box.html">经典花盒</a></li>
+                    <li><a target="_blank" href="/yongshenghua/yongshenghua_large.html">巨型玫瑰</a></li>
+                    <li><a target="_blank" href="/yongshenghua/yongshenghua_lavender.html">薰衣草</a></li>
+                    <li><a target="_blank" href="/yongshenghua/yongshenghua_vase.html">永生瓶花</a></li>
+                    <li><a target="_blank" href="/yongshenghua/yongshenghua_characteristic.html">特色永生花</a></li>
+                </ul>
+
+                <h4><a href="/cake/">蛋糕</a></h4>
+                <ul class="cate-list list-inline">
+                    <li><a target="_blank" href="/cake/ganso/">元祖</a></li>
+                    <li><a target="_blank" href="/cake/holiland/">好利来</a></li>
+                    <li><a target="_blank" href="/cake/xfxb/">幸福西饼</a></li>
+                    <li><a target="_blank" href="/cake/lecake/">诺心</a></li>
+                    <li><a target="_blank" href="/cake/waffleboy/">窝夫小子</a></li>
+                    <li><a target="_blank" href="/cake/mcake/">Mcake</a></li>
+                    <li><a target="_blank" href="/cake/croissants/">可颂坊</a></li>
+                    <li><a target="_blank" href="/cake/micamika/">米卡米卡</a></li>
+                    <li><a target="_blank" href="/cake/vcake/">Vcake</a></li>
+                    <li><a target="_blank" href="/cake/yipinxuan/">一品轩</a></li>
+                    <li><a target="_blank" href="/cake/kaladuo/">卡拉多</a></li>
+                    <li><a target="_blank" href="/cake/oneonecake/">Oneonecake</a></li>
+                    <li><a target="_blank" href="/cake/mzmk/">美滋每客</a></li>
+                    <li><a target="_blank" href="/cake/beisike/">贝思客</a></li>
+                    <li><a target="_blank" href="/cake/allcitycake/">全国品牌</a></li>
+                </ul>
+                <h4><a href="/gifts/">礼品</a></h4>
+                <ul class="cate-list list-inline">
+                    <li><a target="_blank" href="/livingflower/">泰国保鲜花</a></li>
+                    <li><a target="_blank" href="/gifts/musicbox/">音乐盒</a></li>
+                    <li><a target="_blank" href="/gifts/crystallaser/">水晶内雕</a></li>
+                    <li><a target="_blank" href="/gifts/goldenflower/">金箔花</a></li>
+                    <li><a target="_blank" href="/gifts/cosmeticmirror/">化妆镜</a></li>
+                    <li><a target="_blank" href="/gifts/kingking/">香薰系列</a></li>
+                    <li><a target="_blank" href="/gifts/bestlife/">音乐睡枕</a></li>
+                    <li><a target="_blank" href="/gifts/vase/">花瓶/相框</a></li>
+                    <li><a target="_blank" href="/gifts/grose/">镀金玫瑰</a></li>
+                    <li><a target="_blank" href="/gifts/candle/">LED蜡烛</a></li>
+                    <li><a target="_blank" href="/katonghuashu/">卡通花束</a></li>
+                    <li><a target="_blank" href="/toys/">品牌公仔</a></li>
+                    <li><a target="_blank" href="/gifts/hifi/">智能音响</a></li>
+                    <li><a target="_blank" href="/gifts/shoushi/">首饰</a></li>
+                    <li><a target="_blank" href="/gifts/chocolate/">手工巧克力</a></li>
+                    <li><a target="_blank" href="/gifts/jinkouqiaokeli/">进口巧克力</a></li>
+                    <li><a target="_blank" href="/gifts/dengshi/">创意礼品</a></li>
+                    <li><a target="_blank" href="/qiyetuangou/gift_card.html">礼品卡</a></li>
+                    <li><a target="_blank" href="/gifts/mingcha">茗茶</a></li>
+                </ul>
+                <h4><a href="/Plant/">绿植</a></h4>
+                <ul class="cate-list list-inline">
+                    <li><a target="_blank" href="/Plant/greenplant/">绿色植物</a></li>
+                    <li><a target="_blank" href="/Plant/potflower/">盆栽花卉</a></li>
+                </ul>
+            </div>
+        </div>
+        <ul class="nav">
+            <li><a href="/">首页</a></li>
+            <li><a href="/flower/">鲜花</a></li>
+            <li><a href="/yongshenghua/">永生花</a></li>
+            <li><a href="/cake/">蛋糕</a></li>
+            <li><a href="/gifts/">礼品</a></li>
+            <li><a href="/huayu/">花语大全</a></li>
+            <!-- <li><a href="/theme/xingzuo/">射手座鲜花礼物</a></li> -->
+            <li><a href="/theme/xmas/">圣诞节鲜花</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- 导航 End -->
+
+
+
+
+
+
+<!-- 内容 -->
+<div class="container">
+    <div class="wrapper">
+        <div class="pull-left w970 l230">
+            <!-- 大图轮播 -->
+            <div id="flowerCarousel" class="carousel slide carousel-fade">
+                <ol class="carousel-indicators">
+                    <li data-target="#flowerCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#flowerCarousel" data-slide-to="1"></li>
+                    <li data-target="#flowerCarousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item">
+                        <a href="/product/9012112.html" target="_bank"><img src="__INDEX__STATIC__/picture/xianhua01_20161129.jpg" alt="给你我的温柔"></a>
+                    </div>
+                    <div class="item">
+                        <a href="/product/9012121.html" target="_bank"><img src="__INDEX__STATIC__/picture/xianhua02.jpg" alt="给你幸福"></a>
+                    </div>
+                    <div class="item active">
+                        <a href="/product/9012126.html" target="_bank"><img src="__INDEX__STATIC__/picture/xianhua03_20161111.jpg" alt="情有独钟"></a>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#flowerCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">上一页</span>
+                </a>
+                <a class="right carousel-control" href="#flowerCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">下一页</span>
+                </a>
+            </div>
+            <!-- 大图轮播 End -->
+            <!-- 筛选 -->
+                <div class="filterbar">
+                    <ul class="filter-items list-inline">
+                        <li class='active'><a href="?r=0">综合</a></li>
+                        <li class=''><a href="?r=5">销量<span class="glyphicon glyphicon-triangle-bottom"></span></a></li>
+                            <li class=''><a href="?r=1">价格<span class="glyphicon glyphicon-triangle-bottom"></span></a></li>
+                        <li class=''><a href="?r=3">最新<span class="glyphicon glyphicon-triangle-bottom"></span></a></li>
+                    </ul>
+                    <ul class="pager">
+                        <li class="total-page"><strong class="text-primary">1</strong>/16</li>
+                            <li class="disabled"><a href="javascript:void(0)"><span class="glyphicon glyphicon-menu-left"></span></a></li>
+                                                    <li><a href="?r=0&pg=2"><span class="glyphicon glyphicon-menu-right"></span></a></li>
+                    </ul>
+                </div>
+            <!-- 筛选 End -->
+            <!-- 商品列表 -->
+                <div class="grid-wrapper">
+
+                            <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012154.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012154.jpg_220x240.jpg" alt="甜美公主"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">368</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012154.html" target="_blank">
+                            <span class="product-title">鲜花/甜美公主-白玫瑰22枝，粉佳人粉玫瑰14枝，粉色桔梗5枝</span>
+                            <span class="feature">新品</span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012154')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012154" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012153.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012153.jpg_220x240.jpg" alt="浪漫絮语"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">378</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012153.html" target="_blank">
+                            <span class="product-title">鲜花/浪漫絮语-粉玫瑰32枝，白玫瑰6枝，香槟玫瑰6枝，红玫瑰6枝</span>
+                            <span class="feature">新品</span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012153')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012153" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012152.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012152.jpg_220x240.jpg" alt="粉色女孩"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">358</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012152.html" target="_blank">
+                            <span class="product-title">鲜花/粉色女孩-戴安娜粉玫瑰29枝，粉色香水百合2枝，搭配白色桔梗2枝</span>
+                            <span class="feature">新品</span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012152')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012152" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012151.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012151.jpg_220x240.jpg" alt="圣洁的爱"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">346</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012151.html" target="_blank">
+                            <span class="product-title">鲜花/圣洁的爱-雪山白玫瑰36枝，栀子叶适量</span>
+                            <span class="feature">新品</span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012151')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012151" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012150.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012150.jpg_220x240.jpg" alt="幸福久久"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">518</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012150.html" target="_blank">
+                            <span class="product-title">鲜花/幸福久久-戴安娜粉玫瑰99枝，栀子叶适量</span>
+                            <span class="feature">特价</span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012150')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012150" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012149.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012149.jpg_220x240.jpg" alt="99的爱"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">539</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012149.html" target="_blank">
+                            <span class="product-title">鲜花/99的爱-香槟玫瑰99枝，尤加利适量</span>
+                            <span class="feature">特价</span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012149')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012149" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012148.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012148.jpg_220x240.jpg" alt="初心永不变"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">538</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012148.html" target="_blank">
+                            <span class="product-title">鲜花/初心永不变-白玫瑰99枝，栀子叶适量</span>
+                            <span class="feature">特价</span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012148')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012148" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012143.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012143.jpg_220x240.jpg" alt="倾城月色"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">138</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012143.html" target="_blank">
+                            <span class="product-title">鲜花/倾城月色-雪山白玫瑰11枝，搭配适量紫色勿忘我栀子叶</span>
+                            <span class="feature"></span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012143')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012143" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012126.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012126.jpg_220x240.jpg" alt="情有独钟"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">338</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012126.html" target="_blank">
+                            <span class="product-title">鲜花/情有独钟-戴安娜粉玫瑰50枝</span>
+                            <span class="feature"></span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012126')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012126" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012125.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012125.jpg_220x240.jpg" alt="缪斯女神"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">179</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012125.html" target="_blank">
+                            <span class="product-title">鲜花/缪斯女神-红玫瑰16枝，红豆5枝，粉色桔梗1枝，银叶菊2枝</span>
+                            <span class="feature"></span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012125')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012125" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012116.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012116.jpg_220x240.jpg" alt="梦幻之恋"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">288</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012116.html" target="_blank">
+                            <span class="product-title">鲜花/梦幻之恋-红玫瑰29枝</span>
+                            <span class="feature"></span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012116')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012116" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012113.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012113.jpg_220x240.jpg" alt="法式浪漫"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">178</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012113.html" target="_blank">
+                            <span class="product-title">鲜花/法式浪漫-红玫瑰11枝，石竹梅7枝</span>
+                            <span class="feature">新品</span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012113')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012113" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012112.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012112.jpg_220x240.jpg" alt="给你我的温柔"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">179</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012112.html" target="_blank">
+                            <span class="product-title">鲜花/给你我的温柔-戴安娜粉玫瑰11枝，石竹梅7枝</span>
+                            <span class="feature">新品</span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012112')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012112" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012111.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012111.jpg_220x240.jpg" alt="夏日倾情"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">192</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012111.html" target="_blank">
+                            <span class="product-title">鲜花/夏日倾情-香槟玫瑰11枝，香槟色桔梗3枝，石竹梅5枝</span>
+                            <span class="feature">新品</span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012111')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012111" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012108.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012108.jpg_220x240.jpg" alt="拥抱的幸福"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">218</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012108.html" target="_blank">
+                            <span class="product-title">鲜花/拥抱的幸福-戴安娜玫瑰19枝</span>
+                            <span class="feature">新品</span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012108')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012108" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012102.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012102.jpg_220x240.jpg" alt="一生期盼"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">259</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012102.html" target="_blank">
+                            <span class="product-title">鲜花/一生期盼-紫玫瑰19枝、紫色桔梗6枝</span>
+                            <span class="feature">新品</span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012102')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012102" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012101.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012101.jpg_220x240.jpg" alt="夏日香气"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">258</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012101.html" target="_blank">
+                            <span class="product-title">鲜花/夏日香气-苏醒玫瑰19枝、粉色桔梗6枝</span>
+                            <span class="feature">新品</span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012101')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012101" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012099.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012099.jpg_220x240.jpg" alt="说爱你"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">239</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012099.html" target="_blank">
+                            <span class="product-title">鲜花/说爱你-红玫瑰19枝、紫色小菊3枝</span>
+                            <span class="feature">新品</span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012099')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012099" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012098.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012098.jpg_220x240.jpg" alt="初心如一"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">259</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012098.html" target="_blank">
+                            <span class="product-title">鲜花/初心如一-精品玫瑰礼篮:白玫瑰19枝、粉色桔梗6枝</span>
+                            <span class="feature">新品</span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012098')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012098" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012089.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012089.jpg_220x240.jpg" alt="爱在心头"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">338</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012089.html" target="_blank">
+                            <span class="product-title">鲜花/爱在心头-玫瑰50枝：戴安娜粉玫瑰19枝，红玫瑰31枝</span>
+                            <span class="feature">特价</span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012089')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012089" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012088.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012088.jpg_220x240.jpg" alt="白雪公主"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">359</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012088.html" target="_blank">
+                            <span class="product-title">鲜花/白雪公主-白玫瑰50枝</span>
+                            <span class="feature"></span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012088')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012088" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012084.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012084.jpg_220x240.jpg" alt="浪漫爱情"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">282</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012084.html" target="_blank">
+                            <span class="product-title">鲜花/浪漫爱情-红玫瑰12枝，白玫瑰17枝</span>
+                            <span class="feature"></span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012084')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012084" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012082.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012082.jpg_220x240.jpg" alt="巴黎恋人"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">186</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012082.html" target="_blank">
+                            <span class="product-title">鲜花/巴黎恋人-红玫瑰19枝</span>
+                            <span class="feature">特价</span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012082')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012082" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012080.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012080.jpg_220x240.jpg" alt="缘分天空"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">198</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012080.html" target="_blank">
+                            <span class="product-title">鲜花/缘分天空-红玫瑰19枝</span>
+                            <span class="feature"></span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012080')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012080" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012079.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012079.jpg_220x240.jpg" alt="假日公主"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">128</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012079.html" target="_blank">
+                            <span class="product-title">鲜花/假日公主-戴安娜粉玫瑰11枝</span>
+                            <span class="feature"></span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012079')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012079" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012064.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012064.jpg_220x240.jpg" alt="伊人如梦"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">368</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012064.html" target="_blank">
+                            <span class="product-title">鲜花/伊人如梦-精品玫瑰礼盒:粉佳人12枝 苏醒12枝 白玫5枝</span>
+                            <span class="feature"></span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012064')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012064" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012062.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012062.jpg_220x240.jpg" alt="心上人"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">388</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012062.html" target="_blank">
+                            <span class="product-title">鲜花/心上人-红玫瑰66枝，满天星围绕</span>
+                            <span class="feature">包装升级款</span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012062')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012062" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012060.html" target="_blank"><img width="220" height="240" src="__INDEX__STATIC__/picture/9012060.jpg_220x240.jpg" alt="眷念"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">292</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012060.html" target="_blank">
+                            <span class="product-title">鲜花/眷念-戴安娜粉玫瑰33枝，石竹梅围绕</span>
+                            <span class="feature"></span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012060')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012060" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                </div>
+            <!-- 商品列表 End -->
+            <!-- 分页 -->
+                        <div class="page-wrapper">
+
+                            <p class="total-page">1-16 / 共434件商品</p>
+                            <ul class="pagination">
+                                    <li class="disabled"><a href="#"><span class="glyphicon glyphicon-menu-left"></span> 上一页</a></li>
+                                                                
+                                        <li class="active"><a href="javascript:void(0)">1</a></li>
+                                        <li><a href="?r=0&pg=2">2</a></li>
+                                        <li><a href="?r=0&pg=3">3</a></li>
+                                        <li><a href="?r=0&pg=4">4</a></li>
+                                        <li><a href="?r=0&pg=5">5</a></li>
+                                        <li><a href="?r=0&pg=6">6</a></li>
+                                                                    <li><a href="javascript:void(0)">…</a></li>
+                                    <li><a href="?r=0&pg=16&price=">16</a></li>
+                                                                    <li><a href="?r=0&pg=2">下一页 <span class="glyphicon glyphicon-menu-right"></span></a></li>
+                            </ul>
+                        </div>
+            <!-- 分页 End -->
+        </div>
+        <div class="pull-left w210 r970">
+            <!-- 分类 -->
+            <div class="navigation">
+                <div class="item">
+                    <div class="title">
+                        <span class="ico ico-effect"></span>
+                        <h4>用途</h4>
+                    </div>
+                    <ul class="item-list list-inline">
+                        <li><a href="/aiqingxianhua/">爱情鲜花</a></li>
+                        <li><a href="/youqingxianhua/">友情鲜花</a></li>
+                        <li><a href="/shengriliwu/" target="_blank">生日鲜花</a></li>
+                        <li><a href="/songzhangbeixianhua/">问候长辈</a></li>
+                        <li><a href="/songlaoshixianhua/">回报老师</a></li>
+                        <li><a href="/tanbingweiwenxianhua/">探病慰问</a></li>
+                        <li><a href="/daoqianxianhua/">道歉鲜花</a></li>
+                        <li><a href="/hunqingxianhua/">婚庆鲜花</a></li>
+                        <li><a href="/zhufuqinghexianhua/">祝贺鲜花</a></li>
+                        <li><a href="/aisixianhua/">哀思鲜花</a></li>
+                        <li><a href="/businessFlower/">商务鲜花</a></li>
+                        <li><a href="/businessFlower/kaiyehualan/">开业花篮</a></li>
+                        <li><a href="/florist/">自选鲜花</a></li>
+                        <li><a href="/worldflora/">港澳台送花</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div class="title">
+                        <span class="ico ico-texture"></span>
+                        <h4>花材</h4>
+                    </div>
+                    <ul class="item-list list-inline">
+                        <li><a href="/meigui/">玫瑰</a></li>
+                        <li><a href="/hongmeigui/">红玫瑰</a></li>
+                        <li><a href="/fenmeigui/">粉玫瑰</a></li>
+                        <li><a href="/baimeigui/">白玫瑰</a></li>
+                        <li><a href="/zimeigui/">紫玫瑰</a></li>
+                        <li><a href="/lanmeigui/">蓝玫瑰</a></li>
+                        <li><a href="/xiangbinmeigui/">香槟玫瑰</a></li>
+                        <li><a href="/huangmeigui/">黄玫瑰</a></li>
+                        <li><a href="/kangnaixin/">康乃馨</a></li>
+                        <li><a href="/baihe/">百合</a></li>
+                        <li><a href="/fulang/">扶郎</a></li>
+                        <li><a href="/xiangrikui/">向日葵</a></li>
+                        <li><a href="/yujinxiang/">郁金香</a></li>
+                        <li><a href="/matilian/">马蹄莲</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div class="title">
+                        <span class="ico ico-color"></span>
+                        <h4>颜色</h4>
+                    </div>
+                    <ul class="item-list list-inline">
+                        <li><a href="/hongsexianhua/"><span class="c-red"></span>红色</a></li>
+                        <li><a href="/fensexianhua/"><span class="c-pink"></span>粉色</a></li>
+                        <li><a href="/xiangbinsexianhua/"><span class="c-champagne"></span>香槟</a></li>
+                        <li><a href="/huangsexianhua/"><span class="c-yellow"></span>黄色</a></li>
+                        <li><a href="/baisexianhua/"><span class="c-white"></span>白色</a></li>
+                        <li><a href="/zisexianhua/"><span class="c-purple"></span>紫色</a></li>
+                        <li><a href="/lansexianhua/"><span class="c-blue"></span>蓝色</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div class="title">
+                        <span class="ico ico-sort"></span>
+                        <h4>类别</h4>
+                    </div>
+                    <ul class="item-list list-inline">
+                        <li><a href="/huashu/">花束</a></li>
+                        <li><a href="/hezhuanghua/">花盒</a></li>
+                        <li><a href="/pingchahua/">瓶花</a></li>
+                        <li><a href="/flower/JingPinXianHua/">精品鲜花</a></li>
+                        <li><a href="/giftsBasket/">果篮</a></li>
+                        <li><a href="/hualan/">桌面花篮</a></li>
+                        <li><a href="/businessFlower/kaiyehualan/">开业花蓝</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div class="title">
+                        <span class="ico ico-price"></span>
+                        <h4>价格</h4>
+                    </div>
+                    <ul class="item-list list-inline">
+                        <li><a href="/tejiaxianhua/">特价鲜花</a></li>
+                        <li><a href="/xianhuajiage/0-150/">150元以下</a></li>
+                        <li><a href="/xianhuajiage/150-250/">150-250元</a></li>
+                        <li><a href="/xianhuajiage/250-350/">250-350元</a></li>
+                        <li><a href="/xianhuajiage/350-550/">350-550元</a></li>
+                        <li><a href="/xianhuajiage/550-800/">550-800元</a></li>
+                        <li><a href="/xianhuajiage/800-99999/">800元以上</a></li>
+                    </ul>
+                </div>
+
+                <div class="item last-child">
+                    <div class="title">
+                        <span class="ico ico-num"></span>
+                        <h4>枝数</h4>
+                    </div>
+                    <ul class="item-list list-special list-inline">
+                        <li><a href="/jiuduomeigui/">9枝</a></li>
+                        <li><a href="/shiduomeigui/">10枝</a></li>
+                        <li><a href="/shiyiduomeigui/">11枝</a></li>
+                        <li><a href="/shierduomeigui/">12枝</a></li>
+                        <li><a href="/shiliuduomeigui/">16枝</a></li>
+                        <li><a href="/shibaduomeigui/">18枝</a></li>
+                        <li><a href="/shijiuduomeigui/">19枝</a></li>
+                        <li><a href="/ershiduomeigui/">20枝</a></li>
+                        <li><a href="/ershierduomeigui/">22枝</a></li>
+                        <li><a href="/ershijiuduomeigui/">29枝</a></li>
+                        <li><a href="/sanshisanduomeigui/">33枝</a></li>
+                        <li><a href="/sanshiliuduomeigui/">36枝</a></li>
+                        <li><a href="/wushiduomeigui/">50枝</a></li>
+                        <li><a href="/liushiliuduomeigui/">66枝</a></li>
+                        <li class="last-child"><a href="/jiushijiuduomeigui/">99枝以上</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 分类 End -->
+            <!-- 热销推荐 -->
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">热销鲜花推荐</h3>
+                </div>
+                <div class="panel-body">
+
+                            <div class="side-item">
+            <div class="img-box">
+                <a href="/product/9010966.html" target="_blank"><img src="__INDEX__STATIC__/picture/9010966.jpg_220x240.jpg" width="180" height="196" alt="一往情深"></a>
+            </div>
+            <div class="info-cont">
+                <div class="title">
+                    <a href="/product/9010966.html" class="product-title">
+                        鲜花/一往情深-精品玫瑰礼盒:19枝红玫瑰，勿忘我适量
+                    </a>
+                </div>
+                <div class="price">
+                    <span class="price-sign">&yen;</span>
+                    <span class="price-num">239</span>
+                </div>
+            </div>
+        </div>
+        <div class="side-item">
+            <div class="img-box">
+                <a href="/product/9010011.html" target="_blank"><img src="__INDEX__STATIC__/picture/9010011.jpg_220x240.jpg" width="180" height="196" alt="一心一意"></a>
+            </div>
+            <div class="info-cont">
+                <div class="title">
+                    <a href="/product/9010011.html" class="product-title">
+                        鲜花/一心一意-玫瑰11枝，粉色勿忘我0.3扎
+                    </a>
+                </div>
+                <div class="price">
+                    <span class="price-sign">&yen;</span>
+                    <span class="price-num">126</span>
+                </div>
+            </div>
+        </div>
+        <div class="side-item">
+            <div class="img-box">
+                <a href="/product/9012121.html" target="_blank"><img src="__INDEX__STATIC__/picture/9012121.jpg_220x240.jpg" width="180" height="196" alt="给你幸福"></a>
+            </div>
+            <div class="info-cont">
+                <div class="title">
+                    <a href="/product/9012121.html" class="product-title">
+                        鲜花/给你幸福-红玫瑰11枝
+                    </a>
+                </div>
+                <div class="price">
+                    <span class="price-sign">&yen;</span>
+                    <span class="price-num">128</span>
+                </div>
+            </div>
+        </div>
+        <div class="side-item">
+            <div class="img-box">
+                <a href="/product/9010105.html" target="_blank"><img src="__INDEX__STATIC__/picture/9010105.jpg_220x240.jpg" width="180" height="196" alt="爱的纪念日"></a>
+            </div>
+            <div class="info-cont">
+                <div class="title">
+                    <a href="/product/9010105.html" class="product-title">
+                        鲜花/爱的纪念日-红玫瑰11枝,勿忘我、栀子叶
+                    </a>
+                </div>
+                <div class="price">
+                    <span class="price-sign">&yen;</span>
+                    <span class="price-num">128</span>
+                </div>
+            </div>
+        </div>
+        <div class="side-item">
+            <div class="img-box">
+                <a href="/product/9010938.html" target="_blank"><img src="__INDEX__STATIC__/picture/9010938.jpg_220x240.jpg" width="180" height="196" alt="咖啡心情"></a>
+            </div>
+            <div class="info-cont">
+                <div class="title">
+                    <a href="/product/9010938.html" class="product-title">
+                        鲜花/咖啡心情-16枝红玫瑰，叶上花，白色桔梗 
+                    </a>
+                </div>
+                <div class="price">
+                    <span class="price-sign">&yen;</span>
+                    <span class="price-num">188</span>
+                </div>
+            </div>
+        </div>
+
+                </div>
+            </div>
+            <!-- 热销推荐 End -->
+            <!-- 最新鲜花订单评价 -->
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">最新鲜花订单评价</h3>
+                </div>
+                <div class="panel-body">
+
+                            <div class="side-com">
+            <div class="img-box">
+                <a href="/product/9012118.html" target="_blank">
+                    <img src="__INDEX__STATIC__/picture/9012118.jpg_80x87.jpg">
+                </a>
+            </div>
+            <div class="com-cont">
+                <h5>会员号：1806129*</h5>
+                <p><a href="/productpj/9012118.html" target="_blank">很满意</a></p>
+            </div>
+        </div>
+        <div class="side-com">
+            <div class="img-box">
+                <a href="/product/9012135.html" target="_blank">
+                    <img src="__INDEX__STATIC__/picture/9012135.jpg_80x87.jpg">
+                </a>
+            </div>
+            <div class="com-cont">
+                <h5>会员号：1517357*</h5>
+                <p><a href="/productpj/9012135.html" target="_blank">花还不错，就是送货不是特别及时。</a></p>
+            </div>
+        </div>
+        <div class="side-com">
+            <div class="img-box">
+                <a href="/product/9012088.html" target="_blank">
+                    <img src="__INDEX__STATIC__/picture/9012088.jpg_80x87.jpg">
+                </a>
+            </div>
+            <div class="com-cont">
+                <h5>会员号：weixin_*</h5>
+                <p><a href="/productpj/9012088.html" target="_blank">非常满意，还会光顾</a></p>
+            </div>
+        </div>
+        <div class="side-com">
+            <div class="img-box">
+                <a href="/product/9012124.html" target="_blank">
+                    <img src="__INDEX__STATIC__/picture/9012124.jpg_80x87.jpg">
+                </a>
+            </div>
+            <div class="com-cont">
+                <h5>会员号：1865202*</h5>
+                <p><a href="/productpj/9012124.html" target="_blank">很满意</a></p>
+            </div>
+        </div>
+        <div class="side-com">
+            <div class="img-box">
+                <a href="/product/9010668.html" target="_blank">
+                    <img src="__INDEX__STATIC__/picture/9010668.jpg_80x87.jpg">
+                </a>
+            </div>
+            <div class="com-cont">
+                <h5>会员号：dante_c*</h5>
+                <p><a href="/productpj/9010668.html" target="_blank">很好 很满意</a></p>
+            </div>
+        </div>
+        <div class="side-com">
+            <div class="img-box">
+                <a href="/product/9012153.html" target="_blank">
+                    <img src="__INDEX__STATIC__/picture/9012153.jpg_80x87.jpg">
+                </a>
+            </div>
+            <div class="com-cont">
+                <h5>会员号：weixin_*</h5>
+                <p><a href="/productpj/9012153.html" target="_blank">很美很惊喜，花很新鲜，送货及时，下次还会来这里买。</a></p>
+            </div>
+        </div>
+
+                </div>
+            </div>
+            <!-- 最新鲜花订单评价 End -->
+        </div>
+    </div>
+    <!-- 鲜花常识&送花礼仪 -->
+    <div class="panel panel-default knowledge">
+        <div class="panel-heading">
+            <h3 class="panel-title">鲜花常识&amp;送花礼仪</h3>
+        </div>
+        <div class="panel-body">
+            <ul>
+                <li><a href="/huayu/10973.html" target="_blank">为什么要选择鲜花速递？</a> </li>
+                <li><a href="/huayu/10976.html" target="_blank">选择鲜花速递需要注意什么？</a></li>
+                <li><a href="/huayu/20051115103610.htm" target="_blank">送花支数代表的含义</a> </li>
+                <li><a href="/huayu/20051115103923.htm" target="_blank">各种花代表的不同含义</a> </li>
+                <li><a href="/huayu/20051116172128.htm" target="_blank">玫瑰概述及花语</a> </li>
+            </ul>
+            <ul>
+                <li><a href="/huayu/20051115105306.htm" target="_blank">送花的常识和技巧</a> </li>
+                <li><a href="/huayu/20051116174222.htm" target="_blank">经典送花祝福语</a> </li>
+                <li><a href="/huayu/20050612082846.htm" target="_blank">用鲜花表达情感-谈送花礼仪</a></li>
+                <li><a href="/huayu/20050611130752.htm" target="_blank">不同场合送什么花？</a> </li>
+                <li><a href="/huayu/20050611130659.htm" target="_blank"> 鲜花与星座</a> </li>
+            </ul>
+            <ul>
+                <li><a href="/huayu/20050422170012.htm" target="_blank">如何让鲜花保鲜</a> </li>
+                <li><a href="/huayu/20050611130941.htm" target="_blank">鲜花与节日</a> </li>
+                <li><a href="/huayu/20050611131024.htm" target="_blank"> 鲜花与生日</a></li>
+                <li><a href="/huayu/20050612080530.htm" target="_blank">婚礼用鲜花大全</a> </li>
+                <li><a href="/huayu/20050405004253.htm" target="_blank">女孩都喜欢别人送鲜花吗？</a> </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 鲜花常识&送花礼仪 End -->
+</div>
+<!-- 内容 End -->
+
+    <!--底部-->
+    <!-- 尾部导航 -->
+    <div class="footer-nav">
+        <a href="/">首页</a> <b>|</b> <a href="/profile/about.htm" target="_blank">关于我们</a> <b>|</b> <a href="/profile/media.html" target="_blank">媒体报道</a> <b>|</b> <a href="/profile/contact.htm" target="_blank">联系方式</a> <b>|</b> <a href="/qiyetuangou/" target="_blank">企业团购</a> <b>|</b> <a href="/liansuo/" target="_blank">花店加盟</a> <b>|</b> <a href="/profile/links.htm" target="_blank">友情链接</a> <b>|</b> <a href="/member/payment/balancefill" target="_blank">在线补款</a> <b>|</b> <a class="last-child" href="/profile/why_choose_us.htm" target="_blank">为什么选择中国鲜花礼品网</a>
+    </div>
+    <!-- 尾部导航 End -->
+    <!-- 尾部帮助 -->
+    <div class="footer-help" style="display:none;">
+        <div class="container">
+            <div class="mod mod-a">
+                <h4>客户服务</h4>
+                <ul class="list-unstyled">
+                    <li><a href="/help/default.htm" target="_blank" rel="nofollow">服务声明</a></li>
+                    <li><a href="/help/payment.htm" target="_blank" rel="nofollow">支付说明</a></li>
+                    <li><a href="/help/payment_foreign.htm" target="_blank" rel="nofollow">境外支付</a></li>
+                    <li><a href="/help/send_shuoming.htm" target="_blank" rel="nofollow">配送说明</a></li>
+                    <li><a href="/help/sendRange.htm" target="_blank" rel="nofollow">配送范围</a></li>
+                    <li><a href="/help/ordercx/" target="_blank" rel="nofollow">订单查询</a></li>
+                    <li><a href="/help/order_cancel.htm" target="_blank" rel="nofollow">取消订单</a></li>
+                    <li><a href="/help/re_payment.htm" target="_blank" rel="nofollow">补交货款</a></li>
+                    <li><a href="/help/private.htm" target="_blank" rel="nofollow">隐私条款</a></li>
+                    <li><a href="/help/safe.htm" target="_blank" rel="nofollow">安全条款</a></li>
+                </ul>
+            </div>
+            <div class="mod mod-b">
+                <h4>热门咨询</h4>
+                <ul class="list-unstyled">
+                    <li><a href="/help/shop_step.htm" target="_blank" class="thiscolor_h">中国鲜花礼品网购物流程</a></li>
+                    <li><a href="/help/demo.htm" target="_blank">中国鲜花礼品网订购演示</a> </li>
+                    <li><a href="/help/sendRange.htm" target="_blank">鲜花网能配送哪些城市？</a></li>
+                    <li><a href="/help/afterservice.htm" target="_blank">鲜花售后服务是怎么样的？</a></li>
+                    <li><a href="/help/Orde_in_advance.htm" target="_blank">我应该提前多久预订鲜花？</a></li>
+                </ul>
+            </div>
+            <div class="mod mod-c">
+                <h4><a href="/huadian/" target="_blank">同城鲜花专区</a></h4>
+                <ul class="list-unstyled">
+                    <li><a href="http://sz.hua.com/" target="_blank" title="深圳鲜花">深圳鲜花</a></li>
+                    <li><a href="http://bj.hua.com/" target="_blank" title="北京鲜花">北京鲜花</a></li>
+                    <li><a href="http://sh.hua.com/" target="_blank" title="上海鲜花">上海鲜花</a></li>
+                    <li><a href="http://gz.hua.com/" target="_blank" title="广州鲜花">广州鲜花</a></li>
+                    <li><a href="http://tj.hua.com/" target="_blank" title="天津鲜花">天津鲜花</a></li>
+                    <li><a href="http://cq.hua.com/" target="_blank" title="重庆鲜花">重庆鲜花</a></li>
+                    <li><a href="http://cd.hua.com/" target="_blank" title="成都鲜花">成都鲜花</a></li>
+                    <li><a href="http://xa.hua.com/" target="_blank" title="西安鲜花">西安鲜花</a></li>
+                    <li><a href="http://wh.hua.com/" target="_blank" title="武汉鲜花">武汉鲜花</a></li>
+                    <li><a href="http://nj.hua.com/" target="_blank" title="南京鲜花">南京鲜花</a></li>
+                    <li><a href="http://xm.hua.com/" target="_blank" title="厦门鲜花">厦门鲜花</a></li>
+                    <li><a href="/help/sendRange.htm" target="_blank" title="更多城市">更多城市</a></li>
+                </ul>
+            </div>
+            <div class="mod mod-d">
+                <h4>联系我们</h4>
+                <p>
+                    全国订购热线:400-889-8188(免长途费)<br>
+                    <a href="/chat/" target="_blank">在线客服</a><br>
+                    7x24小时在线订购<br>
+                    客服工作时间：8:30-21:00<br>
+                    E-mail: <a href="mailto:kefu@hua.com">kefu@hua.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 尾部帮助 End -->
+    <!-- 通用尾部 -->
+    <footer>
+        <div class="auth">
+            <span style="margin-right:8px;">
+                <script src="__INDEX__STATIC__/js/seallogo.js"></script>
+            </span>
+            <a href="https://search.szfw.org/cert/l/CX20130306002238002312" target="_blank"><img src="__INDEX__STATIC__/picture/cxwz.gif" height="40" width="112"></a>
+            <a href="http://www.anquan.org/authenticate/cert/?site=www.hua.com&at=realname" rel="nofollow" target="_blank"><img src="__INDEX__STATIC__/picture/smyz.gif" height="40" width="106"></a>
+<img src="__INDEX__STATIC__/picture/slogan.png" height="50" width="212" />            <a href="/member/payment/fillbyalipay?order_no=&total_fee=" rel="nofollow" target="_blank"><img src="__INDEX__STATIC__/picture/zfb.gif" height="49" width="96"></a>
+            <a href="/profile/news_20111110.htm" target="_blank"><img src="__INDEX__STATIC__/picture/100.jpg" height="49" width="150"></a>
+            <a href="/profile/ICP.htm" rel="nofollow" target="_blank"><img src="__INDEX__STATIC__/picture/bico1.jpg" alt="ICP" height="46" width="35"></a>
+<!--             <a href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403301920636" rel="nofollow" target="_blank"><img alt="网警" src="__INDEX__STATIC__/picture/bico2.jpg" height="46" width="35"></a> -->
+            <a href="http://szcert.ebs.org.cn/fab6de6a-ff80-4e63-89e4-cd531170c256" rel="nofollow" target="_blank"><img alt="工商网监" src="__INDEX__STATIC__/picture/bico4.jpg" height="46" width="35"></a>
+            <a href="http://www.sznet110.gov.cn/netalarm/index.jsp" rel="nofollow" target="_blank"><img src="__INDEX__STATIC__/picture/bico3.jpg" alt="网安" height="46" width="35"></a>
+        </div>
+        <p><a href="/profile/ChinaFlowerAssociation.htm" rel="nofollow" target="_blank" title="中国花卉协会会员">中国花卉协会会员</a> <a href="/profile/chinaECA.htm" rel="nofollow" target="_blank">中国电子商务协会会员</a> ICP经营许可证：<a href="/profile/ICP.htm" rel="nofollow" target="_blank">粤B2-20050744</a> <b>|</b> <a href="http://www.miibeian.gov.cn" rel="nofollow" target="_blank">粤ICP备09171662号</a> <span class="ico beian"></span>粤公网安备44030502000373号 Copyright © 2005-2016</p>
+        <p>花礼网 （中国鲜花礼品网） <a href="/">www.hua.com</a> 中国领先鲜花网品牌,专业鲜花速递服务！</p>
+    </footer>
+    <!-- 通用尾部 End -->
+    <!-- 弹出窗口-->
+    
+    
+    <div class="modal fade com-modal" id="loginModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="attNotice">关注商品</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe src="" width="100%" frameborder="0" id="attPage"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 弹出窗口end-->
+    <!-- 友情链接 -->
+    <div class="footer-link" style="display:none;">
+        <b>友链</b>
+        <div>
+            <a href="http://www.chinaname.cn/" target="_blank">中华取名网</a> <a href="http://sz.fang.com/" target="_blank">深圳房产网</a> <a href="http://www.juanpi.com" target="_blank">卷皮网</a> <a href="http://www.wbiao.cn" target="_blank">腕表</a>  <a href="http://www.bbhun.com" target="_blank">宝贝婚团网</a> <a href="http://www.yuanlin365.com/" target="_blank">苗木</a> <a href="http://www.zocai.com/" target="_blank">佐卡伊珠宝网</a> <a href="http://www.bloves.com/" target="_blank">钻石婚戒定制</a> <a href="http://www.spider.com.cn/" target="_blank">杂志</a> <a href="http://www.iyijiao.com/" target="_blank">中国青少年艺术教育网</a> <a href="http://www.aiuw.com/" target="_blank">装修网</a> <a href="http://www.dog126.com/" target="_blank">淘狗网</a> <a href="http://www.liwuyou.com/" target="_blank">礼无忧网</a> <a href="http://www.goupuzi.com/" target="_blank">宠物狗</a> <a href="http://www.jiyouwang.com/" target="_blank">机友网</a> <a href="http://www.cocodiy.com/" target="_blank">礼物网</a> <a href="http://zx.meilele.com/" target="_blank">装修</a> <a href="http://www.ipo3.com/" target="_blank">新三板</a> <a href="http://www.huoming.com/" target="_blank">商标注册</a> <a href="http://www.loho88.com" target="_blank">眼镜店</a>
+        </div>
+    </div>
+    <div style="display:none;"><iframe src="/home/iframehua"></iframe></div>
+    <!-- 友情链接 End -->
+        <div class="mui-mbar-tabs">
+            <div class="quick_link_mian">
+                <div class="quick_links_panel">
+                    <div id="quick_links" class="quick_links">
+                        <li>
+                            <a href="#none" class="my_qlinks"><i class="ico_user"></i></a>
+                            <!-- ***** 未登录 ***** -->
+                            <div class="ibar_login_box">
+                                <div class="avatar_box" id="loginStats"></div>
+                                <div class="login_btnbox">
+                                    <a href="/Member/Order/"><i class="ico_order"></i>我的订单</a>
+                                </div>
+                                <i class="icon_arrow_right_white"></i>
+                            </div>
+                        </li>
+                        <li id="shopCart">
+                            <a href="javascript:void(0)" class="message_list"><i class="ico_cart"></i><div class="span">购物车</div><span class="cart_num" id="cart_num">0</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="history_list"><i class="ico_collect"></i></a>
+                            <div class="mp_tooltip">我的关注<i class="icon_arrow_right_white"></i></div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="mpbtn_histroy"><i class="ico_histroy"></i></a>
+                            <div class="mp_tooltip">最近查看<i class="icon_arrow_right_white"></i></div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="leave_message"><i class="ico_phone"></i></a>
+                            <div class="mp_tooltip">400-899-8188<i class="icon_arrow_right_white"></i></div>
+                        </li>
+                        <li>
+                            <a href="/chat/" class="mpbtn_recharge" target="_blank"><i class="ico_headset"></i></a>
+                            <div class="mp_tooltip">在线客服<i class="icon_arrow_right_white"></i></div>
+                        </li>
+                    </div>
+                    <div class="quick_toggle">
+                        <li>
+                            <a href="javascript:void(0)"><i class="ico_qrcode"></i></a>
+                            <div class="mp_qrcode">
+                                <p>
+                                    <img src="__INDEX__STATIC__/picture/qr_wx.jpg" width="110" height="110">
+                                    关注微信公众号
+                                </p>
+                                <p>
+                                    <img src="__INDEX__STATIC__/picture/qr_app.jpg" width="110" height="110">
+                                    下载花礼APP
+                                </p>
+                                <i class="icon_arrow_right_white"></i>
+                            </div>
+                        </li>
+<!--                         <li>
+                            <a href="/Surveys.html" class="mpbtn_recharge" target="_blank"><i class="ico_surveys"></i></a>
+                            <div class="mp_tooltip">反馈意见<i class="icon_arrow_right_white"></i></div>
+                        </li> -->
+                        <li>
+                            <a href="#top" class="return_top"><i class="ico_gotop"></i></a>
+                            <div class="mp_tooltip">返回顶部<i class="icon_arrow_right_white"></i></div>
+                        </li>
+                    </div>
+                </div>
+                <div id="quick_links_pop" class="quick_links_pop hide"></div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="__INDEX__STATIC__/js/common.js"></script>
+    
+    
+    <script>
+        //关注js
+        $('#loginModal').modal({ backdrop: 'static', keyboard: false, show: false });
+        $('#loginModal').on('shown.bs.modal', function () {
+            var $this = $(this);
+            var $modal_dialog = $this.find('.modal-dialog');
+            $this.css('display', 'block');
+            $modal_dialog.css({ 'margin-top': Math.max(0, ($(window).height() - $modal_dialog.height()) / 2) });
+        });
+        $('#loginModal').on('hidden.bs.modal', function () {
+            $("#attPage").attr("src", "");
+        });
+        //关注商品
+        function DoGuanZhu(pp) {
+            $("#attNotice").html("关注商品");
+            $('#loginModal').modal('show');
+            $("#attPage").attr('src', '/shopping/winguanzhu?pp=' + pp)
+        }
+        //关注end
+    </script>
+
+
+
+        <script type="text/javascript" src="__INDEX__STATIC__/js/statesandright.js"></script>
+    <script type="text/javascript">
+        function reqUrlParam(paras) {
+            var url = location.href;
+            var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");
+            var paraObj = {}
+            for (i = 0; j = paraString[i]; i++) {
+                paraObj[j.substring(0, j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=") + 1, j.length);
+            }
+            var returnValue = paraObj[paras.toLowerCase()];
+            if (typeof (returnValue) == "undefined") {
+                return "";
+            } else {
+                return returnValue;
+            }
+        }
+        function setCurUrlClass() {
+            // css : class = "color_tj"
+            var pathname1 = window.location.pathname;
+            $("a[href='" + pathname1 + "'").addClass("color_tj");
+        }
+        if ($("#pjCount").length > 0) {
+            $.get("/productpj/GetPJCount", function (data) {
+                $("#pjCount").text(data);
+            });
+        }
+    </script>
+</body>
+</html>

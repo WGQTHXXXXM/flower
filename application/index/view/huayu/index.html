@@ -1,0 +1,724 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="zh-cn" http-equiv="Content-Language" />
+    <meta name="mobile-agent" content="format=xhtml;url=http://m.hua.com/huayu/">
+    <title>花语大全_鲜花花语大全-中国鲜花礼品网</title>
+    <meta name="description" content="花语大全,鲜花花语大全-鲜花花语，鲜花如何保养?鲜花如何保鲜?为您提供更多更好的鲜花常识,生活中有了鲜花的点缀会更精彩!-中国鲜花礼品网,领先鲜花速递服务，最快3小时鲜花礼品送达全国900多个城市" />
+    <meta name="keywords" content="花语大全、鲜花花语、鲜花祝福语、送花礼仪、节日如何送花、鲜花如何保鲜、鲜花常识、鲜花知识" />
+    <link href="../css/article1.css" rel="stylesheet" type="text/css" />
+    <link href="../css/baike.css" rel="stylesheet" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="../css/pagination.css">
+    <link type="text/css" rel="stylesheet" href="../css/common.css">
+<style>
+ul, ol{ padding:0; margin-bottom:0;}
+.rabox .content .incontent a{ font-size:12px;}
+.aboutallbox.box-sizing{inherit;}
+h3{ font-size:17px;}
+#top-rated {font-size: 12px;height:410px;margin: 15px 0px 0px;width: 954px;}
+#top-rated ul li {float: left;margin-bottom: 30px;width:466px;}
+#top-rated .article .ccontent {float: left;height: 80px;position: relative;width: 300px;}
+#top-rated  ul,#top-rated  li {list-style-type: none;background:none;font-size:12px; padding:0;}
+.Item_Brief{ margin-bottom:18px; line-height:18px; text-indent:24px; width:950px;}
+.Item_Title{ height:24px; line-height:24px; width:1000px; clear:both}
+.home_rec_cat{ float:left; width:464px;list-style:square;}
+.rabox .content .incontent {padding:10px 15px 40px 15px;}
+.bd_weixin_popup .bd_weixin_popup_foot{margin-top:-12px;}
+#top-rated .article .ccontent p {color: #6A6A6A;line-height: 20px;margin: 0px 0px 7px;overflow: hidden;height: 60px;}
+</style>
+<!--[if lt IE 9]>
+        <script src="__INDEX__STATIC__/js/html5shiv.min.js"></script>
+    <![endif]-->
+    <script src="__INDEX__STATIC__/js/jquery-1.3.2.min.js" type="text/javascript"></script>
+    <script src="__INDEX__STATIC__/js/comm.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () { $.get("/ajax/mltoplogininfo.asp?rmd=" + Math.random(), null, function (data) { $("#loginInfo").html(data); }); });
+</script>
+</head>
+
+<body class="huayu">
+	<!-- 顶部导航 -->
+	<div class="site-nav">
+		<div class="container">
+			<ul class="site-nav-l">
+				<li class="menu">
+					<a href="http://www.hua.com/" onClick="addfavorite();return false;"><span class="ico ico-star"></span>收藏鲜花网</a>
+				</li>
+				<li class="menu dropdown">
+					<a href="/mobile/" data-hover="dropdown" data-delay="0" target="_blank"><span class="ico ico-mobile"></span>手机花礼</a>
+					<div class="dropdown-menu dropdown-weixin">
+						<img src="__INDEX__STATIC__/picture/app_qrcode.jpg" height="124" width="124">
+		                <p>用手机客户端 享特别优惠</p>
+		            </div>
+				</li>
+			</ul>
+			<ul class="site-nav-r">
+				<li class="menu login" id="LoginInfo"></li>
+				<li class="site-nav-pipe">|</li>
+				<li class="menu">
+					<a href="/help/ordercx/" rel="nofollow" target="_blank">订单查询</a>
+				</li>
+				<li class="site-nav-pipe">|</li>
+				<li class="menu dropdown">
+					<a href="/help/" data-hover="dropdown" data-delay="0" target="_blank">客户服务<span class="glyphicon glyphicon-triangle-bottom"></span></a>
+					<div class="dropdown-menu dropdown-service">
+		                <a href="/member/payment/balancefill" target="_blank">在线付款</a>
+		                <a href="/help/" target="_blank">帮助中心</a>
+		                <a href="/help/afterservice.htm" target="_blank">售后服务</a>
+		                <a href="/help/sendRange.htm" target="_blank">配送范围</a>
+		                <a href="/chat/" target="_blank">留言反馈</a>
+		            </div>
+				</li>
+				<li class="site-nav-pipe">|</li>
+				<li class="menu dropdown">
+					<a href="/shopping/showcart" data-hover="dropdown" data-delay="0" rel="nofollow" target="_blank"><span class="ico ico-cart"></span>购物车<span class="text-primary" id="gwcCount"></span><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+					<div class="dropdown-menu dropdown-cart" id="CartInfo"></div>
+				</li>
+				<li class="site-nav-pipe">|</li>
+				<li class="menu slogan">
+					花语大全
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 顶部导航 End -->
+		<!-- 头部 -->
+	<header>
+		<div class="logo">
+			<h1><a href="http://www.hua.com/" class="logo-bd">花语大全,鲜花花语</a></h1>
+			<i></i>
+			<h2>中国鲜花礼品网 始于2005，简称花礼网</h2>
+		</div>
+		<div class="search"><form name="i_search" method="post" action="/search.aspx">
+			<div class="input-group">
+				<input name="keyword" type="text" class="form-control" placeholder="关键字,例:99朵">
+				<span class="input-group-btn">
+					<button class="btn btn-primary" type="button" onClick="this.form.submit()">文章搜索</button>
+				</span>
+			</div></form>
+			<span class="help-block"><a target="_blank" href="/search.aspx?keyword=花" title="花">花</a>&nbsp;<a target="_blank" href="/shengriliwu/" title="生日鲜花">生日鲜花</a>&nbsp;<a target="_blank" href="http://www.hua.com/livingflower/" title="泰国进口保鲜花">泰国进口保鲜花</a>&nbsp;<a target="_blank" href="http://www.hua.com/baike/FamousFlower/" title="世界名花">世界名花</a>&nbsp;</span>
+		</div>
+		<div class="service">
+			<span class="ico ico-phone"></span>400-889-8188
+			<a href="/chat/" target="_blank"><span class="ico ico-headset"></span>在线客服</a>
+		</div>
+	</header>
+	<!-- 头部 End -->
+	
+	<!-- 导航 -->
+	<nav class="common">
+		<div class="container">
+			<div class="categorys dropdown">
+				<h3 class="categorys-title" data-hover="dropdown" data-delay="0">
+					<a href="/all.html"><span class="pull-right glyphicon glyphicon-menu-down"></span>全部商品导购</a>
+				</h3>
+				<div class="dropdown-menu dropdown-cate">
+		        	<h4><a href="/flower/">鲜花</a></h4>
+		        	<ul class="cate-list list-inline">
+		        		<li><a href="/aiqingxianhua/">爱情鲜花</a></li>
+		        		<li><a href="/youqingxianhua/">友情鲜花</a></li>
+		        		<li><a href="/shengriliwu/">生日鲜花</a></li>
+						<li><a href="/songzhangbeixianhua/">问候长辈</a></li>
+						<li><a href="/zhufuqinghexianhua/">祝贺鲜花</a></li>
+						<li><a href="/hunqingxianhua/">婚庆鲜花</a></li>
+		        		<li><a href="/tanbingweiwenxianhua/">探病慰问</a></li>
+						<li><a href="/daoqianxianhua/">道歉鲜花</a></li>
+		        		<li><a href="/businessFlower/kaiyehualan/">开业花篮</a></li>
+		        	</ul>
+		        	<h4><a href="/yongshenghua/">永生花</a></h4>
+		        	<ul class="cate-list list-inline">
+	        			<li><a href="/yongshenghua/yongshenghua_box.html">经典花盒</a></li>
+	        			<li><a href="/yongshenghua/yongshenghua_large.html">巨型玫瑰</a></li>
+	        			<li><a href="/yongshenghua/yongshenghua_lavender.html">薰衣草</a></li>
+		        	</ul>
+					
+					<h4><a href="/cake/">蛋糕</a></h4>
+		        	<ul class="cate-list list-inline">
+	        			<li><a href="/cake/ganso/">元祖</a></li>
+	        			<li><a href="/cake/holiland/">好利来</a></li>
+	        			<li><a href="/cake/croissants/">可颂坊</a></li>
+						<li><a href="/cake/ganso/">窝夫小子</a></li>
+	        			<li><a href="/cake/holiland/">米卡米卡</a></li>
+	        			<li><a href="/cake/ganso/">一品轩</a></li>
+						<li><a href="/cake/allcitycake/">全国品牌</a></li>
+		        	</ul>
+					<h4><a href="/gifts/">礼品</a></h4>
+		        	<ul class="cate-list list-inline">
+	        			<li><a href="/livingflower/">泰国保鲜花</a></li>
+	        			<li><a href="/gifts/goldenflower/">金箔花</a></li>
+	        			<li><a href="/gifts/musicbox/">音乐盒</a></li>
+						<li><a href="/gifts/crystallaser/">水晶内雕</a></li>
+	        			<li><a href="/gifts/cosmeticmirror/">化妆镜</a></li>
+	        			<li><a href="/gifts/kingking/">香薰系列</a></li>
+						<li><a href="/toys/">品牌公仔</a></li>
+						<li><a href="/gifts/bestlife/">音乐睡枕</a></li>
+						<li><a href="/katonghuashu/">卡通花束</a></li>	
+		        	</ul>
+					<h4><a href="/Plant/">绿植</a></h4>
+		        	<ul class="cate-list list-inline">
+	        			<li><a href="/plant/greenplant/">绿色植物</a></li>
+			       		<li><a href="/plant/potflower/">盆栽花卉</a></li>
+		        	</ul>		     
+		        </div>
+			</div>        
+			<ul class="nav">
+			    <li><a href="/">首页</a></li>
+				<li><a href="/flower/">鲜花</a></li>
+				<li><a href="/yongshenghua/">永生花</a></li>
+				<li><a href="/cake/">蛋糕</a></li>
+				<li><a href="/gifts/">礼品</a></li>
+				<li><a href="/huayu/">花语大全</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- 导航 End -->
+
+    
+<!-- 中部内容开始 -->
+<div class="aboutallbox">
+<div class="inbasebox_L2">
+
+<!-- rightbox -->
+<div class="rabox">
+<div class="content">
+<div class="incontent" style=" border-top:1px solid  #DDDDDD;">
+<!--图文推荐-->
+<div class="g-row" id="top-rated">
+    
+    <div class="g-row ctitle Home_Header"><a href="tuwentuijian.html"><h3 class="">图文推荐</h3></a></div>
+    <ul> 
+     
+     
+            <li class="">
+            <div class="g-row article">
+                <div class="pic"><a href="http://www.hua.com/huayu/13676.html" target="_blank">
+                <img width="134" height="100" src="__INDEX__STATIC__/picture/20151210170447.jpg">
+                </a></div> 
+                <div class="g-a1 ccontent">
+                    <div class="g-row">
+                        <h4><a href="http://www.hua.com/huayu/13676.html" target="_blank" title="花语大全权威版，花礼网独家出品！">花语大全权威版，花礼网独家出品！</a></h4> 
+                        <span>分类：<a target="_blank" href="http://www.hua.com/huayu/huayu.html">花语</a></span> 
+                    </div> 
+                    <p>花语大全权威版，花礼网独家出品！花语包括：玫瑰花语、百合花语、满天星花语、薰衣草花语、蓝色妖姬花语、勿忘我花语、香槟玫瑰花语、郁金香花语、康乃馨的花语……还有送</p> 
+                </div> 
+            </div>
+        </li> 
+        
+         <li class="g-a4">
+            <div class="g-row article">
+                <div class="pic"><a href="http://www.hua.com/huayu/17573.html" target="_blank">
+                <img width="134" height="100" src="__INDEX__STATIC__/picture/20161115100706.jpg">
+                </a></div> 
+                <div class="g-a1 ccontent">
+                    <div class="g-row">
+                        <h4><a href="http://www.hua.com/huayu/17573.html" target="_blank" title="感恩节该如何送花表达感恩？">感恩节该如何送花表达感恩？</a></h4> 
+                        <span>分类：<a target="_blank" href="http://www.hua.com/huayu/ganenjie.html">感恩节送花</a></span> 
+                    </div> 
+                    <p>感恩节该如何送花表达感恩？人的一生中需要感恩的人和事很多，除了感恩那些在你的生活中起到决定性作用的人，请不要忘了你身边的家人和朋友。中国鲜花礼品网为您解答上述疑</p> 
+                </div> 
+            </div>
+        </li> 
+         
+            <li class="">
+            <div class="g-row article">
+                <div class="pic"><a href="http://www.hua.com/huayu/12737.html" target="_blank">
+                <img width="134" height="100" src="__INDEX__STATIC__/picture/20151014143811.jpg">
+                </a></div> 
+                <div class="g-a1 ccontent">
+                    <div class="g-row">
+                        <h4><a href="http://www.hua.com/huayu/12737.html" target="_blank" title="各星座女收花反应，水瓶座最萌！">各星座女收花反应，水瓶座最萌！</a></h4> 
+                        <span>分类：<a target="_blank" href="http://www.hua.com/huayu/jiqiao.html">送花艺术</a></span> 
+                    </div> 
+                    <p>没有女人不爱鲜花，而不同星座女孩在收到鲜花时的奇葩表现，绝对让你大跌眼镜</p> 
+                </div> 
+            </div>
+        </li> 
+        
+         <li class="g-a4">
+            <div class="g-row article">
+                <div class="pic"><a href="http://www.hua.com/huayu/16624.html" target="_blank">
+                <img width="134" height="100" src="__INDEX__STATIC__/picture/20160922140240.jpg">
+                </a></div> 
+                <div class="g-a1 ccontent">
+                    <div class="g-row">
+                        <h4><a href="http://www.hua.com/huayu/16624.html" target="_blank" title="女朋友生日送永生花有没有推荐？">女朋友生日送永生花有没有推荐？</a></h4> 
+                        <span>分类：<a target="_blank" href="http://www.hua.com/huayu/shengri.html">生日送花</a></span> 
+                    </div> 
+                    <p>还在发愁女朋友生日送什么才有创意吗？送她“永不凋谢的鲜花”——永生花。更多永生花款，请关注花礼网官方微信，或者上HUA.COM。众多永生花，新颖大方，充满美感。</p> 
+                </div> 
+            </div>
+        </li> 
+         
+            <li class="">
+            <div class="g-row article">
+                <div class="pic"><a href="http://www.hua.com/huayu/16477.html" target="_blank">
+                <img width="134" height="100" src="__INDEX__STATIC__/picture/20160922141839.jpg">
+                </a></div> 
+                <div class="g-a1 ccontent">
+                    <div class="g-row">
+                        <h4><a href="http://www.hua.com/huayu/16477.html" target="_blank" title="结婚用花哪种合适？婚礼八大鲜花推荐">结婚用花哪种合适？婚礼八大鲜花推…</a></h4> 
+                        <span>分类：<a target="_blank" href="http://www.hua.com/huayu/jiehun.html">结婚送花</a></span> 
+                    </div> 
+                    <p>结婚用花哪种合适？相信许多人都渴望一场完美的婚礼。结婚用什么鲜花呢，结婚鲜花有哪些花款推荐？每一种鲜花所象征的意义都不同，鲜花也是婚礼的必备物品，那么下面就和花</p> 
+                </div> 
+            </div>
+        </li> 
+        
+         <li class="g-a4">
+            <div class="g-row article">
+                <div class="pic"><a href="http://www.hua.com/huayu/16914.html" target="_blank">
+                <img width="134" height="100" src="__INDEX__STATIC__/picture/20160922140711.jpg">
+                </a></div> 
+                <div class="g-a1 ccontent">
+                    <div class="g-row">
+                        <h4><a href="http://www.hua.com/huayu/16914.html" target="_blank" title="发财树风水学，发财树有哪些寓意？">发财树风水学，发财树有哪些寓意？</a></h4> 
+                        <span>分类：<a target="_blank" href="http://www.hua.com/huayu/zhishi.html">鲜花常识</a></span> 
+                    </div> 
+                    <p>发财树，顾名思义，招财进宝，在国内，这是一种会深受欢迎的植物，特别是经商的人们。那么你知道发财树怎么摆放，发财树可以放在卧室吗，发财树有什么寓意，给开业的朋友送</p> 
+                </div> 
+            </div>
+        </li> 
+        
+
+    </ul> 
+</div>
+  <div class="separate"></div>
+<!--推荐文章-->
+    <div class="Home_Header Home_dot">推荐文章</div>
+             <div class="Item_Title">
+                <a href="http://www.hua.com/huayu/17649.html" class="left" target="_blank" >最永恒的圣诞节礼物— —永生花系列花品</a>
+                <a target="_blank" class="right" href="http://www.hua.com/huayu/shengdanjie.html">圣诞节送花</a></div>
+             <div class="Item_Brief"><a href="http://www.hua.com/huayu/17649.html" target="_blank" >最永恒的圣诞节礼物— —永生花系列花品，中国鲜花礼品网专业提供平安夜及圣诞节送花服务，数百款圣诞节感鲜花任您选择：玫瑰花束送给爱人，鲜花礼篮送给父母长辈老师，圣诞节礼物送给朋友！</a></div>
+        
+             <div class="Item_Title">
+                <a href="http://www.hua.com/huayu/17648.html" class="left" target="_blank" >2016圣诞节永生花新品推荐！</a>
+                <a target="_blank" class="right" href="http://www.hua.com/huayu/huayi.html">花卉花艺</a></div>
+             <div class="Item_Brief"><a href="http://www.hua.com/huayu/17648.html" target="_blank" >2016圣诞节永生花新品推荐！放在桌上的特色永生花，适合摆放在卧室、办公桌、自家杂货铺、咖啡店；当作圣诞的暖心小礼物送给伴侣、朋友或自己。-中国鲜花礼品网（花礼网）</a></div>
+        
+             <div class="Item_Title">
+                <a href="http://www.hua.com/profile/17640.html" class="left" target="_blank" >花礼网2016圣诞节新品出炉啦~选礼物不要错过这里！</a>
+                <a target="_blank" class="right" href="http://www.hua.com/profile/news.htm">公司动态</a></div>
+             <div class="Item_Brief"><a href="http://www.hua.com/profile/17640.html" target="_blank" >花礼网2016圣诞节新品出炉啦~选礼物不要错过这里！-中国鲜花礼品网公司动态</a></div>
+        
+             <div class="Item_Title">
+                <a href="http://www.hua.com/huayu/17605.html" class="left" target="_blank" >圣诞节订花上哪订比较好？</a>
+                <a target="_blank" class="right" href="http://www.hua.com/huayu/ganenjie.html">感恩节送花</a></div>
+             <div class="Item_Brief"><a href="http://www.hua.com/huayu/17605.html" target="_blank" >圣诞节订花上哪订比较好？中国鲜花礼品网为您解答上述疑问！本站专业提供感恩节鲜花，数百款花束任您选择：感谢爱人，有她相伴；感恩父母老师及长辈培育教诲之恩！</a></div>
+        
+             <div class="Item_Title">
+                <a href="http://www.hua.com/huayu/17593.html" class="left" target="_blank" >圣诞节送什么礼物比较好？</a>
+                <a target="_blank" class="right" href="http://www.hua.com/huayu/shengdanjie.html">圣诞节送花</a></div>
+             <div class="Item_Brief"><a href="http://www.hua.com/huayu/17593.html" target="_blank" >圣诞节送什么礼物比较好？中国鲜花礼品网专业提供平安夜及圣诞节送花服务，数百款圣诞节感鲜花任您选择：玫瑰花束送给爱人，鲜花礼篮送给父母长辈老师，圣诞节礼物送给朋友！</a></div>
+        
+             <div class="Item_Title">
+                <a href="http://www.hua.com/huayu/17591.html" class="left" target="_blank" >圣诞节怎样示爱求婚，成功率最高！！</a>
+                <a target="_blank" class="right" href="http://www.hua.com/huayu/shengdanjie.html">圣诞节送花</a></div>
+             <div class="Item_Brief"><a href="http://www.hua.com/huayu/17591.html" target="_blank" >圣诞节怎样示爱求婚，成功率最高！！中国鲜花礼品网专业提供平安夜及圣诞节送花服务，数百款圣诞节感鲜花任您选择：玫瑰花束送给爱人，鲜花礼篮送给父母长辈老师，圣诞节礼物送给朋友！</a></div>
+        
+             <div class="Item_Title">
+                <a href="http://www.hua.com/huayu/17590.html" class="left" target="_blank" >花礼网圣诞节新品花束，99朵精品玫瑰推荐！</a>
+                <a target="_blank" class="right" href="http://www.hua.com/huayu/shengdanjie.html">圣诞节送花</a></div>
+             <div class="Item_Brief"><a href="http://www.hua.com/huayu/17590.html" target="_blank" >花礼网圣诞节新品花束，99朵精品玫瑰推荐！中国鲜花礼品网专业提供平安夜及圣诞节送花服务，数百款圣诞节感鲜花任您选择：玫瑰花束送给爱人，鲜花礼篮送给父母长辈老师，圣诞节礼物送给朋友！</a></div>
+        
+             <div class="Item_Title">
+                <a href="http://www.hua.com/huayu/17585.html" class="left" target="_blank" >圣诞节送礼|如何和女生度过一个浪漫的圣诞节？</a>
+                <a target="_blank" class="right" href="http://www.hua.com/huayu/shengdanjie.html">圣诞节送花</a></div>
+             <div class="Item_Brief"><a href="http://www.hua.com/huayu/17585.html" target="_blank" >圣诞节送礼|如何和女生度过一个浪漫的圣诞节？中国鲜花礼品网专业提供平安夜及圣诞节送花服务，数百款圣诞节感鲜花任您选择：玫瑰花束送给爱人，鲜花礼篮送给父母长辈老师，圣诞节礼物送给朋友！</a></div>
+            
+      <div class="separate"></div>
+<!--分类推荐-->
+     
+ <div class="Home_Header Home_dot">分类推荐</div> 
+     <div class="separate"></div> 
+             <dl class="home_rec_cat">
+                <dd class="header">
+                <a class="left" target="_blank" href="http://www.hua.com/huayu/list_liwu.html">送礼</a>
+                <a class="right" target="_blank" href="http://www.hua.com/huayu/list_liwu.html">更多>></a>
+                </dd>
+                 <dd><a href="http://www.hua.com/huayu/17495.html" target="_blank" >这些节日礼物所代表的寓意你都知道吗？</a></dd><dd><a href="http://www.hua.com/huayu/17494.html" target="_blank" >挑什么礼物送给男性朋友？</a></dd><dd><a href="http://www.hua.com/huayu/16970.html" target="_blank" >释放洪荒之力，教你如何拿下处女座MM</a></dd><dd><a href="http://www.hua.com/huayu/16555.html" target="_blank" >最全送礼禁忌整理！</a></dd><dd><a href="http://www.hua.com/huayu/16419.html" target="_blank" >职场中，如何给领导送礼？</a></dd><dd><a href="http://www.hua.com/huayu/16415.html" target="_blank" >教你如何在结婚纪念日时，为爱人挑选礼物？</a></dd><dd><a href="http://www.hua.com/huayu/14899.html" target="_blank" >2016年生日礼物新品推荐</a></dd><dd><a href="http://www.hua.com/huayu/14898.html" target="_blank" >2015年年度畅销礼品排行榜</a></dd>
+             </dl>
+        
+              <dl class="home_rec_cat g-a4">
+                <dd class="header">
+                <a class="left" target="_blank" href="http://www.hua.com/huayu/shengri.html">生日送花</a>
+                <a class="right" target="_blank" href="http://www.hua.com/huayu/shengri.html">更多>></a>
+                </dd>
+                 <dd><a href="http://www.hua.com/huayu/16624.html" target="_blank" >女朋友生日送永生花有没有推荐？</a></dd><dd><a href="http://www.hua.com/huayu/13891.html" target="_blank" >未来婆婆生日送什么花？</a></dd><dd><a href="http://www.hua.com/huayu/16913.html" target="_blank" >生日同城鲜花速递有哪些推荐？</a></dd><dd><a href="http://www.hua.com/huayu/16912.html" target="_blank" >生日送花可以微信预订吗？</a></dd><dd><a href="http://www.hua.com/huayu/16621.html" target="_blank" >生日送永生花可以吗？</a></dd><dd><a href="http://www.hua.com/huayu/16357.html" target="_blank" >生日送花可以网上预定吗？</a></dd><dd><a href="http://www.hua.com/huayu/15805.html" target="_blank" >哪里定制生日鲜花？速度快的是哪家？</a></dd><dd><a href="http://www.hua.com/huayu/15681.html" target="_blank" >生日鲜花一般去哪儿买最方便最快捷？</a></dd>
+             </dl>
+             <div class="separate_cat"></div>
+        
+             <dl class="home_rec_cat">
+                <dd class="header">
+                <a class="left" target="_blank" href="http://www.hua.com/huayu/jiqiao.html">送花艺术</a>
+                <a class="right" target="_blank" href="http://www.hua.com/huayu/jiqiao.html">更多>></a>
+                </dd>
+                 <dd><a href="http://www.hua.com/huayu/16891.html" target="_blank" >六个表白技巧让你920表白节顺利脱单</a></dd><dd><a href="http://www.hua.com/huayu/16859.html" target="_blank" >十二星座女喜欢什么花？给十二星座女适合送什么花？</a></dd><dd><a href="http://www.hua.com/huayu/16355.html" target="_blank" >微信订花哪家好？送花微信公众号哪个靠谱？</a></dd><dd><a href="http://www.hua.com/huayu/16354.html" target="_blank" >送花APP哪一个靠谱？APP订花方便吗？</a></dd><dd><a href="http://www.hua.com/huayu/16341.html" target="_blank" >电商移动化，你会微信订鲜花吗？关注哪个微信公众号订鲜花比较好？</a></dd><dd><a href="http://www.hua.com/huayu/16339.html" target="_blank" >看十二生肖收花如何反应？一图看出爱情运势</a></dd><dd><a href="http://www.hua.com/huayu/15700.html" target="_blank" >送花一天当中什么时间最合适？</a></dd><dd><a href="http://www.hua.com/huayu/15492.html" target="_blank" >5月21日可以表白送花吗？520与521有什么区别？</a></dd>
+             </dl>
+        
+              <dl class="home_rec_cat g-a4">
+                <dd class="header">
+                <a class="left" target="_blank" href="http://www.hua.com/huayu/zhishi.html">鲜花常识</a>
+                <a class="right" target="_blank" href="http://www.hua.com/huayu/zhishi.html">更多>></a>
+                </dd>
+                 <dd><a href="http://www.hua.com/huayu/16914.html" target="_blank" >发财树风水学，发财树有哪些寓意？</a></dd><dd><a href="http://www.hua.com/huayu/14593.html" target="_blank" >2016，为12星座开运的12种花</a></dd><dd><a href="http://www.hua.com/huayu/12939.html" target="_blank" >婚礼十大必备花卉</a></dd><dd><a href="http://www.hua.com/huayu/17644.html" target="_blank" >黑魔术玫瑰和卡罗拉玫瑰的区别！</a></dd><dd><a href="http://www.hua.com/huayu/17634.html" target="_blank" >啤酒花常识你知多少？</a></dd><dd><a href="http://www.hua.com/huayu/17628.html" target="_blank" >家养花为何易萎焉？</a></dd><dd><a href="http://www.hua.com/huayu/17625.html" target="_blank" >让长寿花多开花的三个方法！</a></dd><dd><a href="http://www.hua.com/huayu/17619.html" target="_blank" >白掌（白雪公主）为何变绿色了？</a></dd>
+             </dl>
+             <div class="separate_cat"></div>
+        
+             <dl class="home_rec_cat">
+                <dd class="header">
+                <a class="left" target="_blank" href="http://www.hua.com/huayu/shenghuo.html">鲜花生活</a>
+                <a class="right" target="_blank" href="http://www.hua.com/huayu/shenghuo.html">更多>></a>
+                </dd>
+                 <dd><a href="http://www.hua.com/huayu/17487.html" target="_blank" >你见过秋色绣球的美吗？秋色绣球如何做干花？</a></dd><dd><a href="http://www.hua.com/huayu/15442.html" target="_blank" >最能代表女神的花，你是哪一种？</a></dd><dd><a href="http://www.hua.com/huayu/13519.html" target="_blank" >雾霾天，清除污染的最佳十大室内植物</a></dd><dd><a href="http://www.hua.com/huayu/17610.html" target="_blank" >卖鲜花的最高境界，你知道是啥吗？</a></dd><dd><a href="http://www.hua.com/huayu/17611.html" target="_blank" >6招教你如何打造室内花园</a></dd><dd><a href="http://www.hua.com/huayu/17603.html" target="_blank" >橡皮树是如何美化你的家？</a></dd><dd><a href="http://www.hua.com/huayu/17604.html" target="_blank" >怎么制作干花？哪些花材适合做干花？</a></dd><dd><a href="http://www.hua.com/huayu/17589.html" target="_blank" >花枯萎了怎么办？教你四种DIY干花制作方法</a></dd>
+             </dl>
+        
+              <dl class="home_rec_cat g-a4">
+                <dd class="header">
+                <a class="left" target="_blank" href="http://www.hua.com/huayu/huayi.html">花卉花艺</a>
+                <a class="right" target="_blank" href="http://www.hua.com/huayu/huayi.html">更多>></a>
+                </dd>
+                 <dd><a href="http://www.hua.com/huayu/17648.html" target="_blank" >2016圣诞节永生花新品推荐！</a></dd><dd><a href="http://www.hua.com/huayu/17491.html" target="_blank" >花艺，先让色彩说话</a></dd><dd><a href="http://www.hua.com/huayu/17489.html" target="_blank" >新手想学习花艺，该如何快速入门？</a></dd><dd><a href="http://www.hua.com/huayu/16428.html" target="_blank" >教你如何制作一款简单的手捧花~</a></dd><dd><a href="http://www.hua.com/huayu/16421.html" target="_blank" >花礼网新品永生花推荐，她怎会不喜欢？</a></dd><dd><a href="http://www.hua.com/huayu/17641.html" target="_blank" >扶郎花这样搭配才好看！</a></dd><dd><a href="http://www.hua.com/huayu/17580.html" target="_blank" >蔷薇果在插花中的运用！</a></dd><dd><a href="http://www.hua.com/huayu/17560.html" target="_blank" >在地球上种颗星星——伯利恒之星（天鹅绒）</a></dd>
+             </dl>
+             <div class="separate_cat"></div>
+        
+             <dl class="home_rec_cat">
+                <dd class="header">
+                <a class="left" target="_blank" href="http://www.hua.com/huayu/huayu.html">花语</a>
+                <a class="right" target="_blank" href="http://www.hua.com/huayu/huayu.html">更多>></a>
+                </dd>
+                 <dd><a href="http://www.hua.com/huayu/17488.html" target="_blank" >多头康乃馨的花语是什么？</a></dd><dd><a href="http://www.hua.com/huayu/10550.html" target="_blank" >蓝色妖姬花语和寓意是什么？</a></dd><dd><a href="http://www.hua.com/huayu/10807.html" target="_blank" >薰衣草花语是什么？</a></dd><dd><a href="http://www.hua.com/huayu/11558.html" target="_blank" >百合花语，百合花怎么养？</a></dd><dd><a href="http://www.hua.com/huayu/11044.html" target="_blank" >白玫瑰花语，送白玫瑰代表什么意思？</a></dd><dd><a href="http://www.hua.com/huayu/10961.html" target="_blank" >彼岸花的花语</a></dd><dd><a href="http://www.hua.com/huayu/10885.html" target="_blank" >满天星花语</a></dd><dd><a href="http://www.hua.com/huayu/10866.html" target="_blank" >勿忘我花语</a></dd>
+             </dl>
+        
+              <dl class="home_rec_cat g-a4">
+                <dd class="header">
+                <a class="left" target="_blank" href="http://www.hua.com/huayu/list_zhufuyu.html">祝福语大全</a>
+                <a class="right" target="_blank" href="http://www.hua.com/huayu/list_zhufuyu.html">更多>></a>
+                </dd>
+                 <dd><a href="http://www.hua.com/huayu/13284.html" target="_blank" >重阳节送花祝福语精选</a></dd><dd><a href="http://www.hua.com/huayu/20060119182956.htm" target="_blank" >情人节祝福语（一）</a></dd><dd><a href="http://www.hua.com/huayu/20120525123201.htm" target="_blank" >经典生日祝福语</a></dd><dd><a href="http://www.hua.com/huayu/20051116174222.htm" target="_blank" >经典送花祝福语</a></dd><dd><a href="http://www.hua.com/huayu/17496.html" target="_blank" >给闺蜜的生日祝福语精选（一）</a></dd><dd><a href="http://www.hua.com/huayu/17502.html" target="_blank" >宝宝生日祝福语大全（二）</a></dd><dd><a href="http://www.hua.com/huayu/17499.html" target="_blank" >爸爸生日祝福语精选</a></dd><dd><a href="http://www.hua.com/huayu/17498.html" target="_blank" >给闺蜜的生日祝福语精选（三）</a></dd>
+             </dl>
+             <div class="separate_cat"></div>
+        
+             <dl class="home_rec_cat">
+                <dd class="header">
+                <a class="left" target="_blank" href="http://www.hua.com/profile/media.html">媒体报道</a>
+                <a class="right" target="_blank" href="http://www.hua.com/profile/media.html">更多>></a>
+                </dd>
+                 <dd><a href="http://www.hua.com/profile/17371.html" target="_blank" >鲜花助力920表白节，看花礼网如何玩转“920”？</a></dd><dd><a href="http://www.hua.com/profile/10413.html" target="_blank" >中国鲜花礼品网，引领网上送花潮流</a></dd><dd><a href="http://www.hua.com/profile/17639.html" target="_blank" >百易（花礼网）获2016年国家级高新技术企业认定</a></dd><dd><a href="http://www.hua.com/profile/17533.html" target="_blank" >花礼网与"不要音乐"合作打造国内大型音乐旅行节目</a></dd><dd><a href="http://www.hua.com/profile/17190.html" target="_blank" >教师节临近鲜花走俏   康乃馨仍然最抢手</a></dd><dd><a href="http://www.hua.com/profile/16165.html" target="_blank" >花礼网携手陌陌礼物商城推出鲜花即时送</a></dd><dd><a href="http://www.hua.com/profile/15419.html" target="_blank" >花礼网微电影《勇敢爱》倾情巨献</a></dd><dd><a href="http://www.hua.com/profile/13828.html" target="_blank" >花礼网发布2015中国浪漫城市排行榜，北深高居前两位</a></dd>
+             </dl>
+        
+              <dl class="home_rec_cat g-a4">
+                <dd class="header">
+                <a class="left" target="_blank" href="http://www.hua.com/profile/gdsj.html">感动瞬间</a>
+                <a class="right" target="_blank" href="http://www.hua.com/profile/gdsj.html">更多>></a>
+                </dd>
+                 <dd><a href="http://www.hua.com/profile/17387.html" target="_blank" >希望你永远自由自在</a></dd><dd><a href="http://www.hua.com/profile/16994.html" target="_blank" >爱你如初</a></dd><dd><a href="http://www.hua.com/profile/16888.html" target="_blank" >我们一直在你身边</a></dd><dd><a href="http://www.hua.com/profile/16838.html" target="_blank" >《38℃》</a></dd><dd><a href="http://www.hua.com/profile/16781.html" target="_blank" >在最好的年华遇见你</a></dd><dd><a href="http://www.hua.com/profile/16714.html" target="_blank" >我永远的小公举</a></dd><dd><a href="http://www.hua.com/profile/16701.html" target="_blank" >相见恨晚，时间未晚。</a></dd><dd><a href="http://www.hua.com/profile/16679.html" target="_blank" >你愿意成为我的爱侣吗？</a></dd>
+             </dl>
+             <div class="separate_cat"></div>
+        
+        
+    
+    <div class="separate"></div>
+    <!--最新文章-->
+   <div class="Home_Header Home_dot"><a class="right" style="float:right" target="_blank" href="/huayu/zuixin.html">更多>></a>最新文章</div>
+            
+        
+            <div class="Item_Title">
+             <a class="left" href="http://www.hua.com/huayu/17647.html" target="_blank" >送白玫瑰代表什么？白玫瑰新品花束推荐！</a>
+             <a target="_blank" class="right" href="http://www.hua.com/huayu/huayu.html">花语</a>
+             </div>
+            <div class="Item_Brief"><a href="http://www.hua.com/huayu/17647.html" target="_blank" >送白玫瑰代表什么？白玫瑰新品花束推荐！白玫瑰代表纯纯的爱，表示你是圣洁的，甘心为你付出所有；白玫瑰的花语是纯洁、纯情、天真；白玫瑰寓意是我足以与你相配。更多花语常识，尽在中国鲜花礼品网（花礼网）</a></div>
+        
+            <div class="Item_Title">
+             <a class="left" href="http://www.hua.com/huayu/17646.html" target="_blank" >粉佳人玫瑰的花语是什么？粉佳人玫瑰新品花束推荐！</a>
+             <a target="_blank" class="right" href="http://www.hua.com/huayu/huayu.html">花语</a>
+             </div>
+            <div class="Item_Brief"><a href="http://www.hua.com/huayu/17646.html" target="_blank" >粉佳人玫瑰的花语是什么？粉佳人玫瑰新品花束推荐！  -中国鲜花礼品网（花礼网）</a></div>
+        
+            <div class="Item_Title">
+             <a class="left" href="http://www.hua.com/huayu/17645.html" target="_blank" >9朵戴安娜玫瑰的花语，9朵戴安娜玫瑰代表什么意思？</a>
+             <a target="_blank" class="right" href="http://www.hua.com/huayu/huayu.html">花语</a>
+             </div>
+            <div class="Item_Brief"><a href="http://www.hua.com/huayu/17645.html" target="_blank" >9朵戴安娜玫瑰的花语，9朵戴安娜玫瑰代表什么意思？送9朵戴安娜玫瑰花束代表沉浸在爱情的甜蜜中每天都是如此的快乐，我愿用一生的爱去陪伴你。 -中国鲜花礼品网（花礼网）</a></div>
+        
+            <div class="Item_Title">
+             <a class="left" href="http://www.hua.com/huayu/17644.html" target="_blank" >黑魔术玫瑰和卡罗拉玫瑰的区别！</a>
+             <a target="_blank" class="right" href="http://www.hua.com/huayu/zhishi.html">鲜花常识</a>
+             </div>
+            <div class="Item_Brief"><a href="http://www.hua.com/huayu/17644.html" target="_blank" >黑魔术玫瑰和卡罗拉玫瑰的区别！下面我们来看看红玫瑰品种中黑魔术玫瑰和卡罗拉玫瑰的区别！更多鲜花常识，尽在中国鲜花礼品网（花礼网）</a></div>
+        
+            <div class="Item_Title">
+             <a class="left" href="http://www.hua.com/huayu/17643.html" target="_blank" >玛利亚玫瑰的花语是什么？花礼网新品玛利亚玫瑰花束推荐！</a>
+             <a target="_blank" class="right" href="http://www.hua.com/huayu/huayu.html">花语</a>
+             </div>
+            <div class="Item_Brief"><a href="http://www.hua.com/huayu/17643.html" target="_blank" >玛利亚玫瑰的花语是什么？花礼网新品玛利亚玫瑰花束推荐！玛丽亚(Marie Victorin)切花月季，颜色是浅浅的桃红色，非常好看。更多花语常识，尽在中国鲜花礼品网（花礼网）</a></div>
+        
+            <div class="Item_Title">
+             <a class="left" href="http://www.hua.com/huayu/17642.html" target="_blank" >11朵雪山白玫瑰的花语，11朵雪山白玫瑰代表什么意思？</a>
+             <a target="_blank" class="right" href="http://www.hua.com/huayu/huayu.html">花语</a>
+             </div>
+            <div class="Item_Brief"><a href="http://www.hua.com/huayu/17642.html" target="_blank" >11朵雪山白玫瑰的花语，11朵雪山白玫瑰代表什么意思？11朵雪山白玫瑰代表一生一世的挚爱-中国鲜花礼品网（花礼网）</a></div>
+        
+            <div class="Item_Title">
+             <a class="left" href="http://www.hua.com/huayu/17641.html" target="_blank" >扶郎花这样搭配才好看！</a>
+             <a target="_blank" class="right" href="http://www.hua.com/huayu/huayi.html">花卉花艺</a>
+             </div>
+            <div class="Item_Brief"><a href="http://www.hua.com/huayu/17641.html" target="_blank" >扶郎花，也称为非洲菊，有时也叫太阳花、灯盏花、波斯花、千日菊，是一种茎枝娇弯、花朵低垂的美花，也非常适合当居家摆放。今天，就给大家带来扶郎花的素材，希望这种好看又好用的花材能成为大家居家的一员哦！</a></div>
+        
+            <div class="Item_Title">
+             <a class="left" href="http://www.hua.com/profile/17639.html" target="_blank" >百易（花礼网）获2016年国家级高新技术企业认定</a>
+             <a target="_blank" class="right" href="http://www.hua.com/profile/media.html">媒体报道</a>
+             </div>
+            <div class="Item_Brief"><a href="http://www.hua.com/profile/17639.html" target="_blank" >百易（花礼网）获2016年国家级高新技术企业认定-中国鲜花礼品网媒体报道</a></div>
+                
+    
+ <div class="separate"></div>
+ 
+<!-- 分享到start -->
+
+<div class="fenxiang">
+
+<!-- Baidu Button BEGIN -->
+
+<div class="bdsharebuttonbox">
+    
+    <a href="#" class="bds_more" data-cmd="more">分享到:</a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    
+
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "24" }, "share": {}, "image": { "viewList": ["tsina", "tqq", "qzone", "sqq", "weixin"], "viewText": "分享到：", "viewSize": "16" }, "selectShare": { "bdContainerClass": null, "bdSelectMiniList": ["tsina", "tqq", "qzone", "sqq", "weixin"] } }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+
+</script>
+<!-- Baidu Button END -->
+
+</div>
+
+
+<!-- 分享到END -->
+
+
+
+<div class="hytablebox">
+  <div class="clear"></div>
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+<div class="inbasebox_R2">
+<!-- 花语大全 -->
+
+   
+    <div class="hybk_titbox">
+<div class="title">花语分类导航</div>
+<div class="borderct">
+<div class="incontent">
+    
+<ul class="bk_menu">
+    
+             <li class="first"><a href="http://www.hua.com/huayu/list_xianhua.html" target="_blank">送花</a></li>
+            <li><dl>
+            <dd><a href="http://www.hua.com/huayu/jiehun.html" target="_blank">结婚送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/story.html" target="_blank">送花故事分享</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/shengri.html" target="_blank">生日送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/jiqiao.html" target="_blank">送花艺术</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/zhishi.html" target="_blank">鲜花常识</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/shenghuo.html" target="_blank">鲜花生活</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/huayi.html" target="_blank">花卉花艺</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/huayu.html" target="_blank">花语</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/shangwu.html" target="_blank">商务送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/huadian.html" target="_blank">花店经营</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/daoqian.html" target="_blank">道歉送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/kaiye.html" target="_blank">开业送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/qiaoqian.html" target="_blank">乔迁送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/shengzi.html" target="_blank">生子送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/tanbing.html" target="_blank">探病送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/biye.html" target="_blank">毕业送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/jiehunjinian.html" target="_blank">结婚纪念送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/forgirl.html" target="_blank">给女朋友送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/forfriend.html" target="_blank">给朋友送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/forleader.html" target="_blank">给领导送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/forkids.html" target="_blank">给孩子送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/forelder.html" target="_blank">给长辈送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/forteacher.html" target="_blank">给老师送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/formate.html" target="_blank">给同事送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/forclient.html" target="_blank">给客户送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/forparent.html" target="_blank">给父母送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/forwife.html" target="_blank">给妻子送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/forrelative.html" target="_blank">给亲属送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/yidisonghua.html" target="_blank">异地送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/zhushousonghua.html" target="_blank">祝寿送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/qiuhunsonghua.html" target="_blank">求婚送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/biaobaisonghua.html" target="_blank">求爱表白送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/guanggunjie.html" target="_blank">光棍节送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/ganenjie.html" target="_blank">感恩节送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/shengdanjie.html" target="_blank">圣诞节送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/chunjie.html" target="_blank">春节送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/qingrenjie.html" target="_blank">情人节送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/sanbajie.html" target="_blank">三八妇女节送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/muqingjie.html" target="_blank">母亲节送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/fuqingjie.html" target="_blank">父亲节送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/qixijie.html" target="_blank">七夕节送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/jiaoshijie.html" target="_blank">教师节送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/zhongqiujie.html" target="_blank">中秋节送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/hushijie.html" target="_blank">护士节送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/duanwujie.html" target="_blank">端午节送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/chongyangjie.html" target="_blank">重阳节送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/yuanxiaojie.html" target="_blank">元宵节送花</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/whiteday.html" target="_blank">白色情人节送花</a></dd>
+            </dl></li>
+        
+             <li class="first"><a href="http://www.hua.com/huayu/list_dangao.html" target="_blank">蛋糕常识</a></li>
+            <li><dl></dl></li>
+        
+             <li class="first"><a href="http://www.hua.com/huayu/list_liwu.html" target="_blank">送礼</a></li>
+            <li><dl>
+            <dd><a href="http://www.hua.com/huayu/tolingdao.html" target="_blank">送领导生日礼物</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/tozhangbei.html" target="_blank">送长辈生日礼物</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/totongshi.html" target="_blank">送同事生日礼物</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/tomuqing.html" target="_blank">送母亲生日礼物</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/tonvyou.html" target="_blank">送女朋友生日礼物</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/tonanyou.html" target="_blank">送男朋友生日礼物</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/tokehu.html" target="_blank">送客户生日礼物</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/togongsi.html" target="_blank">送员工生日礼物</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/topengyou.html" target="_blank">送朋友生日礼物</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/toxiaohai.html" target="_blank">送小孩生日礼物</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/tofuqing.html" target="_blank">送父亲生日礼物</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/tosongli.html" target="_blank">送礼艺术</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/tozhinan.html" target="_blank">生日礼物指南</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/tojieri.html" target="_blank">节日礼物</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/toqizi.html" target="_blank">送妻子生日礼物</a></dd>
+            </dl></li>
+        
+             <li class="first"><a href="http://www.hua.com/huayu/list_zhufuyu.html" target="_blank">祝福语大全</a></li>
+            <li><dl></dl></li>
+        
+             <li class="first"><a href="http://www.hua.com/huayu/yanghua.html" target="_blank">养花</a></li>
+            <li><dl>
+            <dd><a href="http://www.hua.com/huayu/yanghua_01.html" target="_blank">鲜花养护</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/yanghua_02.html" target="_blank">花卉盆栽养护</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/yanghua_03.html" target="_blank">绿植养护</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/huahuidaquan.html" target="_blank">花卉大全</a></dd>
+            
+            <dd><a href="http://www.hua.com/huayu/xianqiehua.html" target="_blank">常用鲜切花专辑</a></dd>
+            </dl></li>
+        
+</ul>
+
+</div>
+</div>
+
+<div class="imgbottom"></div>
+</div>
+
+<!-- 花语大全END -->
+</div>
+
+</div>
+
+<!-- 中部内容结束 -->
+<div style="clear:both"></div>
+	
+	<!-- 尾部导航 -->
+	<div class="footer-nav">
+		<a href="/">首页</a> <b>|</b> <a href="/profile/about.htm" target="_blank">关于我们</a> <b>|</b> <a href="/profile/media.html" target="_blank">媒体报道</a> <b>|</b> <a href="/profile/contact.htm" target="_blank">联系方式</a> <b>|</b> <a href="/help/GroupBuy.htm" target="_blank">团购合作</a> <b>|</b> <a href="/liansuo/" target="_blank">花店加盟</a> <b>|</b> <a href="/member/payment/balancefill" target="_blank">在线补款</a> <b>|</b> <a class="last-child" href="/huayu/songhua_city.html" target="_blank">同城送花</a> <b>|</b> <a class="last-child" href="/profile/why_choose_us.htm" target="_blank">为什么选择中国鲜花礼品网</a>
+	</div>
+	<!-- 尾部导航 End -->
+		<!-- 通用尾部 -->
+	<footer>
+		<div class="auth">
+			<a href="http://kxlogo.knet.cn/seallogo.dll?sn=e15041744030058395oqbo000000&size=4" target="_blank"><img src="__INDEX__STATIC__/picture/kxwz.gif" height="40" width="109"></a>
+			<a href="https://search.szfw.org/cert/l/CX20130306002238002312" target="_blank"><img src="__INDEX__STATIC__/picture/cxwz.gif" height="40" width="112"></a>
+			<a href="http://www.anquan.org/authenticate/cert/?site=www.hua.com&at=realname" rel="nofollow" target="_blank"><img src="__INDEX__STATIC__/picture/smyz.gif" height="40" width="106"></a>
+			<a href="/member/payment/fillbyalipay?order_no=&order_sum=" rel="nofollow" target="_blank"><img src="__INDEX__STATIC__/picture/zfb.gif" height="49" width="96"></a>
+			<a href="/profile/news_20111110.htm" target="_blank"><img src="__INDEX__STATIC__/picture/100.jpg" height="49" width="150"></a>
+		</div>
+		<p><a href="/profile/ChinaFlowerAssociation.htm" rel="nofollow" target="_blank" title="中国花卉协会会员">中国花卉协会会员</a> <a href="/profile/chinaECA.htm" rel="nofollow" target="_blank">中国电子商务协会会员</a> ICP经营许可证：<a href="/profile/ICP.htm" rel="nofollow" target="_blank">粤B2-20050744</a> <b>|</b> <a href="http://www.miibeian.gov.cn" rel="nofollow" target="_blank">粤ICP备09171662号</a> Copyright &copy; 2005-2015</p> 
+		<p>中国鲜花礼品网-花语大全 <a href="http://www.hua.com/">www.hua.com</a></p>  
+	</footer>
+	<!-- 通用尾部 End -->
+
+
+    <script type="text/javascript"  src="__INDEX__STATIC__/js/common.js"></script>
+    <script type="text/javascript" src="__INDEX__STATIC__/js/statesandright.js"></script>
+
+
+</body>
+</html>

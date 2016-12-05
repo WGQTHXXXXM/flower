@@ -1,0 +1,720 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>中国鲜花礼品网怎么样 为什么选择中国鲜花礼品网（花礼网）?</title>
+    <meta name="description" content="中国鲜花礼品网怎么样? 您可以通过本页快速认识中国鲜花礼品网,了解鲜花网的成长历程,运作,服务理念。">
+    <meta name="keywords" content="中国鲜花礼品网怎么样 为什么选择中国鲜花礼品网 鲜花网 花礼网">
+    <link type="text/css" rel="stylesheet" href="../../css/common.css">
+<link type="text/css" rel="stylesheet" href="../../css/public.css">
+<link type="text/css" rel="stylesheet" href="../../css/owl.carousel.css">
+<link type="text/css" rel="stylesheet" href="../../css/why.css">
+
+<script src="../../js/gdxg.js" type="text/javascript"></script>
+<script>
+$(document).ready(function(){
+		var guarantee_menu_bg_top =0;
+		var menu_list_item_pos = new Array();
+		var menu_list_item_pos_tag = new Array();
+		var i = 0;
+		$("#guarantee_menu a").each(function(){
+			// menu_list_item_pos[i] = $("#" +$(this).attr("tab"))[0].offsetTop;
+			menu_list_item_pos_tag[i] = $(this).attr("tab");
+			i = i +1;
+		});
+		menu_list_item_pos=[405,2368,3206,5618,6394,7629,8404,9179];
+		menu_list_item_pos[menu_list_item_pos.length] = 102400;	
+		guarantee_menu_bg_top = $("#guarantee_menu_bg")[0].offsetTop;
+	
+		$(window).scroll(function(e){
+			var nowTop = $(this).scrollTop()+80;
+			if(nowTop >guarantee_menu_bg_top){
+				$("#guarantee_menu_bg").css("position","fixed");
+				$("#guarantee_menu_bg").css("top","0px");
+			}else{
+				$("#guarantee_menu_bg").css("position","absolute");
+				$("#guarantee_menu_bg").css("top",guarantee_menu_bg_top.toString() + "px");
+			}
+			for(var i = 0;i < menu_list_item_pos.length;i++){
+				if(nowTop > menu_list_item_pos[i] && nowTop < menu_list_item_pos[i+1]  ){
+					$("#guarantee_menu").find("a[tab='"+ menu_list_item_pos_tag[i] +"']").addClass("selected")
+						.parent().siblings().find("a").removeClass("selected");
+					break;
+				}
+			}
+		});
+		
+		$("#guarantee_menu a").click(function(){
+			$(this).addClass("selected")
+				.parent().siblings().find("a").removeClass("selected");
+			$(window).scrollTop($("#" +$(this).attr("tab")).position().top-150);
+		});
+	
+		var page=1;//初始化当前的版面为1
+		var $show=$("#lanrenzhijia").find(".lanrenzhijia_box");//找到图片展示区域
+		var page_count=$show.find("ul").length;
+		var $width_box=$show.parents("#wai_box").width();//找到图片展示区域外围的div
+		//显示title文字
+		$show.find("li").hover(function(){
+			$(this).find(".title").show();								
+		},function(){
+			$(this).find(".title").hide();
+		})
+		function nav(){
+			if(page==1){
+				$("#lanrenzhijia").find(".pre").hide().siblings(".next").show();
+			}else if(page==page_count){
+				$("#lanrenzhijia").find(".next").hide().siblings(".pre").show();
+			}else{
+				$("#lanrenzhijia").find(".pre").show().siblings(".next").show();
+			}
+		}
+		$("#lanrenzhijia").find(".next").click(function(){
+			//首先判断展示区域是否处于动画
+			if(!$show.is(":animated")){
+				$show.animate({left:'-='+$width_box},"normal");
+				page++;
+				nav();
+				$number=page-1;
+				$("#lanrenzhijia").find(".nav a:eq("+$number+")").addClass("now").siblings("a").removeClass("now");
+				return false;
+			}
+		})
+		$("#lanrenzhijia").find(".pre").click(function(){
+		if(!$show.is(":animated")){
+			$show.animate({left:'+='+$width_box},"normal");
+			page--;
+			nav();
+			$number=page-1;
+			$("#lanrenzhijia").find(".nav a:eq("+$number+")").addClass("now").siblings("a").removeClass("now");
+			}
+			return false;
+		})
+		$("#lanrenzhijia").find(".nav a").click(function(){
+				$index=$(this).index();
+				page=$index+1;
+				nav();
+				$show.animate({left:-($width_box*$index)},"normal");	
+				$(this).addClass("now").siblings("a").removeClass("now");
+				return false;
+		})
+						   
+});
+</script>
+<style>
+#loginModal .btn {margin-top:0px;}
+.bd {text-align: center;}a:focus{outline:none;}
+
+/*菜单切换样式*/
+ul{ margin:0; padding:0;}li{list-style-type: none; }
+.guarantee_menu_bg {width:100%;height:150px;background:#fff;position:relative;z-index:999;}
+.guarantee_menu_main{width: 1200px;margin: 0px auto;}
+ul.guarantee_menu {display:inline-block;z-index:100;width:1200px;_width:990px;margin:0 auto;}
+ul.guarantee_menu li {float:left;padding: 20px 84px 0 0;}
+ul.guarantee_menu li.tpcn_btn {padding-right:0px;}
+ul.guarantee_menu li a, ul.guarantee_menu li a.selected {display:inline-block;height:78px;cursor:pointer;}
+ul.guarantee_menu li a span.corn, ul.guarantee_menu li a.selected span.corn {width:76px;height:105px;background:url(../../images/nav_hg_03.png) no-repeat 0 0 transparent;display:inline-block;}
+ul.guarantee_menu li.pp_btn a span.corn {background-position: 0 0;}
+ul.guarantee_menu li.pp_btn a.selected span.corn {background-position: 0 -123px;}
+ul.guarantee_menu li.xldy_btn a span.corn {background-position: -76px 0;}
+ul.guarantee_menu li.xldy_btn a.selected span.corn {background-position: -76px -123px;}
+ul.guarantee_menu li.bwkh_btn a span.corn {background-position: -152px 0;}
+ul.guarantee_menu li.bwkh_btn a.selected span.corn {background-position: -152px -123px;}
+ul.guarantee_menu li.ychy_btn a span.corn {background-position: -304px 0;}
+ul.guarantee_menu li.ychy_btn a.selected span.corn {background-position: -304px -123px;}
+ul.guarantee_menu li.ddsp_btn a span.corn {background-position: -228px 0;}
+ul.guarantee_menu li.ddsp_btn a.selected span.corn {background-position: -228px -123px;}
+ul.guarantee_menu li.djbz_btn a span.corn {background-position: -456px 0;}
+ul.guarantee_menu li.djbz_btn a.selected span.corn {background-position: -456px -123px;}
+ul.guarantee_menu li.sd_btn a span.corn {background-position: -380px 0;}
+ul.guarantee_menu li.sd_btn a.selected span.corn {background-position: -380px -123px;}
+ul.guarantee_menu li.tpcn_btn a span.corn {background-position: -532px 0;}
+ul.guarantee_menu li.tpcn_btn a.selected span.corn {background-position: -532px -123px;}
+/*菜单切换样式介绍*/
+.top{ height:100px; width:100%; border-bottom:5px solid #f60;}
+.top .zuo{ width:336px; height:62px; float:left; margin-right:350px; padding-top:18px;}
+.top .you{ width:510px; float:left; margin-top:35px;}
+.top .you a{ font-size:16px; line-height:30px; color:#4f4f4f; text-align:center;display: block;float: left; width:76px; height:30px; margin-right:32px;}
+.top .you a:hover{ font-size:16px; line-height:30px; color:#fff; text-align:center;display: block;float:left; width:76px;height:30px; text-decoration:none; background:#f60;border-radius:25px;-webkit-border-radius:25px;-moz-border-radius:25px}
+.top .you a.on{ font-size:16px; line-height:30px; color:#4f4f4f; text-align:center;display: block;float: left; width:76px; height:30px; margin-right:0px;}
+.top .you a.on:hover{ font-size:16px; line-height:30px; color:#fff; text-align:center;display: block;float:left; width:76px;height:30px; text-decoration:none; background:#f60;border-radius:25px;-webkit-border-radius:25px;-moz-border-radius:25px}
+.why-banner {height:360px;margin-top:-10px;background: url(../../images/why_01.jpg) 50% 0 no-repeat;}.nav-10th{ background:url(../../images/why_02.jpg) no-repeat scroll center 41px #fe6600; height:150px; margin-top:150px;}
+.why-banner1{height:267px;background: url(../../images/why_27.jpg) 50% 0 no-repeat;}
+.why_ry{background: url(../../images/why-bg.png) 0 0 repeat;}.why_list .bd img {display: block;margin: 0px auto;}.why_list {background-color: #f5f5f5;}.why_list .bd {text-align: center;}.item{ text-align:center;}.mtbd{ line-height:44px; color:#8f8f8f; text-align:center;}.why_sp{background: url(../../images/why-bg.png) 0 0 repeat; padding:40px 0;}
+.item span{ line-height:40px;}.nav-top1{background:url(../../images/why_07.jpg) no-repeat scroll center 30px #a6c307; height:150px;}
+.mtbd_list{ background:#ededed; border:2px solid #d2d2d2; padding:26px; text-align:center; color:#737373; line-height:20px;width: 1200px;padding-right: 0px;padding-left: 0px; margin:30px auto;}
+.mtbd_list1{ background:#ededed; border:2px solid #d2d2d2; padding:26px; text-align:center; color:#737373; line-height:20px;width: 1200px;padding-right: 0px;padding-left: 0px; margin:30px auto;}
+.mtbd_list2{ background:#ededed; border:2px solid #d2d2d2; padding:26px; text-align:center; color:#737373; line-height:20px;width: 1200px;padding-right: 0px;padding-left: 0px; margin:0 auto;}
+.nav-top2{background:url(../../images/why_11.jpg) no-repeat scroll center 25px #eb6877; height:150px;}
+.nav-top3{background:url(../../images/why_20.jpg) no-repeat scroll center 30px #aa6a51; height:150px;}
+.nav-top4{background:url(../../images/why_22.jpg) no-repeat scroll center 30px #e42a1e; height:150px;}
+.nav-top5{background:url(../../images/why_24.jpg) no-repeat scroll center 30px #ffb300; height:150px;}
+.nav-top6{background:url(../../images/why_36.jpg) no-repeat scroll center 25px #ff952d; height:150px;}
+.nav-top7{background:url(../../images/why_43.jpg) no-repeat scroll center 27px #ae5da1; height:150px;}
+.lxfs{ height:100px; background:#fe6600; width:100%;}
+.lxfs img{margin-top: -4px;margin-right: 4px;}
+.lxfs .nr{ width:1200px; padding-top:45px; color:#fff; margin:0 auto}.lxfs .nr span{ padding-right:90px;}.lxfs .nr a{ color:#FFF; text-decoration:none;}.lxfs .nr a:hover{ color:#FFF; text-decoration:underline;}
+.ddsp{ height:115px; width:1200px;background: url(../../images/why_42.png) 0 0 no-repeat;font-family: tahoma, arial, 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1', sans-serif;color: #fe6600; padding: 86px 0 0 20px; font-size:15px;}
+.ddsp_list{ background:#FFF; height:585px; margin-bottom:50px;}
+.list-sales { margin: 0px;padding: 0px;list-style: outside none none; background:#FFF; padding:0 23px;}
+.list-sales li:first-child {margin-left: 0px;}
+.list-sales li {position: relative;float: left;width:162px;height:210px;background-color: #FFF;margin: 30px 0px 0px 36px; font-size:12px;}
+.list-sales li .img-box {height:162px;margin-bottom: 10px;text-align:left;}
+.list-sales li .img-box img { width:160px; height:170px; border:1px solid #e0e0e0;}
+.spx_list{text-align:center; border-top:2px dotted #eeeeee;line-height:50px; font-size:12px;width:1150px; clear:both; margin:0 auto;}
+.spx_1{line-height:22px;text-align:center; width:1200px; margin:0 auto;}
+.list-sales1 { margin: 0px;padding: 0px;list-style: outside none none; background:#FFF; margin-top:30px;}
+.list-sales1 li:first-child {margin-left: 0px;}
+.list-sales1 li {float: left;width:268px;height:350px;background-color: #FFF;margin: 30px 0px 55px 42px; font-size:12px; text-align:center;}
+.list-sales1 li .img-box {height:300px;text-align:center; padding:10px 0;}
+.list-sales1 li .img-box img { width:240px; height:280px;}
+.khpl{ height:115px; width:1200px;background: url(../../images/why_39.png) 0 0 no-repeat;font-family: tahoma, arial, 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1', sans-serif;color: #fe6600; padding: 86px 0 0 20px; font-size:15px;}
+.shgs{ height:115px; width:1200px;background: url(../../images/why_40.png) 0 0 no-repeat;font-family: tahoma, arial, 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1', sans-serif;color: #fe6600; padding: 86px 0 0 20px; font-size:15px;}
+.shgs-list{ background:#FFF; padding:35px 0 0 25px; height:635px;}
+.shgs-list ul{ margin:0; padding:0;}
+.shgs-list ul li{ width:560px; margin-bottom:32px; float:left;list-style-type: none; margin-right:27px;}
+.shgs-list ul li .zuo{ float:left; line-height:0; margin-right:12px;}
+.shgs-list ul li .you{ float:left; width:260px;}
+.shgs-list ul li .teme1{ width:560px; margin-bottom:32px; margin-left:40px; float:left;list-style-type: none; margin-right:0px;}
+.shgs-list ul li h4{ text-align:left; font-size:14px; line-height:0px; font-weight:bold; margin-bottom:15px; color:#575757; }
+.p8{ font-size:14px; line-height:24px; text-align:left;}.p9{ line-height:23px; font-size:12px; text-align:left; color:#7e7e80; margin:0;}
+.mqxl{ height:115px; width:1200px;background: url(../../images/why_41.png) 0 0 no-repeat;font-family: tahoma, arial, 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1', sans-serif;color: #fe6600; padding: 86px 0 0 20px; font-size:15px;}
+.mqxl-list{ background:#FFF; height:675px; padding-top:35px; margin-bottom:50px;}
+.mqxl-bt{ text-align:center; font-size:24px; color:#fff; font-size:24px; line-height:64px; background:#fe6600; font-weight:bold; width:900px; margin:0 auto;}
+.mqxl-new{ width:900px; margin:0 auto; margin-top:30px;}.mqxl-new ul{list-style-type: none; margin:0; padding:0;}.mqxl-new ul li{ float:left; width:260px; margin-right:60px;}.mqxl-new ul li.on{ float:left; width:260px; margin-right:0px;}
+.mqxl-new p{ color:#666;text-align:center; line-height:54px; font-size:12px;}.mqxl-new a{text-decoration:none;}.mqxl-new:hover{text-decoration: underline;color:#f60;}
+.mqxl-hz{ width:900px; margin:0 auto;}
+.common1 {background-color: #fff;border-bottom: 2px solid #f60;margin-bottom: 0;}
+.common1 .nav {margin: 0;}
+.common1 .nav li a {color: #595656; margin-right:10px;}
+.common1 .nav li a:hover { color: #ff6600;background-color: transparent;}
+.common1 .nav li.active a,
+.common1 .nav li.active a:hover {color: #fff;width: 130px; margin-right:24px; text-align: center; background:#f60;}
+</style>
+<!--[if lt IE 9]>
+        <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body class="tutorial" data-spy="scroll" data-target=".affix-box">
+		<!-- 顶部导航 -->
+	<div class="site-nav">
+		<div class="container">
+			<ul class="site-nav-l">
+				<li class="menu">
+					<a href="http://www.hua.com/" onClick="addfavorite();return false;"><span class="ico ico-star"></span>收藏鲜花网</a>
+				</li>
+				<li class="menu dropdown">
+					<a href="javascript:void(0)" data-hover="dropdown" data-delay="0"><span class="ico ico-weixin"></span>关注微信</a>
+					<div class="dropdown-menu dropdown-weixin">
+						<img src="../../picture/wechat_qrcode.jpg" height="124" width="124">
+		                <p>扫码关注<br>回复"礼物" 更多惊喜！</p>
+		            </div>
+				</li>
+				<li class="menu dropdown">
+					<a href="javascript:void(0)" data-hover="dropdown" data-delay="0"><span class="ico ico-mobile"></span>手机花礼</a>
+					<div class="dropdown-menu dropdown-weixin">
+						<img src="../../picture/app_qrcode.jpg" height="124" width="124">
+		                <p>APP首单减20元！<br>(需下单时输入券号9920)</p>
+		            </div>
+				</li>
+			</ul>
+			<ul class="site-nav-r">
+				<li class="menu login" id="LoginInfo"></li>
+				<li class="site-nav-pipe">|</li>
+				<li class="menu">
+					<a href="/help/ordercx/" rel="nofollow" target="_blank">订单查询</a>
+				</li>
+				<li class="site-nav-pipe">|</li>
+				<li class="menu dropdown">
+					<a href="/help/" data-hover="dropdown" data-delay="0">客户服务<span class="glyphicon glyphicon-triangle-bottom"></span></a>
+					<div class="dropdown-menu dropdown-service">
+		                <a href="/member/payment/balancefill">在线付款</a>
+		                <a href="/help/">帮助中心</a>
+		                <a href="/help/afterservice.htm">售后服务</a>
+		                <a href="/help/sendRange.htm">配送范围</a>
+		                <a href="/chat/">留言反馈</a>
+		            </div>
+				</li>
+				<li class="site-nav-pipe">|</li>
+				<li class="menu dropdown">
+					<a href="/shopping/showcart" data-hover="dropdown" data-delay="0" rel="nofollow"><span class="ico ico-cart"></span>购物车<span class="text-primary" id="gwcCount"></span><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+					<div class="dropdown-menu dropdown-cart" id="CartInfo"></div>
+				</li>
+				<li class="site-nav-pipe">|</li>
+				<li class="menu slogan">
+					中国领先鲜花速递服务
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 顶部导航 End -->
+    
+		<!-- 头部 -->
+	<header>
+		<div class="logo">
+			<h1><a href="http://www.hua.com/" class="logo-bd">企业团购</a></h1>
+			<i></i>
+			<h2>中国鲜花礼品网 开始2005，简称花礼网</h2>
+		</div>
+		<div class="search"><form name="i_search" method="post" action="/search/">
+			<div class="input-group">
+				<input name="keyword" type="text" class="form-control" placeholder="商品关键词">
+				<span class="input-group-btn">
+					<button class="btn btn-primary" type="button" onClick="this.form.submit()">搜索</button>
+				</span>
+			</div></form>
+			<span class="help-block" style="text-align:left;"><a href="/hongmeigui/">红玫瑰</a> | <a href="/yongshenghua/">永生花</a> | <a href="/theme/shengriliwu.asp">企业团购</a> | <a href="/gifts/goldenflower/">金玫瑰</a></span>
+		</div>
+		<div class="service">
+			<span class="ico ico-phone"></span>400-889-8188
+			<a href="/chat/" target="_blank"><span class="ico ico-headset"></span>在线客服</a>
+		</div>
+	</header>
+	<!-- 头部 End -->
+	
+	<!-- 导航 -->
+	<nav class="common">
+		<div class="container">
+			<div class="categorys dropdown">
+				<h3 class="categorys-title" data-hover="dropdown" data-delay="0">
+					<a href="/all.html"><span class="pull-right glyphicon glyphicon-menu-down"></span>全部商品导购</a>
+				</h3>
+				<div class="dropdown-menu dropdown-cate">
+		        	<h4><a href="/flower/">鲜花</a></h4>
+		        	<ul class="cate-list list-inline">
+		        		<li><a target="_blank" href="/aiqingxianhua/">爱情鲜花</a></li>
+		        		<li><a target="_blank" href="/youqingxianhua/">友情鲜花</a></li>
+		        		<li><a target="_blank" href="/shengriliwu/">生日鲜花</a></li>
+						<li><a target="_blank" href="/songzhangbeixianhua/">问候长辈</a></li>
+						<li><a target="_blank" href="/zhufuqinghexianhua/">祝贺鲜花</a></li>
+						<li><a target="_blank" href="/hunqingxianhua/">婚庆鲜花</a></li>
+		        		<li><a target="_blank" href="/tanbingweiwenxianhua/">探病慰问</a></li>
+						<li><a target="_blank" href="/daoqianxianhua/">道歉鲜花</a></li>
+		        		<li><a target="_blank" href="/businessFlower/kaiyehualan/">开业花篮</a></li>
+		        	</ul>
+		        	<h4><a target="_blank" href="/yongshenghua/">永生花</a></h4>
+		        	<ul class="cate-list list-inline">
+	        			<li><a target="_blank" href="/yongshenghua/yongshenghua_box.html">经典花盒</a></li>
+	        			<li><a target="_blank" href="/yongshenghua/yongshenghua_large.html">巨型玫瑰</a></li>
+	        			<li><a target="_blank" href="/yongshenghua/yongshenghua_lavender.html">薰衣草</a></li>
+	        			<li><a target="_blank" href="/yongshenghua/yongshenghua_vase.html">永生瓶花</a></li>
+	        			<li><a target="_blank" href="/yongshenghua/yongshenghua_characteristic.html">特色永生花</a></li>
+		        	</ul>
+					
+					<h4><a target="_blank" href="/cake/">蛋糕</a></h4>
+		        	<ul class="cate-list list-inline">
+	        			<li><a target="_blank" href="/cake/ganso/">元祖</a></li>
+	        			<li><a target="_blank" href="/cake/holiland/">好利来</a></li>
+	        			<li><a target="_blank" href="/cake/croissants/">可颂坊</a></li>
+						<li><a target="_blank" href="/cake/waffleboy/">窝夫小子</a></li>
+	        			<li><a target="_blank" href="/cake/micamika/">米卡米卡</a></li>
+	        			<li><a target="_blank" href="/cake/yipinxuan/">一品轩</a></li>
+	        			<li><a target="_blank" href="/cake/xfxb/">幸福西饼</a></li>
+	        			<li><a target="_blank" href="/cake/mcake/">Mcake</a></li>
+	        			<li><a target="_blank" href="/cake/lecake/">诺心</a></li>
+	        			<li><a target="_blank" href="/cake/vcake/">Vcake</a></li>
+						<li><a target="_blank" href="/cake/allcitycake/">全国品牌</a></li>
+		        	</ul>
+					<h4><a target="_blank" href="/gifts/">礼品</a></h4>
+		        	<ul class="cate-list list-inline">
+	        			<li><a target="_blank" href="/livingflower/">泰国保鲜花</a></li>
+	        			<li><a target="_blank" href="/gifts/musicbox/">音乐盒</a></li>
+						<li><a target="_blank" href="/gifts/crystallaser/">水晶内雕</a></li>
+	        			<li><a target="_blank" href="/gifts/goldenflower/">金箔花</a></li>
+	        			<li><a target="_blank" href="/gifts/cosmeticmirror/">化妆镜</a></li>
+	        			<li><a target="_blank" href="/gifts/kingking/">香薰系列</a></li>
+						<li><a target="_blank" href="/gifts/bestlife/">音乐睡枕</a></li>
+	        			<li><a target="_blank" href="/gifts/vase/">花瓶/相框</a></li>
+	        			<li><a target="_blank" href="/gifts/grose/">镀金玫瑰</a></li>
+	        			<li><a target="_blank" href="/gifts/candle/">LED蜡烛</a></li>
+						<li><a target="_blank" href="/katonghuashu/">卡通花束</a></li>	
+						<li><a target="_blank" href="/toys/">品牌公仔</a></li>
+						<li><a target="_blank" href="/gifts/hifi/">智能音响</a></li>	
+						<li><a target="_blank" href="/gifts/shoushi/">首饰</a></li>	
+						<li><a target="_blank" href="/gifts/chocolate/">手工巧克力</a></li>	
+						<li><a target="_blank" href="/gifts/jinkouqiaokeli/">进口巧克力</a></li>	
+						<li><a target="_blank" href="/gifts/dengshi/">创意礼品</a></li>	
+						<li><a target="_blank" href="/qiyetuangou/gift_card.html">礼品卡</a></li>	
+		        	</ul>
+					<h4><a target="_blank" href="/Plant/">绿植</a></h4>
+		        	<ul class="cate-list list-inline">
+	        			<li><a target="_blank" href="/Plant/greenplant/">绿色植物</a></li>
+			       		<li><a target="_blank" href="/Plant/potflower/">盆栽花卉</a></li>
+		        	</ul>		     
+		        </div>
+			</div>        
+<ul class="nav">
+			    <li><a href="/">首页</a></li>
+				<li><a href="/flower/">鲜花</a></li>
+				<li><a href="/yongshenghua/">永生花</a></li>
+				<li><a href="/cake/">蛋糕</a></li>
+				<li><a href="/gifts/">礼品</a></li>
+				<li><a href="/huayu/">花语大全</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- 导航 End -->
+    
+<!--菜单切换-->
+<div class="guarantee_menu_bg" id="guarantee_menu_bg" style="position: absolute;top:555px;">
+  <div class="guarantee_menu_main">
+    <ul id="guarantee_menu" class="guarantee_menu">
+      <li class="pp_btn"><a href="javascript:;" tab="pp_btn" class="selected"><span class="corn" title="10年品牌"></span></a></li>
+      <li class="xldy_btn"><a href="javascript:;" tab="xldy_btn"><span class="corn" title="销量第一"></span></a></li>
+      <li class="bwkh_btn"><a href="javascript:;" tab="bwkh_btn"><span class="corn" title="百万客户"></span></a></li>
+      <li class="ychy_btn"><a href="javascript:;" tab="ychy_btn"><span class="corn" title="原创花艺"></span></a></li>
+      <li class="ddsp_btn"><a href="javascript:;" tab="ddsp_btn"><span class="corn" title="订单实拍"></span></a></li>
+      <li class="djbz_btn"><a href="javascript:;" tab="djbz_btn"><span class="corn" title="三小时送达"></span></a></li>
+      <li class="sd_btn"><a href="javascript:;" tab="sd_btn"><span class="corn" title="底价保证"></span></a></li>
+      <li class="tpcn_btn"><a href="javascript:;" tab="tpcn_btn"><span class="corn" title="退赔承诺"></span></a></li>
+    </ul>
+  </div>
+</div>
+<!--菜单切换 END-->
+    
+<!--栏目导航--> 
+<div class="why-banner"></div>  
+<div class="nav-10th" id="pp_btn"></div> 	
+<div class="why_ry"><div class="container"><img src="../../picture/why_03.jpg"></div></div>	
+<div class="why_list"><div class="bd"><img src="../../picture/why_29.jpg"><img src="../../picture/why_04.jpg"></div></div>
+
+<!--十年品牌-->
+		<section class="t-advance" style="padding-bottom:60px;">
+			<div class="container">
+				<div class="bd">
+					<div class="owl-carousel">
+						<div class="item"><img src="../../picture/why_ry14.jpg" height="400" width="520"><span>鲜花礼品行业龙头奖</span></div>
+						<div class="item"><img src="../../picture/why_ry13.jpg" height="400" width="520"><span>可信网站验证单位</span></div>
+						<div class="item"><img src="../../picture/why_ry.jpg" height="400" width="520"><span>中国互联网电子商务鲜花礼品行业龙头企业</span></div>
+						<div class="item"><img src="../../picture/why_ry01.jpg" height="400" width="520"><span>中国电子商务e价值榜‘金种子’奖 </span></div>
+						<div class="item"><img src="../../picture/why_ry02.jpg" height="400" width="520"><span>中国花卉协会零售业分会单位会员</span></div>
+						<div class="item"><img src="../../picture/why_ry03.jpg" height="400" width="520"><span>中国花卉协会单位会员</span></div>
+						<div class="item"><img src="../../picture/why_ry04.jpg" height="400" width="520"><span>中国电子商务协会单位会员</span></div>
+						<div class="item"><img src="../../picture/why_ry05.jpg" height="400" width="520"><span>2006年消费者最喜爱网站TOP100</span></div>
+						<div class="item"><img src="../../picture/why_ry06.jpg" height="400" width="520"><span>2007年消费者最喜爱网站TOP100</span></div>
+						<div class="item"><img src="../../picture/why_ry07.jpg" height="400" width="520"><span>中国电子商务2009年百佳品牌购物网站</span></div>
+						<div class="item"><img src="../../picture/why_ry08.jpg" height="400" width="520"><span>2010中国网上诚信品牌100强</span></div>
+						<div class="item"><img src="../../picture/why_ry09.jpg" height="400" width="520"><span>2011年度消费者最喜爱的网站TOP100</span></div>
+						<div class="item"><img src="../../picture/why_ry10.jpg" height="400" width="520"><span>2012年度中国网上零售年会 最佳用户体验奖</span></div>
+						<div class="item"><img src="../../picture/why_ry11.jpg" height="400" width="520"><span>中华人民共和国增值电信业务经营许可证（粤B2-20050744)</span></div>
+						<div class="item"><img src="../../picture/why_ry12.jpg" height="400" width="520"><span>中国互联网电子商务诚信示范企业</span></div>
+					</div>
+					<div class="prev">prev</div>
+					<div class="next">next</div>
+				</div>
+			</div>
+		</section>
+	</div>
+<!--十年品牌 End-->
+
+<!--销量第1-->	
+<section class="t-advance" id="xldy_btn">
+<div class="nav-top1"></div>
+<div class="why_list">
+	<div class="bd"><img src="../../picture/why_08.jpg" alt="花礼网媒体报道" style="margin-top:20px; margin-bottom:30px;"></div>
+    <div class="container mtbd">
+        <div style="float:left; width:500px;"><a href="http://news.sina.com.cn/o/2016-03-18/doc-ifxqnnkr9510796.shtml" target="_blank"><img src="../../picture/why_09.jpg" alt="花礼网微电影《勇敢爱》倾情巨献">花礼网微电影《勇敢爱》倾情巨献</a></div>
+        <div style="float:right; width:500px;"><a href="http://www.ebrun.com/20121108/60418.shtml" target="_blank"><img src="../../picture/why_10.jpg" alt="解析十大鲜花速递网站的特点及发展">解析十大鲜花速递网站的特点及发展</a></div>
+    </div>
+          <div class="mtbd_list">中国鲜花礼品网(www.Hua.com)，中国鲜花网领先品牌，专业鲜花礼品速递服务商，网站自成立以来一直保持高速成长，连续四年增长率均超过100%，<br><font class="text-primary">目前规模和影响力均位居国内鲜花礼品网站前列，销量已连续3年在同类网站中处于领先。</font></div><div style="height:48px;"></div>
+</div>
+</section>
+<!--销量第1结束-->
+
+<!--百万客户信赖-->	
+<section class="t-advance" id="bwkh_btn">
+<div class="nav-top2"></div>
+<div class="container">
+ 	<div class="khpl"><strong>客户评论</strong></div>
+<div id="Comment" class="tabs-panel" style="background:#fff;">
+					<div class="comment-bd" id="ajaxComment" style="height:484px;">
+					</div>
+					<div class="comment-ft">
+						【<a href="http://www.hua.com/productpj/" target="_blank" title="查看所有商品评价" class="color_hong2">查看所有商品评价</a>】
+					</div>
+				</div>
+</div>
+<div class="container">
+ 	<div class="shgs"><strong>感动瞬间</strong></div>
+    <div class="shgs-list">
+    	 <ul>
+        	<a href="/profile/13552.html" target="_blank"><li>
+            	<div class="zuo"><img src="../../picture/why_gd1.jpg" alt="感动瞬间1" ></div>
+                <div class="you"><h4>斯人若彩虹，遇上方知有 </h4><p class="p8">2015-12-03</p><p class="p9">有人住高楼，有人在深沟，有人光万丈，有人一身锈，世人万千种，浮云莫去求，斯人若彩虹，遇上方知有。</p></div>
+            </li></a>
+            <a href="/profile/13658.html" target="_blank"><li class="teme1">
+            	<div class="zuo"><img src="../../picture/why_gd2.jpg" alt="感动瞬间2" ></div>
+                <div class="you"><h4>7年了我一点都不痒</h4><p class="p8">2015-12-09</p><p class="p9">亲爱的老婆，岁月如歌！7年了，我们共同走过的路~ 7年了，你是孩子的妈妈~ 7年了，你哭过笑过~
+7年了，你还是我的那个赵总~ 很幸运的是在7年前的你选择了我！</p></div>
+            </li></a>
+            <a href="/profile/13234.html" target="_blank"><li>
+            	<div class="zuo"><img src="../../picture/why_gd3.jpg" alt="感动瞬间3" ></div>
+                <div class="you"><h4>11.11.11我把你娶回了家</h4><p class="p8">2015-11-11</p><p class="p9">11.11.11在亲人和朋友的祝福中我把你娶回了家，我们相识相知相恋结婚已经度过了4714个日夜，谢谢你这么多年的辛苦与陪伴。</p></div>
+            </li></a>
+            <a href="/profile/13736.html" target="_blank"><li class="teme1">
+            	<div class="zuo"><img src="../../picture/why_gd4.jpg" alt="感动瞬间4" ></div>
+                <div class="you"><h4>如果有下一次送花会是求婚的时候 </h4><p class="p8">2015-12-14</p><p class="p9">不要因为也许会改变，就不肯说那句美丽的誓言；不要因为也许会分离，就不敢求一次倾心的相遇。这花语很适合我的心境...</p></div>            
+            </li></a>
+            <a href="/profile/13785.html" target="_blank"><li>
+            	<div class="zuo"><img src="../../picture/why_gd5.jpg" alt="感动瞬间5" ></div>
+                <div class="you"><h4>对你表白，那爱的火焰在内心燃烧！</h4><p class="p8">2015-12-17</p><p class="p9">恕我冒昧，但爱的火焰在内心燃烧，已使我不能自已。思念如同海潮般久久不能平息，在寒冷的冬日是你给我带来的温暖抵抗了所有严寒。</p></div>
+            </li>
+            <a href="/profile/13455.html" target="_blank"><li class="teme1">
+            	<div class="zuo"><img src="../../picture/why_gd6.jpg" alt="感动瞬间6" ></div>
+                <div class="you"><h4>这辈子第一次送男生鲜花 </h4><p class="p8">2015-11-27</p><p class="p9">这辈子第一次送男生鲜花，还直接就送了玫瑰，真不容易。把这值得纪念的一束，送给你。</p></div>
+            </li></a>
+        </ul>
+        <div style="text-align:center; border-top:2px dotted #eeeeee;line-height:50px; font-size:12px;width:1150px; clear:both;"><a href="/profile/gdsj.html" target="_blank">【<font color="#f60">查看更多感动瞬间</font>】</a></div>
+    </div>
+</div>
+
+<div class="container">
+ 	<div class="mqxl"><strong>名企信赖</strong></div>
+	<div class="mqxl-list">
+    	<div class="mqxl-bt">我们，赢得了众多知名企业的信赖，与多家大型企业、机构常年合作</div>
+        <div class="mqxl-new">
+    	<ul>
+        	<li><a href="http://www.cmbchina.com/Personal/Promotion/PrmotionInfo.aspx?guid=d0f82e6b-a86e-477d-8c6e-15a4a05cdb01" target="_blank"><img src="../../picture/why_13.jpg" alt="“招商银行”2015情人节活动" ><p>“招商银行”2015情人节活动</p></a></li>
+            <li><a href="http://mall.wanlitong.com/shop/hua/index.html" target="_blank"><img src="../../picture/why_14.jpg" alt="“中国平安”唯一指定鲜花类积分兑换服务商" ><p>“中国平安”唯一指定鲜花类积分兑换服务商</p></a></li>
+            <li class="on"><a href="http://map.baidu.com" target="_blank"><img src="../../picture/why_15.jpg" alt="“百度地图”春运送爱到家活动合作" ><p>“百度地图”春运送爱到家活动合作</p></a></li>
+        </ul>
+   		</div>
+        <div class="mqxl-hz"><img src="../../picture/why_44.jpg" alt="合作客户" ></div>
+    </div>
+</div>
+
+</section>	
+<!--百万客户信赖结束-->	
+
+<!--时尚原创花艺-->	
+<section class="t-advance" id="ychy_btn">
+<div class="nav-top7"></div>
+ 	<div class="container">
+   			 <ul class="list-sales1">
+    			<li><div class="img-box"><a href="/product/9012009.html" target="_blank"><img src="../../picture/9012009.jpg" alt="忘情巴黎" ></a></div><a href="/product/9012009.html" target="_blank">忘情巴黎-33枝玫瑰，石竹梅<br><b>￥296</b></a></li>
+    			<li><div class="img-box"><a href="/product/9012011.html" target="_blank"><img src="../../picture/9012011.jpg" alt="阳光海岸" ></a></div><a href="/product/9012011.html" target="_blank">阳光海岸-19枝香槟玫瑰<br><b>￥219</b></a></li>
+    			<li><div class="img-box"><a href="/product/9012055.html" target="_blank"><img src="../../picture/9012055.jpg" alt="不变的心" ></a></div><a href="/product/9012055.html" target="_blank">不变的心-戴安娜玫瑰66枝<br><b>￥398</b></a></li>
+    			<li><div class="img-box"><a href="/product/9010917.html" target="_blank"><img src="../../picture/9010917.jpg" alt="永恒的爱情" ></a></div><a href="/product/9010917.html" target="_blank">永恒的爱情-红玫瑰99枝<br><b>￥598</b></a></li>
+    		</ul>
+     </div>
+</div>
+    <div class="mtbd_list2">花礼，拥有世界最优秀的花艺师团队，设计出一季又一季的畅销花款；花礼赋予鲜花以文化、艺术的<br>魅力，不断推出有故事的创新花束；花礼，已经设计出超300多款花束，我们会持续引领花艺潮流！</div>
+    <div style="height:65px;"></div>
+</section>	
+<!--时尚原创花艺结束-->	
+
+<!--订单实拍-->	
+<section class="t-advance" id="ddsp_btn">
+<div class="nav-top6"></div>
+<div class="container">
+ 	<div class="ddsp"><strong>订单实拍</strong></div>
+  <div class="ddsp_list">
+    <ul class="list-sales" id="OrderShowHtml" style=" height:510px;">
+    </ul>
+  <div style="clear:both; height:20px;"></div>
+	<div class="spx_list">&nbsp;<a href="javascript:void(0)" onClick="GetPage('first');">首页</a>&nbsp;<a href="javascript:void(0)" onClick="GetPage('pre');" id="prePage" style="color:#cccccc">上一页</a>&nbsp;<a href="javascript:void(0)" onClick="GetPage('next');" id="nextPage">下一页</a>&nbsp;页次：<font color="red" id="pageshow">1/99</font>&nbsp;（已有<span class="color_blue" id="totalKuan">0</span>款/<span class="color_blue" id="totalNum">0</span>条实拍秀）</div>
+   </div>
+</div>
+<div class="why_sp">
+	<div class="container"><img src="../../picture/why_38.jpg" style="margin-bottom:40px;"></div>
+	<div class="spx_1">我们坚持甄选优质的花材，从昆明新鲜空运的A级花材，始终坚持一丝不苟的按照"接单 > 鲜花制作 > 品质检验 > 配送"流程<br>处理订单，专业分工协作，每张订单至少设客服人员、插花师、品检专员、配送员四个职能岗位，确保产品品质稳定如一。</div>
+</div>
+</section>	
+<!--订单实拍结束-->	
+
+<!--三小时送达及低价保证200退赔-->
+<section class="t-advance" id="djbz_btn">
+<div class="nav-top3"></div>
+	<div class="bd"><img src="../../picture/why_21.jpg" alt="3小时送达" style="margin-top:45px; margin-bottom:68px;"></div>
+</section>	
+<section class="t-advance" id="sd_btn">
+<div class="nav-top4"></div>
+	<div class="bd"><img src="../../picture/why_23.jpg" alt="低价保证" style="margin-top:45px; margin-bottom:68px;"></div>
+</section>	
+<section class="t-advance" id="tpcn_btn">
+<div class="nav-top5"></div>
+	<div class="bd"><img src="../../picture/why_25.jpg" alt="200%退赔承诺" style="margin-top:45px; margin-bottom:68px;"></div>
+    <div class="bd"><img src="../../picture/why_26.jpg" alt="客服文化" style="margin-top:15px;"></div>
+    <div class="mtbd_list1">客服中心墙壁上的文化挂图似乎会说话，俏皮的卡通形象与严谨的客服要求，因为朝夕相伴，因为耳濡目染，一切都显得那么自然……<br> 我们每天在真切体会：客服无小事、 用心倾听、 以心换心、 微笑服务、真诚待人、被信任很幸福、 您的快乐就是我们的快乐！</div>
+    <div class="lxfs">
+    	<div class="nr"><span><img src="../../picture/why_30.png" alt="热线电话">热线:400-889-8188</span><span><img src="../../picture/why_32.png" alt="在线客服">在线客服： <a href="http://www.hua.com/chat/" target="_blank">QQ客服</a>  /  <a href="http://www.hua.com/chat/" target="_blank">LIVE800客服</a></span><span><img src="../../picture/why_35.png" alt="邮箱">总经理邮箱：ceo@hua.com </span>* 人工客服在时间   8：30-21：00 ， 一年365天全年无休</div>
+    </div>
+</section>	
+<div class="why-banner1"></div>
+<!--三小时送达及低价保证200退赔结束-->	
+
+    
+		<!-- 尾部导航 -->
+	<div class="footer-nav">
+		<a href="/">首页</a> <b>|</b> <a href="/profile/about.htm" target="_blank">关于我们</a> <b>|</b> <a href="/profile/media.html" target="_blank">媒体报道</a> <b>|</b> <a href="/profile/contact.htm" target="_blank">联系方式</a> <b>|</b> <a href="/qiyetuangou/" target="_blank">企业团购</a> <b>|</b> <a href="/liansuo/" target="_blank">花店加盟</a> <b>|</b> <a href="/member/payment/balancefill" target="_blank">在线补款</a> <b>|</b> <a class="last-child" href="/profile/why_choose_us.htm" target="_blank">为什么选择中国鲜花礼品网</a>
+	</div>
+	<!-- 尾部导航 End -->
+		<!-- 通用尾部 -->
+	<footer>
+		<div class="auth">
+			<a href="http://kxlogo.knet.cn/seallogo.dll?sn=e15041744030058395oqbo000000&size=4" target="_blank"><img src="../../picture/kxwz.gif" height="40" width="109"></a>
+			<a href="https://search.szfw.org/cert/l/CX20130306002238002312" target="_blank"><img src="../../picture/cxwz.gif" height="40" width="112"></a>
+			<a href="http://www.anquan.org/authenticate/cert/?site=www.hua.com&at=realname" rel="nofollow" target="_blank"><img src="../../picture/smyz.gif" height="40" width="106"></a>
+			<a href="/member/payment/fillbyalipay?order_no=&order_sum=" rel="nofollow" target="_blank"><img src="../../picture/zfb.gif" height="49" width="96"></a>
+			<a href="/profile/news_20111110.htm" target="_blank"><img src="../../picture/100.jpg" height="49" width="150"></a>
+		</div>
+		<p><a href="/profile/ChinaFlowerAssociation.htm" rel="nofollow" target="_blank" title="中国花卉协会会员">中国花卉协会会员</a> <a href="/profile/chinaECA.htm" rel="nofollow" target="_blank">中国电子商务协会会员</a> ICP经营许可证：<a href="/profile/ICP.htm" rel="nofollow" target="_blank">粤B2-20050744</a> <b>|</b> <a href="http://www.miibeian.gov.cn" rel="nofollow" target="_blank">粤ICP备09171662号</a> Copyright &copy; 2005-2016</p> 
+		<p>花礼网 （中国鲜花礼品网） <a href="http://www.hua.com/">www.hua.com</a> 中国领先鲜花网品牌,一分钟挑选鲜花！</p>  
+	</footer>
+	<!-- 通用尾部 End -->
+<script type="text/javascript"  src="../../js/common.js"></script>
+<script type="text/javascript"  src="../../js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="../../js/statesandright.js"></script> 
+<script>
+		$(function() {
+		 	// 进阶篇tabs
+		 	var owl = $(".owl-carousel");
+			owl.owlCarousel({
+				mouseDrag: false,
+				touchDrag : false,
+      			slideSpeed : 300,
+      			paginationSpeed : 400,
+      			singleItem: true,
+      			autoPlay: true,
+      			navigation: false,
+      			afterInit: customPager,
+			});
+
+			function customPager() {
+			    $.each(this.owl.userItems, function (i) {
+			        var titleData = jQuery(this).find('img').attr('title');
+			        var paginationLinks = jQuery('.owl-controls .owl-pagination .owl-page span');
+			    });
+			};
+
+			$(".next").click(function(){
+				owl.trigger('owl.next');
+			})
+			$(".prev").click(function() {
+				owl.trigger('owl.prev');
+			})
+		});
+		var sjs=Math.random();
+		//$.get("/ajax/getlogininfo.asp?rmd="+sjs,null,function(data){if(data.indexOf("<") > -1){$("#LoginInfo").html(data);}});//登陆状态
+		//$.get("/ajax/CartCount.asp?rmd="+sjs,null,function(data){if(data.indexOf("(") > -1){$("#gwcCount").html(data);}});//购物车商品件数
+		//$.get("/ajax/getcartinfo.asp?rmd="+sjs,null,function(data){if(data.indexOf("<") > -1){$("#CartInfo").html(data);}});//购物车商品详情
+		$.get("/ajax/ajaxComment.asp",null,function(data){$("#ajaxComment").html(data);});//评价数据
+		
+		var currPage=1;//当前页码
+		var totalPage=1;//总页数
+		var totalKuans=1;//款数
+		var totalNums=1;//总数量
+		var pageSize=12;//分页数量
+		
+		$.get("/ajax/ajaxOrderShow.asp?p=1",function(data)
+		{
+			var htmlNr=data.split("@@@");
+			var shuliang=htmlNr[1].split("$$$");
+			$("#OrderShowHtml").html(htmlNr[0]);
+			totalKuans=shuliang[0];
+			totalNums=shuliang[1];
+			totalPage=parseInt(totalNums/pageSize);
+			if((totalNums%pageSize)>0)
+			{
+				totalPage=parseInt(totalNums/pageSize)+1;
+			}
+			$("#pageshow").html(currPage+"/"+totalPage);
+			$("#totalKuan").html(totalKuans);
+			$("#totalNum").html(totalNums);
+			$("#prePage").css("color","#cccccc");
+		});
+		
+		
+		
+		function GetPage(oper)
+		{
+			$("#prePage").removeAttr("style");
+			$("#nextPage").removeAttr("style");
+			if(oper=="pre")
+			{
+				currPage=currPage-1;
+				if(currPage<1)
+				{
+					currPage=1;
+				}
+				$.get("/ajax/ajaxOrderShow.asp?p="+currPage,function(data)
+				{
+					var htmlNr=data.split("@@@");
+					$("#OrderShowHtml").html(htmlNr[0]);
+					$("#pageshow").html(currPage+"/"+totalPage);
+					if(currPage==1)
+					{
+						$("#prePage").css("color","#cccccc");
+					}
+				});
+			}
+			else if(oper=="next")
+			{
+				currPage=currPage+1;
+				if(currPage>totalPage)
+				{
+					currPage=totalPage;
+				}
+				$.get("/ajax/ajaxOrderShow.asp?p="+currPage,function(data)
+				{
+					var htmlNr=data.split("@@@");
+					$("#OrderShowHtml").html(htmlNr[0]);
+					$("#pageshow").html(currPage+"/"+totalPage);
+					if(currPage==totalPage)
+					{
+						$("#nextPage").css("color","#cccccc");
+					}
+				});
+			}
+			else if(oper=="first")
+			{
+				currPage=1;
+				$.get("/ajax/ajaxOrderShow.asp?p="+currPage,function(data)
+				{
+					var htmlNr=data.split("@@@");
+					$("#OrderShowHtml").html(htmlNr[0]);
+					$("#pageshow").html(currPage+"/"+totalPage);
+					$("#prePage").css("color","#cccccc");
+				});
+			}
+		}
+		
+		
+	</script>
+<!-- 返回顶部  -->    
+<style type="text/css">
+#goTopBtn{BOTTOM: 80px; CURSOR: pointer; RIGHT:15px; _position: absolute; _right: auto;height:40px; width:40px;POSITION: fixed; border:1px solid #e6e6e6; background:#fafafa;}
+#goTopBtn span{display:inline-block;width:17px;height:16px;background:url("../../images/top_1.png") no-repeat;vertical-align:top; margin:12px 11px;}
+
+</style>
+<a style="display: none" id="goTopBtn" title="返回顶部"><span></span></a>
+<script type="text/javascript">
+function goTopEx() {
+	var obj = document.getElementById("goTopBtn");
+	function getScrollTop() {
+		return document.documentElement.scrollTop + document.body.scrollTop;
+	}
+	function setScrollTop(value) {
+		if (document.documentElement.scrollTop) {
+		document.documentElement.scrollTop = value;
+		} else {
+		document.body.scrollTop = value;
+		}
+	}
+	window.onscroll = function() {
+		getScrollTop() > window.screen.height ? obj.style.display = "": obj.style.display = "none";
+	}
+	obj.onclick = function() {
+		var goTop = setInterval(scrollMove, 10);
+		function scrollMove() {
+			setScrollTop(0);
+			if (getScrollTop() < 1) clearInterval(goTop);
+		}
+	}
+}
+</script>
+<script type="text/javascript">goTopEx();</script>
+</body>
+</html>

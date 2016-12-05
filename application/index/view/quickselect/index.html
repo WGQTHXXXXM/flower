@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>一分钟挑选鲜花-花礼网(中国鲜花礼品网)</title>
+    <meta name="description" content="一分钟挑选鲜花-中国鲜花礼品网一分钟教您选花: 根据您对鲜花的需求、送花对象、价位要求，短短一分钟您就可以选好心仪的鲜花，高效快捷，省时方便！">
+    <meta name="keywords" content="一分钟挑选鲜花">
+	<meta name="mobile-agent" content="format=xhtml;url=http://m.hua.com/quickselect/">
+
+    <link type="text/css" rel="stylesheet" href="../css/common.css">
+<link type="text/css" rel="stylesheet" href="../css/public.css">
+<link type="text/css" rel="stylesheet" href="../css/owl.carousel.css">
+<link type="text/css" rel="stylesheet" href="../css/tutorial.css">
+<style>body{min-width: 1200px;}#loginModal .btn {margin-top:0px;}</style>
+<!--[if lt IE 9]>
+        <script src="__INDEX__STATIC__/js/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body class="tutorial" data-spy="scroll" data-target=".affix-box">
+		<!-- 顶部导航 -->
+	<div class="site-nav">
+		<div class="container">
+			<ul class="site-nav-l">
+				<li class="menu">
+					<a href="http://www.hua.com/" onClick="addfavorite();return false;"><span class="ico ico-star"></span>收藏鲜花网</a>
+				</li>
+				<li class="menu dropdown">
+					<a href="/mobile/" data-hover="dropdown" data-delay="0" target="_blank"><span class="ico ico-mobile"></span>手机花礼</a>
+					<div class="dropdown-menu dropdown-weixin">
+						<img src="__INDEX__STATIC__/picture/app_qrcode.jpg" height="124" width="124">
+		                <p>APP首单减20元！<br>(需下单时输入券号9920)</p>
+		            </div>
+				</li>
+			</ul>
+			<ul class="site-nav-r">
+				<li class="menu login" id="LoginInfo"></li>
+				<li class="site-nav-pipe">|</li>
+				<li class="menu">
+					<a href="/help/ordercx/" rel="nofollow" target="_blank">订单查询</a>
+				</li>
+				<li class="site-nav-pipe">|</li>
+				<li class="menu dropdown">
+					<a href="/help/" data-hover="dropdown" data-delay="0" target="_blank">客户服务<span class="glyphicon glyphicon-triangle-bottom"></span></a>
+					<div class="dropdown-menu dropdown-service">
+		                <a href="/member/payment/balancefill" target="_blank">在线付款</a>
+		                <a href="/help/" target="_blank">帮助中心</a>
+		                <a href="/help/afterservice.htm" target="_blank">售后服务</a>
+		                <a href="/help/sendRange.htm" target="_blank">配送范围</a>
+		                <a href="/chat/" target="_blank">留言反馈</a>
+		            </div>
+				</li>
+				<li class="site-nav-pipe">|</li>
+				<li class="menu dropdown">
+					<a href="/shopping/showcart" data-hover="dropdown" data-delay="0" rel="nofollow" target="_blank"><span class="ico ico-cart"></span>购物车<span class="text-primary" id="gwcCount"></span><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+					<div class="dropdown-menu dropdown-cart" id="CartInfo"></div>
+				</li>
+				<li class="site-nav-pipe">|</li>
+				<li class="menu slogan">
+					中国领先鲜花速递服务
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 顶部导航 End -->
+		<!-- 头部 -->
+	<header>
+		<div class="logo">
+			<h1><a href="http://www.hua.com/" class="logo-bd">鲜花速递</a></h1>
+			<i></i>
+			<h2>中国鲜花礼品网 始于2005，简称花礼网</h2>
+		</div>
+		<div class="search"><form name="i_search" method="post" action="/search/">
+			<div class="input-group">
+				<input name="keyword" id="kw" type="text" class="form-control" placeholder="新品永生花">
+				<span class="input-group-btn">
+					<button class="btn btn-primary" type="submit" onClick="if(document.getElementById('kw').value.length==0){alert('请输入搜索关键词');return false;}else{return true;}">搜索</button>
+				</span>
+			</div></form>
+			<span class="help-block"><a href="/songlaoshixianhua/">送老师鲜花</a> | <a href="/florist/">自选鲜花</a> | <a href="/theme/shengriliwu.asp">生日鲜花</a> | <a href="/worldflora/">港澳台送花</a></span>
+		</div>
+		<div class="service">
+			<span class="ico ico-phone"></span>400-889-8188
+			<a href="/chat/" target="_blank"><span class="ico ico-headset"></span>在线客服</a>
+		</div>
+	</header>
+	<!-- 头部 End -->
+	
+	<!-- 导航 -->
+	<nav class="common">
+		<div class="container">
+			<div class="categorys dropdown">
+				<h3 class="categorys-title" data-hover="dropdown" data-delay="0">
+					<a href="/all.html"><span class="pull-right glyphicon glyphicon-menu-down"></span>全部商品导购</a>
+				</h3>
+				<div class="dropdown-menu dropdown-cate">
+		        	<h4><a href="/flower/">鲜花</a></h4>
+		        	<ul class="cate-list list-inline">
+		        		<li><a target="_blank" href="/aiqingxianhua/">爱情鲜花</a></li>
+		        		<li><a target="_blank" href="/youqingxianhua/">友情鲜花</a></li>
+		        		<li><a target="_blank" href="/shengriliwu/">生日鲜花</a></li>
+						<li><a target="_blank" href="/songzhangbeixianhua/">问候长辈</a></li>
+						<li><a target="_blank" href="/zhufuqinghexianhua/">祝贺鲜花</a></li>
+						<li><a target="_blank" href="/hunqingxianhua/">婚庆鲜花</a></li>
+		        		<li><a target="_blank" href="/tanbingweiwenxianhua/">探病慰问</a></li>
+						<li><a target="_blank" href="/daoqianxianhua/">道歉鲜花</a></li>
+		        		<li><a target="_blank" href="/businessFlower/kaiyehualan/">开业花篮</a></li>
+		        	</ul>
+		        	<h4><a target="_blank" href="/yongshenghua/">永生花</a></h4>
+		        	<ul class="cate-list list-inline">
+	        			<li><a target="_blank" href="/yongshenghua/yongshenghua_box.html">经典花盒</a></li>
+	        			<li><a target="_blank" href="/yongshenghua/yongshenghua_large.html">巨型玫瑰</a></li>
+	        			<li><a target="_blank" href="/yongshenghua/yongshenghua_lavender.html">薰衣草</a></li>
+	        			<li><a target="_blank" href="/yongshenghua/yongshenghua_vase.html">永生瓶花</a></li>
+	        			<li><a target="_blank" href="/yongshenghua/yongshenghua_characteristic.html">特色永生花</a></li>
+		        	</ul>
+					
+					<h4><a target="_blank" href="/cake/">蛋糕</a></h4>
+		        	<ul class="cate-list list-inline">
+	        			<li><a target="_blank" href="/cake/ganso/">元祖</a></li>
+	        			<li><a target="_blank" href="/cake/holiland/">好利来</a></li>
+	        			<li><a target="_blank" href="/cake/croissants/">可颂坊</a></li>
+						<li><a target="_blank" href="/cake/waffleboy/">窝夫小子</a></li>
+	        			<li><a target="_blank" href="/cake/micamika/">米卡米卡</a></li>
+	        			<li><a target="_blank" href="/cake/yipinxuan/">一品轩</a></li>
+	        			<li><a target="_blank" href="/cake/xfxb/">幸福西饼</a></li>
+	        			<li><a target="_blank" href="/cake/mcake/">Mcake</a></li>
+	        			<li><a target="_blank" href="/cake/lecake/">诺心</a></li>
+	        			<li><a target="_blank" href="/cake/vcake/">Vcake</a></li>
+						<li><a target="_blank" href="/cake/allcitycake/">全国品牌</a></li>
+		        	</ul>
+					<h4><a target="_blank" href="/gifts/">礼品</a></h4>
+		        	<ul class="cate-list list-inline">
+	        			<li><a target="_blank" href="/livingflower/">泰国保鲜花</a></li>
+	        			<li><a target="_blank" href="/gifts/musicbox/">音乐盒</a></li>
+						<li><a target="_blank" href="/gifts/crystallaser/">水晶内雕</a></li>
+	        			<li><a target="_blank" href="/gifts/goldenflower/">金箔花</a></li>
+	        			<li><a target="_blank" href="/gifts/cosmeticmirror/">化妆镜</a></li>
+	        			<li><a target="_blank" href="/gifts/kingking/">香薰系列</a></li>
+						<li><a target="_blank" href="/gifts/bestlife/">音乐睡枕</a></li>
+	        			<li><a target="_blank" href="/gifts/vase/">花瓶/相框</a></li>
+	        			<li><a target="_blank" href="/gifts/grose/">镀金玫瑰</a></li>
+	        			<li><a target="_blank" href="/gifts/candle/">LED蜡烛</a></li>
+						<li><a target="_blank" href="/katonghuashu/">卡通花束</a></li>	
+						<li><a target="_blank" href="/toys/">品牌公仔</a></li>
+						<li><a target="_blank" href="/gifts/hifi/">智能音响</a></li>	
+						<li><a target="_blank" href="/gifts/shoushi/">首饰</a></li>	
+						<li><a target="_blank" href="/gifts/chocolate/">手工巧克力</a></li>	
+						<li><a target="_blank" href="/gifts/jinkouqiaokeli/">进口巧克力</a></li>	
+						<li><a target="_blank" href="/gifts/dengshi/">创意礼品</a></li>	
+						<li><a target="_blank" href="/qiyetuangou/gift_card.html">礼品卡</a></li>	
+		        	</ul>
+					<h4><a target="_blank" href="/Plant/">绿植</a></h4>
+		        	<ul class="cate-list list-inline">
+	        			<li><a target="_blank" href="/Plant/greenplant/">绿色植物</a></li>
+			       		<li><a target="_blank" href="/Plant/potflower/">盆栽花卉</a></li>
+		        	</ul>		     
+		        </div>
+			</div>        
+			<ul class="nav">
+			    <li><a href="/">首页</a></li>
+				<li><a href="/flower/">鲜花</a></li>
+				<li><a href="/yongshenghua/">永生花</a></li>
+				<li><a href="/cake/">蛋糕</a></li>
+				<li><a href="/gifts/">礼品</a></li>
+				<li><a href="/quickselect/">一分钟教你选花</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- 导航 End -->
+	   		
+
+	<div class="main">
+
+		<div class="affix-box">
+			<ul class="nav section-nav" data-spy="affix" data-offset-top="0" data-offset-bottom="0">
+				<li class="nav-li active"><a href="#Section02">花材</a></li>
+				<li class="nav-li"><a href="#Section03">数量</a></li>
+				<li class="nav-li"><a href="#Section04">颜色</a></li>
+				<li class="nav-li"><a href="#Section05">进阶篇</a></li>
+				<li class="gotop"><a href="#">回顶部</a></li>
+			</ul>
+		</div>
+
+		<section class="t-default" id="Section01">
+			<div class="container">
+				<div class="bd">
+					<img src="__INDEX__STATIC__/picture/tutorial_p1.png">
+					<span class="default-arrow"></span>
+				</div>
+			</div>
+		</section>
+		<section class="t-material" id="Section02">
+			<div class="container">
+				<div class="hd">
+					<h3>花材</h3>
+					<p>每种花都有自己的花语，当你在选择送的对象时，<br>千万不要送错，免得出糗哦</p>
+				</div>
+				<div class="bd">
+					<a href="/meigui/" target="_blank"><img src="__INDEX__STATIC__/picture/tutorial_p2_1.jpg" height="450" width="318"></a>
+					<a href="/kangnaixin/" target="_blank"><img src="__INDEX__STATIC__/picture/tutorial_p2_2.jpg" height="450" width="318"></a>
+					<a href="/baihe/" target="_blank"><img src="__INDEX__STATIC__/picture/tutorial_p2_3.jpg" height="450" width="318"></a>
+				</div>
+			</div>
+		</section>
+
+		<section class="t-amount" id="Section03">
+			<div class="container">
+				<div class="hd">
+					<h3>数量</h3>
+					<p>不同玫瑰朵数，有不同的寓意，但都是对爱情的美好祝福<br><span class="text-primary">（最简单的秘诀：有纪念意义的场合就多送就对了）</span></p>
+				</div>
+				<div class="bd">
+					<ul>
+						<li class="amount-li">
+							<a href="/shiyiduomeigui/" target="_blank">
+								<img src="__INDEX__STATIC__/picture/tutorial_p3_11.png" height="60" width="64">
+								11枝代表一心一意
+							</a>
+						</li>
+						<li><img src="__INDEX__STATIC__/picture/tutorial_p3_1.png" height="220" width="160"></li>
+						<li class="amount-li">
+							<a href="/shiliuduomeigui/" target="_blank">
+								<img src="__INDEX__STATIC__/picture/tutorial_p3_16.png" height="60" width="64">
+								16枝代表最深的爱
+							</a>
+						</li>
+						<li class="amount-li">
+							<a href="/shiliuduomeigui/" target="_blank">
+								<img src="__INDEX__STATIC__/picture/tutorial_p3_19.png" height="60" width="64">
+								19枝代表期待陪伴
+							</a>
+						</li>
+						<li><img src="__INDEX__STATIC__/picture/tutorial_p3_2.png" height="220" width="160"></li>
+						<li class="amount-li">
+							<a href="/sanshisanduomeigui/" target="_blank">
+								<img src="__INDEX__STATIC__/picture/tutorial_p3_33.png" height="60" width="64">
+								33枝代表爱你三生三世
+							</a>
+						</li>
+						<li class="amount-li">
+							<a href="/jiushijiuduomeigui/" target="_blank">
+								<img src="__INDEX__STATIC__/picture/tutorial_p3_99.png" height="60" width="64">
+								99枝代表长相厮守
+							</a>
+						</li>
+						<li><img src="__INDEX__STATIC__/picture/tutorial_p3_3.png" height="220" width="160"></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+		<section class="t-colour" id="Section04">
+			<div class="container">
+				<div class="hd">
+					<h3>颜色</h3>
+					<p>花的颜色也可以诉说不同的语言，你想要表达什么呢？<br>花能说出你心中的秘密</p>
+				</div>
+				<div class="bd">
+					<a href="/hongsexianhua/" target="_blank"><img src="__INDEX__STATIC__/picture/tutorial_p4_1.jpg" height="224" width="480"></a>
+					<a href="/fensexianhua/" target="_blank"><img src="__INDEX__STATIC__/picture/tutorial_p4_2.jpg" height="224" width="480"></a>
+					<a href="/baisexianhua/" target="_blank"><img src="__INDEX__STATIC__/picture/tutorial_p4_3.jpg" height="224" width="480"></a>
+					<a href="/huangsexianhua/" target="_blank"><img src="__INDEX__STATIC__/picture/tutorial_p4_4.jpg" height="224" width="480"></a>
+				</div>
+			</div>
+		</section>
+
+		<section class="t-advance" id="Section05">
+			<div class="container">
+				<div class="hd">
+					<h3>进阶篇</h3>
+				</div>
+				<div class="bd">
+					<div class="owl-carousel">
+						<div class="item">
+							<a href="/flower/JingPinXianHua/"><img src="__INDEX__STATIC__/picture/tutorial_p5_1.jpg" title="高端" height="440" width="960"></a>
+						</div>
+						<div class="item">
+							<a href="/tesexianhua/"><img src="__INDEX__STATIC__/picture/tutorial_p5_2.jpg" title="别致" height="440" width="960"></a>
+						</div>
+						<div class="item">
+							<a href="/yongshenghua/"><img src="__INDEX__STATIC__/picture/tutorial_p5_3.jpg" title="珍藏" height="440" width="960"></a>
+						</div>
+					</div>
+					<div class="prev">prev</div>
+					<div class="next">next</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	
+		<!-- 尾部导航 -->
+	<div class="footer-nav">
+		<a href="/">首页</a> <b>|</b> <a href="/profile/about.htm" target="_blank">关于我们</a> <b>|</b> <a href="/profile/media.html" target="_blank">媒体报道</a> <b>|</b> <a href="/profile/contact.htm" target="_blank">联系方式</a> <b>|</b> <a href="/qiyetuangou/" target="_blank">企业团购</a> <b>|</b> <a href="/liansuo/" target="_blank">花店加盟</a> <b>|</b> <a href="/member/payment/balancefill" target="_blank">在线补款</a> <b>|</b> <a class="last-child" href="/profile/why_choose_us.htm" target="_blank">为什么选择中国鲜花礼品网</a>
+	</div>
+	<!-- 尾部导航 End -->
+		<!-- 通用尾部 -->
+	<footer>
+		<div class="auth">
+			<a href="http://kxlogo.knet.cn/seallogo.dll?sn=e15041744030058395oqbo000000&size=4" target="_blank"><img src="__INDEX__STATIC__/picture/kxwz.gif" height="40" width="109"></a>
+			<a href="https://search.szfw.org/cert/l/CX20130306002238002312" target="_blank"><img src="__INDEX__STATIC__/picture/cxwz.gif" height="40" width="112"></a>
+			<a href="http://www.anquan.org/authenticate/cert/?site=www.hua.com&at=realname" rel="nofollow" target="_blank"><img src="__INDEX__STATIC__/picture/smyz.gif" height="40" width="106"></a>
+			<img src="__INDEX__STATIC__/picture/slogan.png" height="50" width="212">
+			<a href="/member/payment/fillbyalipay?order_no=&order_sum=" rel="nofollow" target="_blank"><img src="__INDEX__STATIC__/picture/zfb.gif" height="49" width="96"></a>
+			<a href="/profile/news_20111110.htm" target="_blank"><img src="__INDEX__STATIC__/picture/100.jpg" height="49" width="150"></a>
+		</div>
+		<p><a href="/profile/ChinaFlowerAssociation.htm" rel="nofollow" target="_blank" title="中国花卉协会会员">中国花卉协会会员</a> <a href="/profile/chinaECA.htm" rel="nofollow" target="_blank">中国电子商务协会会员</a> ICP经营许可证：<a href="/profile/ICP.htm" rel="nofollow" target="_blank">粤B2-20050744</a> <b>|</b> <a href="http://www.miibeian.gov.cn" rel="nofollow" target="_blank">粤ICP备09171662号</a> Copyright &copy; 2005-2016</p> 
+		<p>花礼网 （中国鲜花礼品网） <a href="http://www.hua.com/">www.hua.com</a> 中国领先鲜花网品牌,一分钟挑选鲜花！</p>  
+	</footer>
+	<!-- 通用尾部 End -->
+
+	<script type="text/javascript"  src="__INDEX__STATIC__/js/common.js"></script>
+<script type="text/javascript"  src="__INDEX__STATIC__/js/owl.carousel.min.js"></script>
+<script>
+$('#loginModal').modal({backdrop: 'static', keyboard: false, show: false});
+$('#loginModal').on('shown.bs.modal', function () {
+	var $this = $(this);
+	var $modal_dialog = $this.find('.modal-dialog');
+	$this.css('display', 'block');
+	$modal_dialog.css({'margin-top': Math.max(0, ($(window).height() - $modal_dialog.height()) / 2) });
+});
+//关注商品
+function DoConfirm(ys,zs,hc){
+	$('#loginModal').modal('show');
+	$("#confirmChoose").attr("href","/flower/quickselect.asp?ys="+ys+"&zs="+zs+"&hc="+hc);
+	$("#againSee").attr("href","/quickselect/?ys="+ys+"&zs="+zs+"&hc="+hc+"#Section05");
+}
+//关注end
+		$(function() {
+		 	// 进阶篇tabs
+		 	var owl = $(".owl-carousel");
+			owl.owlCarousel({
+				mouseDrag: false,
+				touchDrag : false,
+      			slideSpeed : 300,
+      			paginationSpeed : 400,
+      			singleItem: true,
+      			autoPlay: true,
+      			navigation: false,
+      			afterInit: customPager,
+			});
+
+			function customPager() {
+			    $.each(this.owl.userItems, function (i) {
+			        var titleData = jQuery(this).find('img').attr('title');
+			        var paginationLinks = jQuery('.owl-controls .owl-pagination .owl-page span');
+			    	$(paginationLinks[i]).append(titleData);
+			    });
+			};
+
+			$(".next").click(function(){
+				owl.trigger('owl.next');
+			})
+			$(".prev").click(function() {
+				owl.trigger('owl.prev');
+			})
+		});
+		var sjs=Math.random();
+		//$.get("/ajax/getlogininfo.asp?rmd="+sjs,null,function(data){if(data.indexOf("<") > -1){$("#LoginInfo").html(data);}});//登陆状态
+		//$.get("/ajax/CartCount.asp?rmd="+sjs,null,function(data){if(data.indexOf("(") > -1){$("#gwcCount").html(data);}});//购物车商品件数
+		//$.get("/ajax/getcartinfo.asp?rmd="+sjs,null,function(data){if(data.indexOf("<") > -1){$("#CartInfo").html(data);}});//购物车商品详情
+	</script>
+</body>
+</html>

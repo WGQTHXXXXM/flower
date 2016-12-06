@@ -2,6 +2,8 @@
 /**
  * 首页的控制器
  */
+
+
 namespace app\index\controller;
 
 class Help extends Auth

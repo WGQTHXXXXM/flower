@@ -27,11 +27,13 @@ class Passport extends Auth
         $data['email'] = $_REQUEST['Email'];
         $data['password'] = $_REQUEST['PassWord'];
         $data['reg_time'] = time();
-        $this->tbUser->addMember($data);
+        $this->tbUser->addMember($data);   
+        return $this->fetch('Member/memberCenter/index');     
     }
 
     public function register()
     { 
+
     	//return view('abc/index.html');
     	return $this->fetch('passport/register/index');
     }
@@ -47,10 +49,12 @@ class Passport extends Auth
 
     //  检查用户邮箱是否存在            
     public function isExistEmail()
-    {
+    {   
         if($this->tbUser->isExistEmail(['email' => $_REQUEST['email']]))
         {
             session('email',$_REQUEST['email']);
+            $name = strstr(session('email'),'@',true);
+            session('name',$name);
             echo json_encode(['status'=>1, 'msg'=>"成功", 'data'=>""]);
         }
         else

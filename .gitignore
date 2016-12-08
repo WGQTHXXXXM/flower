@@ -3,4 +3,8 @@ composer.lock
 *.log
 runtime
 database.php
+<<<<<<< HEAD
 thinkphp
+=======
+thinkphp
+>>>>>>> b2c8345afaea9d8c5ed938d7f34af9214384e9a5

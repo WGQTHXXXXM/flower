@@ -102,8 +102,7 @@ class Admin extends Controller
 			//验证失败
 			echo json_encode(array('status'=>0,'msg'=>'','data'=>[]));die();
 		} else{
-			echo json_encode(array('status'=>1,'msg'=>'','data'=>[]));die();
-		
+			echo json_encode(array('status'=>1,'msg'=>'','data'=>[]));die();	
 		}
 	}
 	
@@ -111,15 +110,15 @@ class Admin extends Controller
 	public function doLogin()
 	{
 		
-		// $user = new User;
-		// $data['username'] = $_POST['username'];
-		// $data['password'] = $_POST['password'];
-		// /*model -> user*/
-		// $result = $user->doFind($data);
-		// /*判断用户名是否存在*/
-		// if (empty($result)) {
-		// 	$this->error('用户名不存在');
-		// }
+		$user = new User;
+		$data['username'] = $_POST['username'];
+		$data['password'] = $_POST['password'];
+		/*model -> user*/
+		$result = $user->doFind($data);
+		/*判断用户名是否存在*/
+		if (empty($result)) {
+			$this->error('用户名不存在');
+		}
 
 		/*判断验证码*/
 		// if(!captcha_check($_POST['code'])){
@@ -128,16 +127,16 @@ class Admin extends Controller
 		// }
 		
 		/*判断密码是否正确*/
-		// if ($result['password'] == $_POST['password']) {
-		// 	session('user',[
-		// 		'id' => $result['id'],
-		// 		'username' => $result['vir_name']
-		// 		]);
-		// 	$this->success('登录成功','admin/admin/index');
-		// }else{
-		// 	$this->error('密码错误');
-		// }
-		// return true;
+		if ($result['password'] == $_POST['password']) {
+			session('user',[
+				'id' => $result['id'],
+				'username' => $result['vir_name']
+				]);
+			$this->success('登录成功','admin/admin/index');
+		}else{
+			$this->error('密码错误');
+		}
+		return true;
 	}
 	
 	//退出登录

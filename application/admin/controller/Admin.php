@@ -21,6 +21,18 @@ class Admin extends Controller
     	 return $this->fetch();
 
 	}
+    //验证码验证
+	public function verify()
+	{
+		if(!captcha_check($_POST['verify'])){
+			//验证失败
+			echo json_encode(array('status'=>0,'msg'=>'','data'=>[]));die();
+		} else{
+			echo json_encode(array('status'=>1,'msg'=>'','data'=>[]));die();
+		
+		}
+	}
+	
 	public function checklogin()
 	{
         // dump($_POST);

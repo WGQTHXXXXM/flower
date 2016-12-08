@@ -12,6 +12,6 @@ return [
     'view_replace_str'       => [
         '__INDEX__SITE__' => 'http://www.psumdgt.com',
         // '__STATIC__' => 'http://static.tp5.com/static'
-        '__INDEX__STATIC__' => 'http://www.psumdgt.com/static'
+        '__INDEX__STATIC__' => 'http://www.psumdgt.com/static/index'
     ]
 ];

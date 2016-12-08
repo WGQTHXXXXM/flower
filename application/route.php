@@ -24,9 +24,8 @@ return [
         'gifts' => 'index/Gifts',
         'help' => 'index/Help',
         'huayu' => 'index/Huayu',
-        'member' => 'index/Member',
-        // 'register' => 'index/Passport/Register',
-        // 'login' => 'index/Passport/Login',
+        'Member' => 'index/Member',
+        'Passport' => 'index/Passport',
         'plant' => 'index/Plant',
         'product' => 'index/Product',
         'productpj' => 'index/Productpj',
@@ -38,7 +37,7 @@ return [
         'toys' => 'index/Toys',
         'xianhuashipai' => 'index/Xianhuashipai',
         'yongshenghua' => 'index/Yongshenghua',
-        ],
+    ],
     
 
 ];

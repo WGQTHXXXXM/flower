@@ -12,9 +12,20 @@ class Member extends Auth
 		
 	}
 
-    public function index()
+    public function memberCenter()
     { 
     	//return view('abc/index.html');
-    	return $this->fetch();
+    	return $this->fetch("Member/MemberCenter/index");
     }
+
+    function personInfoManage()
+    {
+    	return $this->fetch('Member/accountSetting/PersonInfoManage/index');
+    }
+
+    function headPicUpload()
+    {
+    	return $this->fetch('Member/accountSetting/HeadPicUpload/index');
+    }
+
 }

@@ -1,0 +1,377 @@
+
+    <!-- 顶部导航 -->
+    
+    <div class="site-nav">
+        <div class="container">
+
+            <ul class="site-nav-l">
+                <li class="menu">
+                    <a href="__INDEX__SITE__/" onclick="addfavorite();return false;"><span class="ico ico-star"></span>收藏鲜花网(hua.com)</a>
+                </li>
+                <li class="menu dropdown">
+                    <a href="javascript:void(0)" data-hover="dropdown" data-delay="0"><span class="ico ico-weixin"></span>关注微信</a>
+                    <div class="dropdown-menu dropdown-weixin">
+                        <img src="http://img02.hua.com/pc/pimg/wechat_qrcode.jpg" width="124" height="124">
+                        <p>扫码关注<br>回复"礼物" 更多惊喜！</p>
+                    </div>
+                </li>
+                <li class="menu dropdown">
+                    <a href="__INDEX__SITE__/mobile/" data-hover="dropdown" data-delay="0" target="_blank"><span class="ico ico-mobile"></span>手机花礼</a>
+                    <div class="dropdown-menu dropdown-weixin">
+                        <img src="http://img02.hua.com/pc/pimg/app_qrcode.jpg" width="124" height="124">
+                        <p>首单再减20！<br>(需输入券号9920)</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="site-nav-r">
+                <!--登陆状态信息显示start-->
+                <li class="menu login" id="LoginInfo"><a href="__INDEX__SITE__/Member/MemberCenter/" rel="nofollow">你好，wgqthxxxxm</a><a href="__INDEX__SITE__/Passport/Login/Loginout" title="退出">退出</a></li>
+                <!--登陆状态信息显示end-->
+                <li class="site-nav-pipe">|</li>
+                <li class="menu">
+                    <a href="__INDEX__SITE__/help/ordercx/" rel="nofollow" target="_blank">订单查询</a>
+                </li>
+                <li class="site-nav-pipe">|</li>
+                <!--我的花礼信息显示start-->
+                <li class="menu dropdown">
+                    <a href="__INDEX__SITE__/member/" rel="nofollow" data-hover="dropdown" data-delay="0" target="_blank">我的花礼</a>
+                </li><!--我的花礼信息显示end-->
+                <li class="site-nav-pipe">|</li>
+                <li class="menu dropdown">
+                    <a href="__INDEX__SITE__/help/" data-hover="dropdown" data-delay="0" target="_blank">客户服务<span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                    <div class="dropdown-menu dropdown-service">
+                        <a href="__INDEX__SITE__/member/payment/balancefill" target="_blank">在线付款</a>
+                        <a href="__INDEX__SITE__/help/" target="_blank">帮助中心</a>
+                        <a href="__INDEX__SITE__/help/afterservice.htm" target="_blank">售后服务</a>
+                        <a href="__INDEX__SITE__/help/sendRange.htm" target="_blank">配送范围</a>
+                        <a href="__INDEX__SITE__/chat/" target="_blank">留言反馈</a>
+                    </div>
+                </li>
+                <li class="site-nav-pipe">|</li>
+                <!--购物车信息显示start-->
+                <li class="menu dropdown">
+                    <a href="__INDEX__SITE__/shopping/showcart/" data-hover="dropdown" data-delay="0" rel="nofollow" target="_blank"><span class="ico ico-cart"></span>购物车<span class="text-primary" id="gwcCount">(0)</span><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                    <div class="dropdown-menu dropdown-cart" id="CartInfo"><div class="empty">您的购物车中没有商品，<a href="__INDEX__SITE__/">先去选购吧</a>！</div></div>
+                </li><!--购物车信息显示end-->
+                <li class="site-nav-pipe">|</li>
+                <li class="menu slogan">
+                    中国鲜花礼品网: 会员中心
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 顶部导航 End -->
+    <!-- 头部 -->
+    <header>
+        <div class="logo">
+            <h1><a href="__INDEX__SITE__/" class="logo-bd">会员中心</a></h1>
+            <i></i>
+            
+        <h2>中国鲜花礼品网 始于2005，简称花礼网</h2>
+    
+
+        </div>
+        <div class="search">
+            <form name="i_search" method="post" action="/search/">
+                <div class="input-group">
+                    <input name="keyword" class="form-control" placeholder="商品关键词" type="text">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button" onclick="this.form.submit()">搜索</button>
+                    </span>
+                </div>
+            </form>
+            
+    
+
+        </div>
+        <div class="service">
+            <span class="ico ico-phone"></span>400-889-8188
+            <a href="__INDEX__SITE__/chat/" target="_blank"><span class="ico ico-headset"></span>在线客服</a>
+        </div>
+    </header>
+    <!-- 头部 End -->
+    
+<!-- 导航 -->
+<nav class="common">
+    <div class="container">
+        <div class="categorys dropdown">
+            <h3 class="categorys-title" data-hover="dropdown" data-delay="0">
+                <a href="__INDEX__SITE__/all.html"><span class="pull-right glyphicon glyphicon-menu-down"></span>全部商品导购</a>
+            </h3>
+            <div class="dropdown-menu dropdown-cate">
+                <h4><a href="__INDEX__SITE__/flower/">鲜花</a></h4>
+                <ul class="cate-list list-inline">
+                    <li><a href="__INDEX__SITE__/aiqingxianhua/">爱情鲜花</a></li>
+                    <li><a href="__INDEX__SITE__/youqingxianhua/">友情鲜花</a></li>
+                    <li><a href="__INDEX__SITE__/shengriliwu/" target="_blank">生日鲜花</a></li>
+                    <li><a href="__INDEX__SITE__/songzhangbeixianhua/">问候长辈</a></li>
+                    <li><a href="__INDEX__SITE__/zhufuqinghexianhua/">祝贺鲜花</a></li>
+                    <li><a href="__INDEX__SITE__/hunqingxianhua/">婚庆鲜花</a></li>
+                    <li><a href="__INDEX__SITE__/tanbingweiwenxianhua/">探病慰问</a></li>
+                    <li><a href="__INDEX__SITE__/daoqianxianhua/">道歉鲜花</a></li>
+                    <li><a href="__INDEX__SITE__/businessFlower/kaiyehualan/">开业花篮</a></li>
+                </ul>
+                <h4><a href="__INDEX__SITE__/yongshenghua/">永生花</a></h4>
+                <ul class="cate-list list-inline">
+                    <li><a href="__INDEX__SITE__/yongshenghua/yongshenghua_box.html">经典花盒</a></li>
+                    <li><a href="__INDEX__SITE__/yongshenghua/yongshenghua_large.html">巨型玫瑰</a></li>
+                    <li><a href="__INDEX__SITE__/yongshenghua/yongshenghua_lavender.html">薰衣草</a></li>
+                </ul>
+
+                <h4><a href="__INDEX__SITE__/cake/">蛋糕</a></h4>
+                <ul class="cate-list list-inline">
+                    <li><a href="__INDEX__SITE__/cake/ganso/">元祖</a></li>
+                    <li><a href="__INDEX__SITE__/cake/holiland/">好利来</a></li>
+                    <li><a href="__INDEX__SITE__/cake/croissants/">可颂坊</a></li>
+                    <li><a href="__INDEX__SITE__/cake/waffleboy/">窝夫小子</a></li>
+                    <li><a href="__INDEX__SITE__/cake/micamika/">米卡米卡</a></li>
+                    <li><a href="__INDEX__SITE__/cake/yipinxuan/">一品轩</a></li>
+                    <li><a href="__INDEX__SITE__/cake/allcitycake/">全国品牌</a></li>
+                </ul>
+                <h4><a href="__INDEX__SITE__/gifts/">礼品</a></h4>
+                <ul class="cate-list list-inline">
+                    <li><a href="__INDEX__SITE__/livingflower/">泰国保鲜花</a></li>
+                    <li><a href="__INDEX__SITE__/gifts/goldenflower/">金箔花</a></li>
+                    <li><a href="__INDEX__SITE__/gifts/musicbox/">音乐盒</a></li>
+                    <li><a href="__INDEX__SITE__/gifts/crystallaser/">水晶内雕</a></li>
+                    <li><a href="__INDEX__SITE__/gifts/cosmeticmirror/">化妆镜</a></li>
+                    <li><a href="__INDEX__SITE__/gifts/kingking/">香薰系列</a></li>
+                    <li><a href="__INDEX__SITE__/toys/">品牌公仔</a></li>
+                    <li><a href="__INDEX__SITE__/gifts/bestlife/">音乐睡枕</a></li>
+                    <li><a href="__INDEX__SITE__/katonghuashu/">卡通花束</a></li>
+                </ul>
+                <h4><a href="__INDEX__SITE__/Plant/">绿植</a></h4>
+                <ul class="cate-list list-inline">
+                    <li><a href="__INDEX__SITE__/Plant/greenplant/">绿色植物</a></li>
+                    <li><a href="__INDEX__SITE__/Plant/potflower/">盆栽花卉</a></li>
+                </ul>
+            </div>
+        </div>
+        <ul class="nav">
+            <li><a href="__INDEX__SITE__/">首页</a></li>
+            <li><a href="__INDEX__SITE__/flower/">鲜花</a></li>
+            <li><a href="__INDEX__SITE__/yongshenghua/">永生花</a></li>
+            <li><a href="__INDEX__SITE__/cake/">蛋糕</a></li>
+            <li><a href="__INDEX__SITE__/gifts/">礼品</a></li>
+            <li><a href="__INDEX__SITE__/huayu/">花语大全</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- 导航 End -->
+<div class="container">
+    <div class="breadcrumbs"><a href="__INDEX__SITE__/">首页</a> &gt; <a href="__INDEX__SITE__/Member/MemberCenter/">会员中心</a></div>
+    <div class="wrapper about">
+        
+
+<div class="pull-left w970 l230">
+    <div class="box-border member-r">
+        <div class="member-base-l mb0">
+            <ul class="mb-tab">
+                <li><a href="__INDEX__SITE__/Member/PersonInfoManage">基本信息</a></li>
+                <li class="active"><a href="__INDEX__SITE__/Member/HeadPicUpload">头像照片</a></li>
+            </ul>
+        </div>
+
+        <div class="avatar-wrap">
+            <div class="avatar-preview">
+                <div class="preview-l">
+                    <div id="Canvas" class="uploaddiv">
+                        <table id="Crop" style="-moz-user-select: none; cursor: move;" cellspacing="0" cellpadding="0" border="0">
+                            <tbody><tr>
+                                <td style="height: 53px" colspan="3" class="Overlay"></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 63px" class="Overlay"></td>
+                                <td id="headArea" style="width: 140px; height: 140px; border-width: 1px; border-style: solid; border-color: white;"></td>
+                                <td style="width: 62px" class="Overlay"></td>
+                            </tr>
+                            <tr>
+                                <td style="height: 54px" colspan="3" class="Overlay"></td>
+                            </tr>
+                        </tbody></table>
+                        <div style="position:relative;top:0px;left:0px;" id="IconContainer">
+                            <img id="ImageIcon" src="__INDEX__STATIC__/images/avatar_default_09.jpg" class="imagePhoto" tooltip="" relativepath="/assets/img/avatar_default_09.jpg" style="width: 150px; height: 150px; left: 68px; top: -209px;">
+                        </div>
+                    </div>
+                    <div class="uploaddiv">
+                        <table>
+                            <tbody><tr>
+                                <td id="Min">
+                                    <img alt="缩小" src="__INDEX__STATIC__/images/_c.gif" onmouseover="this.src = '__INDEX__STATIC__/images/_c.gif';" onmouseout="this.src = '__INDEX__STATIC__/images/_h.gif';" id="moresmall" class="smallbig">
+                                </td>
+                                <td>
+                                    <div id="bar">
+                                        <div id="barchild" class="child" style="left: 100px; cursor: move;">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td id="Max">
+                                    <img alt="放大" src="__INDEX__STATIC__/images/c.gif" onmouseover="this.src='__INDEX__STATIC__/images/c.gif';" onmouseout="this.src='__INDEX__STATIC__/images/h.gif';" id="morebig" class="smallbig">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+
+                    <div style="display:none;">
+
+                        图片实际宽度： <input name="txt_width" value="1" id="txt_width" type="text"><br>
+                        图片实际高度： <input name="txt_height" value="1" id="txt_height" type="text"><br>
+                        距离顶部： <input name="txt_top" value="63" id="txt_top" type="text"><br>
+                        距离左边： <input name="txt_left" value="54" id="txt_left" type="text"><br>
+                        截取框的宽：<input name="txt_DropWidth" value="150" id="txt_DropWidth" type="text"><br>
+                        截取框的高：<input name="txt_DropHeight" value="150" id="txt_DropHeight" type="text"><br>
+                        放大倍数： <input name="txt_Zoom" id="txt_Zoom" type="text">
+                    </div>
+
+                    <h4>推荐头像</h4>
+                    <ul class="avatar-list">
+                        <li>
+                            <a href="__INDEX__SITE__/Member/AccountSetting/HeadPicUpLoad?Picurl=/assets/img/avatar_default_01.jpg">
+                                <img src="__INDEX__STATIC__/images/avatar_default_01.jpg" width="300" height="300">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="__INDEX__SITE__/Member/AccountSetting/HeadPicUpLoad?Picurl=/assets/img/avatar_default_02.jpg">
+                                <img src="__INDEX__STATIC__/images/avatar_default_02.jpg" width="300" height="300">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="__INDEX__SITE__/Member/AccountSetting/HeadPicUpLoad?Picurl=/assets/img/avatar_default_03.jpg">
+                                <img src="__INDEX__STATIC__/images/avatar_default_03.jpg" width="300" height="300">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="__INDEX__SITE__/Member/AccountSetting/HeadPicUpLoad?Picurl=/assets/img/avatar_default_04.jpg">
+                                <img src="__INDEX__STATIC__/images/avatar_default_04.jpg" width="300" height="300">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="__INDEX__SITE__/Member/AccountSetting/HeadPicUpLoad?Picurl=/assets/img/avatar_default_05.jpg">
+                                <img src="__INDEX__STATIC__/images/avatar_default_05.jpg" width="300" height="300">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="__INDEX__SITE__/Member/AccountSetting/HeadPicUpLoad?Picurl=/assets/img/avatar_default_06.jpg">
+                                <img src="__INDEX__STATIC__/images/avatar_default_06.jpg" width="300" height="300">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="__INDEX__SITE__/Member/AccountSetting/HeadPicUpLoad?Picurl=/assets/img/avatar_default_07.jpg">
+                                <img src="__INDEX__STATIC__/images/avatar_default_07.jpg" width="300" height="300">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="__INDEX__SITE__/Member/AccountSetting/HeadPicUpLoad?Picurl=/assets/img/avatar_default_08.jpg">
+                                <img src="__INDEX__STATIC__/images/avatar_default_08.jpg" width="300" height="300">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="__INDEX__SITE__/Member/AccountSetting/HeadPicUpLoad?Picurl=/assets/img/avatar_default_09.jpg">
+                                <img src="__INDEX__STATIC__/images/avatar_default_09.jpg" width="300" height="300">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="__INDEX__SITE__/Member/AccountSetting/HeadPicUpLoad?Picurl=/assets/img/avatar_default_10.jpg">
+                                <img src="__INDEX__STATIC__/images/avatar_default_10.jpg" width="300" height="300">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="preview-r">
+                    <h4>头像预览</h4>
+                    <p>您上传的图片会自动生成2种尺寸，请注意大小尺寸的头像是否清晰，您可以在左侧调整后提交保存。</p>
+                    <div class="preview-box-100">
+                        <img id="imgPreview100" src="__INDEX__STATIC__/images/avatar_default_09.jpg" width="100" height="100">
+                    </div>
+                    <p>100*100像素</p>
+                    <div class="preview-box-50">
+                        <img id="imgPreview50" src="__INDEX__STATIC__/images/avatar_default_09.jpg" width="50" height="50">
+                    </div>
+                    <p>50*50像素</p>
+                </div>
+            </div>
+            <div class="uploaddiv" style="width:250px;">
+
+                <input class="btn btn-default btn-sm btn-submit" id="save" onclick="savePost();" value="保存头像" type="button">
+
+                <span id="saveTips" style="color:red; font-size:15px; font-weight:600; float:right; display:none;">
+                    保存成功
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+    {include file="Member/AccountSetting/guide"}
+    <!-- 尾部导航 -->
+    {include file="public/about"}
+    <!-- 尾部导航 End -->
+    
+    
+    <script src="__INDEX__STATIC__/js/jquery-1.6.2.min.js"></script>
+    <script src="__INDEX__STATIC__/js/CutPic.js"></script>
+    <script src="__INDEX__STATIC__/js/jquery.easydrag.js"></script>
+    <script type="text/javascript" src="__INDEX__STATIC__/js/statesandright.js"></script>
+    <script type="text/javascript">
+
+        function savePost() {
+            picUrl = $('#ImageIcon').attr("relativePath");
+            $.ajax({
+                url: '/Member/AccountSetting/HeadPicSave',  //正式环境
+                cache: false,
+                type: 'post',
+                data: "picUrl=" + picUrl + "&p=" + Math.random(),
+                async: false, //默认为true 异步
+                error: function () {
+                    alert('error');
+                },
+                success: function (data) {
+
+                    if ($.trim(data) != "false") {
+                        $('#saveTips').show().delay(2000).fadeOut();
+                    } else {
+                        alert("保存失败，登录超时请重新登录。")
+                    }
+                }
+            });
+
+        }
+    </script>
+
+
+    <script>
+        var activeItem = 'memberCenterItem';
+        $("#containerBody").find('li').each(function () {
+            $(this).removeClass("active");
+            if ($(this).attr('id') == activeItem) {
+                $(this).addClass("active");
+            }
+        })
+    </script>
+
+    <script type="text/javascript">
+        function reqUrlParam(paras) {
+            var url = location.href;
+            var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");
+            var paraObj = {}
+            for (i = 0; j = paraString[i]; i++) {
+                paraObj[j.substring(0, j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=") + 1, j.length);
+            }
+            var returnValue = paraObj[paras.toLowerCase()];
+            if (typeof (returnValue) == "undefined") {
+                return "";
+            } else {
+                return returnValue;
+            }
+        }
+        function setCurUrlClass() {
+            // css : class = "color_tj"
+            var pathname1 = window.location.pathname;
+            $("a[href='" + pathname1 + "'").addClass("color_tj");
+        }
+        if ($("#pjCount").length > 0) {
+            $.get("/productpj/GetPJCount", function (data) {
+                $("#pjCount").text(data);
+            });
+        }
+    </script>
+

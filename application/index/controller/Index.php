@@ -14,7 +14,6 @@ class Index extends Auth
 
     public function index()
     { 
-    	//return view('abc/index.html');
     	return $this->fetch();
     }
 }

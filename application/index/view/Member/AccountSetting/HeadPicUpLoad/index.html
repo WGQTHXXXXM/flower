@@ -1,95 +1,7 @@
 
-    <!-- 顶部导航 -->
-    
-    <div class="site-nav">
-        <div class="container">
-
-            <ul class="site-nav-l">
-                <li class="menu">
-                    <a href="__INDEX__SITE__/" onclick="addfavorite();return false;"><span class="ico ico-star"></span>收藏鲜花网(hua.com)</a>
-                </li>
-                <li class="menu dropdown">
-                    <a href="javascript:void(0)" data-hover="dropdown" data-delay="0"><span class="ico ico-weixin"></span>关注微信</a>
-                    <div class="dropdown-menu dropdown-weixin">
-                        <img src="http://img02.hua.com/pc/pimg/wechat_qrcode.jpg" width="124" height="124">
-                        <p>扫码关注<br>回复"礼物" 更多惊喜！</p>
-                    </div>
-                </li>
-                <li class="menu dropdown">
-                    <a href="__INDEX__SITE__/mobile/" data-hover="dropdown" data-delay="0" target="_blank"><span class="ico ico-mobile"></span>手机花礼</a>
-                    <div class="dropdown-menu dropdown-weixin">
-                        <img src="http://img02.hua.com/pc/pimg/app_qrcode.jpg" width="124" height="124">
-                        <p>首单再减20！<br>(需输入券号9920)</p>
-                    </div>
-                </li>
-            </ul>
-            <ul class="site-nav-r">
-                <!--登陆状态信息显示start-->
-                <li class="menu login" id="LoginInfo"><a href="__INDEX__SITE__/Member/MemberCenter/" rel="nofollow">你好，wgqthxxxxm</a><a href="__INDEX__SITE__/Passport/Login/Loginout" title="退出">退出</a></li>
-                <!--登陆状态信息显示end-->
-                <li class="site-nav-pipe">|</li>
-                <li class="menu">
-                    <a href="__INDEX__SITE__/help/ordercx/" rel="nofollow" target="_blank">订单查询</a>
-                </li>
-                <li class="site-nav-pipe">|</li>
-                <!--我的花礼信息显示start-->
-                <li class="menu dropdown">
-                    <a href="__INDEX__SITE__/member/" rel="nofollow" data-hover="dropdown" data-delay="0" target="_blank">我的花礼</a>
-                </li><!--我的花礼信息显示end-->
-                <li class="site-nav-pipe">|</li>
-                <li class="menu dropdown">
-                    <a href="__INDEX__SITE__/help/" data-hover="dropdown" data-delay="0" target="_blank">客户服务<span class="glyphicon glyphicon-triangle-bottom"></span></a>
-                    <div class="dropdown-menu dropdown-service">
-                        <a href="__INDEX__SITE__/member/payment/balancefill" target="_blank">在线付款</a>
-                        <a href="__INDEX__SITE__/help/" target="_blank">帮助中心</a>
-                        <a href="__INDEX__SITE__/help/afterservice.htm" target="_blank">售后服务</a>
-                        <a href="__INDEX__SITE__/help/sendRange.htm" target="_blank">配送范围</a>
-                        <a href="__INDEX__SITE__/chat/" target="_blank">留言反馈</a>
-                    </div>
-                </li>
-                <li class="site-nav-pipe">|</li>
-                <!--购物车信息显示start-->
-                <li class="menu dropdown">
-                    <a href="__INDEX__SITE__/shopping/showcart/" data-hover="dropdown" data-delay="0" rel="nofollow" target="_blank"><span class="ico ico-cart"></span>购物车<span class="text-primary" id="gwcCount">(0)</span><span class="glyphicon glyphicon-triangle-bottom"></span></a>
-                    <div class="dropdown-menu dropdown-cart" id="CartInfo"><div class="empty">您的购物车中没有商品，<a href="__INDEX__SITE__/">先去选购吧</a>！</div></div>
-                </li><!--购物车信息显示end-->
-                <li class="site-nav-pipe">|</li>
-                <li class="menu slogan">
-                    中国鲜花礼品网: 会员中心
-                </li>
-            </ul>
-        </div>
-    </div>
+    <!-- 顶部导航 -->    
+    {include file='public/top'}
     <!-- 顶部导航 End -->
-    <!-- 头部 -->
-    <header>
-        <div class="logo">
-            <h1><a href="__INDEX__SITE__/" class="logo-bd">会员中心</a></h1>
-            <i></i>
-            
-        <h2>中国鲜花礼品网 始于2005，简称花礼网</h2>
-    
-
-        </div>
-        <div class="search">
-            <form name="i_search" method="post" action="/search/">
-                <div class="input-group">
-                    <input name="keyword" class="form-control" placeholder="商品关键词" type="text">
-                    <span class="input-group-btn">
-                        <button class="btn btn-primary" type="button" onclick="this.form.submit()">搜索</button>
-                    </span>
-                </div>
-            </form>
-            
-    
-
-        </div>
-        <div class="service">
-            <span class="ico ico-phone"></span>400-889-8188
-            <a href="__INDEX__SITE__/chat/" target="_blank"><span class="ico ico-headset"></span>在线客服</a>
-        </div>
-    </header>
-    <!-- 头部 End -->
     
 <!-- 导航 -->
 <nav class="common">
@@ -307,10 +219,8 @@
     <!-- 尾部导航 End -->
     
     
-    <script src="__INDEX__STATIC__/js/jquery-1.6.2.min.js"></script>
     <script src="__INDEX__STATIC__/js/CutPic.js"></script>
     <script src="__INDEX__STATIC__/js/jquery.easydrag.js"></script>
-    <script type="text/javascript" src="__INDEX__STATIC__/js/statesandright.js"></script>
     <script type="text/javascript">
 
         function savePost() {

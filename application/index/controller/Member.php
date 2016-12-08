@@ -3,6 +3,7 @@
  * 首页的控制器
  */
 namespace app\index\controller;
+use \think\Request;
 
 class Member extends Auth
 {
@@ -26,6 +27,11 @@ class Member extends Auth
     function headPicUpload()
     {
     	return $this->fetch('Member/accountSetting/HeadPicUpload/index');
+    }
+
+    function personInfoSave()
+    {
+        dump(Request::instance()->post());
     }
 
 }

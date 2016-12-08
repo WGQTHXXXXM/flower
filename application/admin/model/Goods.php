@@ -4,8 +4,7 @@ use think\Model;
 
 use think\Request;
 use traits\model\SoftDelete;
-
-class User extends Model
+class Goods extends Model
 {
 
 	use SoftDelete;

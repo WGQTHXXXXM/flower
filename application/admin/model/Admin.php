@@ -5,12 +5,8 @@ use think\Model;
 use think\Request;
 use traits\model\SoftDelete;
 
-class User extends Model
+class Admin extends Model
 {
-
-	use SoftDelete;
-	protected static $deleteTime = 'delete_time';
-	
 
 
 }

@@ -5,10 +5,10 @@ use think\Model;
 
 class User extends Model
 {
-	//  检查用户邮箱是否存在
-	function isExistEmail($email)
+	//  检查用户是否存在
+	function hasUser($email)
 	{
-		return User::get($email);	
+		return $this->get($email)->toArray();	
 	}
 
 	//添加成员 
@@ -16,5 +16,19 @@ class User extends Model
 	{
 		$this->data($data);
 		$this->save();
+		return $this->id;
 	}
+	//更新成员信息
+	function updateUser($data,$id)
+	{
+		dump($id);
+		dump($data);
+		return $this->save($data,['id'=>$id]);
+	}
+
+	function test()
+    {
+    	return 1;
+    }
+
 }

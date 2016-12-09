@@ -3,31 +3,16 @@
  * 注册登录
  */
 namespace app\index\controller;
-use app\index\model\User;
 
 
 class Passport extends Auth
 {
-    private $tbUser;
-
-    public function abc()
-    {
-        $qqq = $_REQUEST['aaa'];
-        $user = ['username' => 'chuhongbo', 'password' => $qqq];
-        echo json_encode($user);        
-    }
-
-	public function _initialize()
-	{
-        $this->tbUser = new User();	
-    }
-
     public function doRegister()
     {
         $data['email'] = $_REQUEST['Email'];
         $data['password'] = $_REQUEST['PassWord'];
         $data['reg_time'] = time();
-        $this->tbUser->addMember($data);   
+        session('idUser',$this->tbUser->addMember($data));   
         return $this->fetch('Member/memberCenter/index');     
     }
 
@@ -50,13 +35,9 @@ class Passport extends Auth
     //  检查用户邮箱是否存在            
     public function isExistEmail()
     {   
-        if($this->tbUser->isExistEmail(['email' => $_REQUEST['email']]))
-        {
-            session('email',$_REQUEST['email']);
-            $name = strstr(session('email'),'@',true);
-            session('name',$name);
+        $result = $this->tbUser->hasUser(['email' => $_REQUEST['email']]);
+        if($result)
             echo json_encode(['status'=>1, 'msg'=>"成功", 'data'=>""]);
-        }
         else
             echo json_encode(['status'=>0, 'msg'=>"失败", 'data'=>""]);
     }
@@ -66,14 +47,15 @@ class Passport extends Auth
     	//return view('abc/index.html');
     	return $this->fetch('passport/Login/index');
     }
-    //检查用户名是否存在
+    //检查用户名和密码是否正确
     function checkUserLogin()
     {
-        if($this->tbUser->isExistEmail(['email' => $_REQUEST['email'],'password'=>$_REQUEST['pwd']]))
+        $result = $this->tbUser->hasUser(['email' => $_REQUEST['email'],'password'=>$_REQUEST['pwd']]);
+        if($result)
         {
-            session('email',$_REQUEST['email']);
-            $name = strstr(session('email'),'@',true);
+            $name = strstr($_REQUEST['email'],'@',true);
             session('name',$name);
+            session('idUser',$result['id']);
             echo json_encode(['status'=>1, 'msg'=>"成功", 'data'=>""]);
         }
         else
@@ -94,7 +76,7 @@ class Passport extends Auth
     //登录状态
     function loginState()
     {
-        if(session('?email'))
+        if(session('?idUser'))
         {
             echo json_encode(['Logined'=>1, 'ShowName'=>session('name'), 'data'=>""]);
         }

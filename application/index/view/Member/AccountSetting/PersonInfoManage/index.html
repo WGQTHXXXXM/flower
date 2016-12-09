@@ -124,7 +124,7 @@
                 <div class="form-group form-group-sm">
                     <label class="col-xs-2 control-label">邮箱:</label>
                     <div class="col-xs-10">
-                        <p class="form-control-static">wgqthxxxxm@163.com <input name="email" value="wgqthxxxxm@163.com" type="hidden"> </p>
+                        <p id="u_e" class="form-control-static"><input name="email" value="wgqthxxxxm@163.com" type="hidden"> </p>
                     </div>
                 </div>
                         <div class="form-group form-group-sm">
@@ -194,12 +194,25 @@
 
 
     <script type="text/javascript">
-        addressInit('cmbProvince', 'cmbCity', 'cmbArea', '', '', 'XX区');  //前面三个是ID，后面三个是初始化值
-        $("#birthday_container").birthday();  //此代码顺序不能乱
+        $.getJSON("__INDEX__SITE__/index/Auth/getUserInfo/type/1", function(json){
+            $("#inputName").val(json.vir_name);//添加姓名
+            if(json.sex == '男')
+                $('#sex1').attr('checked',true);
+            else if(json.sex == '女')
+                $('#sex2').attr('checked',true);
+            else if(json.sex == '保密')
+                $('#sex3    ').attr('checked',true);
+            if(json.bir_year)
+                $("#year option").eq(2017-json.bir_year).attr('selected','selected');
+            if(json.bir_month)
+                $("#month option").eq(json.bir_month).attr('selected','selected');
+            if(json.bir_day)
+                $("#day option").eq(json.bir_day).attr('selected','selected');
+            $('#u_e').html(json.email);
+            $("#inputMobile").val(json.mphone);
+            $("#inputPhone").val(json.tel_phone);
 
-        $("#year").find("option[value='']").attr("selected", true);
-        $("#month").find("option[value='']").attr("selected", true);
-        $("#day").find("option[value='']").attr("selected", true);
+        });
     </script>
 
     <script type="text/javascript">

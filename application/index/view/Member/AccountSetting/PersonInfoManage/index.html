@@ -1,8 +1,8 @@
 ﻿
-    <!-- 顶部导航 -->
-    
+    <!-- 顶部导航 -->    
+    {include file='public/top'}
+    <!-- 顶部导航 End -->
 
-    <!-- 头部 End -->
     
 <!-- 导航 -->
 <nav class="common">
@@ -85,9 +85,9 @@
                 <li><a href="__INDEX__SITE__/Member/HeadPicUpLoad">头像照片</a></li>
             </ul>
 
-            <form class="form-horizontal" action="/Member/AccountSetting/PersonInfoSave" method="post" id="theForm">
+            <form class="form-horizontal" action="__INDEX__SITE__/Member/PersonInfoSave" method="post" id="theForm">
                 <div class="form-group form-group-sm">
-                    <label for="inputName" class="col-xs-2 control-label">* 真实姓名:</label>
+                    <label for="inputName" class="col-xs-2 control-label">* 真名:</label>
                     <div class="col-xs-4">
                         <input class="form-control" id="inputName" name="realname" maxlength="40" value="" type="text">
                     </div>
@@ -193,11 +193,6 @@
 
 
 
-    <script type="text/javascript" src="http://img02.hua.com/pc/js/common.js"></script>
-    
-    
-    <script type="text/javascript" src="http://img02.hua.com/pc/js/jsAddress.js"></script>
-    <script type="text/javascript" src="http://img02.hua.com/pc/js/birthday.js?v=1.1"></script>
     <script type="text/javascript">
         addressInit('cmbProvince', 'cmbCity', 'cmbArea', '', '', 'XX区');  //前面三个是ID，后面三个是初始化值
         $("#birthday_container").birthday();  //此代码顺序不能乱
@@ -247,7 +242,6 @@
         })
     </script>
 
-        <script type="text/javascript" src="http://img02.hua.com/pc/js/statesandright.js"></script>
     <script type="text/javascript">
         function reqUrlParam(paras) {
             var url = location.href;

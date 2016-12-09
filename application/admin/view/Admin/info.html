@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +9,15 @@
     <link rel="stylesheet" href="__ADMIN__STATIC__ /css/pintuer.css">
     <link rel="stylesheet" href="__ADMIN__STATIC__ /css/admin.css">
     <script src="__ADMIN__STATIC__ /js/jquery.js"></script>
-    <script src="__ADMIN__STATIC__ /js/pintuer.js"></script>  
+    <script src="__ADMIN__STATIC__ /js/pintuer.js"></script>
 </head>
-<body>
-  
-     <div style="margin-left:350px;margin-top:200px;"><font size="25" color="blue">
-     				{if($Think.session.adminname)}
-                   
-					欢迎您，{$Think.session.adminname}!
-					{else}
-                   没有名字的管理员!
-                    {/if}		</div>
 
-</body></html>
+<body>
+
+    <div style="margin-left:350px;margin-top:200px;">
+        <font size="25" color="blue">
+            {if($Think.session.user)} “ 后台管理中心 ” {else} 喝饱了再过来 jian坤集团欢迎您！ {/if} </div>
+
+</body>
+
+</html>

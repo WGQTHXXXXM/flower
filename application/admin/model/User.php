@@ -1,16 +1,11 @@
 <?php
 namespace app\admin\model;
 use think\Model;
-
-use think\Request;
-use traits\model\SoftDelete;
-
 class User extends Model
 {
-
-	use SoftDelete;
-	protected static $deleteTime = 'delete_time';
-	
-
-
+	public function LoginVerify($data)
+	{
+		$idUser = User::get($data);
+		return $idUser;
+	}
 }

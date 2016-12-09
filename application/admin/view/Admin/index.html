@@ -15,7 +15,11 @@
 <body style="background-color:#f2f9fd;">
     <div class="header bg-main">
         <div class="logo margin-big-left fadein-top">
-            <h1><img src="__ADMIN__STATIC__ /images/y.jpg" class="radius-circle rotate-hover" height="50" alt="" />后台管理中心</h1>
+            {if($Think.session.user)}
+            <h1><img src="__ADMIN__STATIC__ /images/y.jpg" class="radius-circle rotate-hover" height="50" alt="" />尊敬的管理员：{$Think.session.user}</h1>
+            {else}
+            <h1><img src="__ADMIN__STATIC__ /images/y.jpg" class="radius-circle rotate-hover" height="50" alt="" />没权限，快去吃奶</h1>
+            {/if}
         </div>
         <div class="head-l"><a class="button button-little bg-green" href="" target="_blank"><span class="icon-home"></span> 前台首页</a> &nbsp;&nbsp;<a class="button button-little bg-red" href="{:url('admin/admin/logout')}"><span class="icon-power-off"></span> 退出登录</a> </div>
     </div>
@@ -28,7 +32,7 @@
             <!-- <li><a href="{:url('admin/admin/page')}" target="right"><span class="icon-caret-right"></span>单页管理</a></li>   -->
             <!-- <li><a href="{:url('admin/admin/adv')}" target="right"><span class="icon-caret-right"></span>首页轮播</a></li>    -->
             <!-- <li><a href="{:url('admin/admin/book')}" target="right"><span class="icon-caret-right"></span>板块管理</a></li>      -->
-            {if($Think.session.adminname)}
+            {if($Think.session.user)}
 
             <li><a href="{:url('admin/admin/fourmshow')}" target="right"><span class="icon-caret-right"></span>模块展示</a></li>
 
@@ -42,7 +46,7 @@
         <h2><span class="icon-pencil-square-o"></span>增添管理</h2>
         <ul>
             <!-- <li><a href="{:url('admin/admin/list')}" target="right"><span class="icon-caret-right"></span>内容管理</a></li> -->
-            {if($Think.session.adminname)}
+            {if($Think.session.user)}
 
             <li><a href="{:url('admin/admin/addfourm')}" target="right"><span class="icon-caret-right"></span>板块添加</a></li>
             <li><a href="{:url('admin/admin/goodadd')}" target="right"><span class="icon-caret-right"></span>商品添加</a></li>
@@ -50,7 +54,7 @@
         </ul>
         <h2><span class="icon-pencil-square-o"></span>回收站管理</h2>
         <ul>
-            {if($Think.session.adminname)}
+            {if($Think.session.user)}
 
             <li><a href="{:url('admin/admin/userrecycle')}" target="right"><span class="icon-caret-right"></span>用户管理</a></li>
             <li><a href="{:url('admin/admin/goodrecycle')}" target="right"><span class="icon-caret-right"></span>商品管理</a></li>

@@ -12,44 +12,39 @@
     <script src="__ADMIN__STATIC__ /js/jquery.js"></script>
     <script src="__ADMIN__STATIC__ /js/pintuer.js"></script>
     <script type="text/javascript">
-        function refreshVerify() {
-            var ts = Date.parse(new Date()) / 1000;
-            var img = document.getElementById('verify_img');
-            img.src = "/captcha?id=" + ts;
-        }
         $(function() {
-
-            function checkVerify() {
-
+            $('#verify_img').click(function() {
+                var ts = Date.parse(new Date()) / 1000;
+                var img = document.getElementById('verify_img');
+                img.src = "/captcha?id=" + ts;
+            })
+            var ret = 0;
+            alert('管理员用户登录界面 温馨提醒: 登录账户为您的 "真实姓名"， 请核实填写"用户名密码"');
+            $('#submit').click(function() {
                 $.ajaxSetup({
                     async: false
                 });
-                $.post('__SITE__/admin/admin/verify', {
+
+                $.post('__ADMIN__SITE__/admin/admin/verify', {
                     verify: $("#verify").val()
                 }, function(data) {
-                    if (data.status == 1) {
-                        $("#verify").next().html('<font color="green">验证码正确</font>');
+                    if (data.status == 1)
+                        ret = 1;
+                    else
+                        ret = 0;
+                }, 'json');
 
-                        return true;
-                    } else {
-                        $("#verify").next().html('<font color="red">验证码错误</font>');
+                if (ret == 0) {
+                    alert('请核实 "验证码"');
+                    return false;
+                }
+                $("form:first").submit();
 
-                        return false;
 
-                    }
-                }, 'json')
-            }
-            //alert(rel);
-            $("#verify").blur(function() {
-                checkVerify();
             });
-            //  $("#submit").click(function() {
-            //     // if (rel == 1) {
-            //     //      $("form:first").submit();
-            //     // }else{
-            //     //     alert('验证码错误');
-            //     // }
-            // });
+
+
+
         });
     </script>
 </head>
@@ -62,7 +57,7 @@
                 <div style="height:150px;"></div>
                 <div class="media media-y margin-big-bottom">
                 </div>
-                <form action="{:url('admin/admin/checklogin')}" method="post">
+                <form action="{:url('admin/admin/index')}" method="post">
                     <div class="panel loginbox">
                         <div class="text-center margin-big padding-big-top">
                             <h1>后台管理中心</h1>
@@ -70,7 +65,7 @@
                         <div class="panel-body" style="padding:30px; padding-bottom:10px; padding-top:10px;">
                             <div class="form-group">
                                 <div class="field field-icon-right">
-                                    <input type="text" class="input input-big" name="adminname" placeholder="登录账号" data-validate="required:请填写账号" />
+                                    <input type="text" class="input input-big" name="username" placeholder="登录账号" data-validate="required:请填写账号" />
                                     <span class="icon icon-user margin-small"></span>
                                 </div>
                             </div>
@@ -87,7 +82,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div style="padding:30px;"><input type="submit" class="button button-block bg-main text-big input-big" value="登录"></div>
+                        <div style="padding:30px;"><input type="submit" id="submit" class="button button-block bg-main text-big input-big" value="登录"></div>
                     </div>
                 </form>
             </div>

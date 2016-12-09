@@ -1,5 +1,6 @@
 .idea
 *.log
+.gitignore
 runtime
 database.php
 thinkphp

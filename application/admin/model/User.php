@@ -3,7 +3,7 @@ namespace app\admin\model;
 use think\Model;
 class User extends Model
 {
-	public function LoginVerify($data)
+	public function uCheckLogin($data)
 	{
 		$idUser = User::get($data);
 		return $idUser;

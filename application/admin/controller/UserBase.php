@@ -15,10 +15,6 @@ class UserBase extends Controller
     {
         $this->adUser = new User();
     }
-
-    // protected $beforeActionList = [
-	// 	'checkLogin' => ''
-	// ];
 }
 
 

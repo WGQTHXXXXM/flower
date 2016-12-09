@@ -1,21 +1,32 @@
 <?php
 /**
- * 需要验证的基类
+ * 用户验证的基类
  */
 namespace app\index\controller;
 use think\Controller;
+use app\index\model\User;
 
 class Auth extends Controller
 {
-	
-    public function abc()
-    { 
-    	return '123141';
+	//用户模块的对象
+	protected $tbUser;
+
+    public function _initialize()
+	{
+        $this->tbUser = new User();	
     }
 
-    public function index()
+    /**
+     * 返回用户信息
+     * @param  [type] $type [1:json; 2:arr; 3:obj;]
+     * @return [type]       [description]
+     */
+    function getUserInfo($type)
     {
-    	return 'Auth';
+    	if($type == 1)
+    		echo json_encode($this->tbUser->hasUser(['id'=>session('idUser')]));
+    	else if($type == 2)
+    		return $this->tbUser->hasUser(['id'=>session('idUser')]);
     }
 
 }

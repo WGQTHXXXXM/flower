@@ -12,7 +12,7 @@ class Product extends Auth
 		
 	}
 
-    public function index()
+    public function qwe()
     { 
     	//return view('abc/index.html');
     	return $this->fetch();

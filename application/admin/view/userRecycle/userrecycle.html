@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <form method="post" action="{:url('admin/admin/userallrecover')}" id="listform">
+    <form method="post" action="{:url('admin/userrecycle/recoverSbm')}" id="listform">
         <div class="panel admin-panel">
             <div class="panel-head"><strong class="icon-reorder">用户列表</strong> <a href="" style="float:right; display:none;">添加字段</a></div>
 
@@ -45,7 +45,8 @@
                     <td>{//$data['delete_time']}</td>
                     <td>
                         <div class="button-group">
-                            <a class="button border-red" href="{//:url('admin/admin/userrecover',['uid'=>$data['uid']])}">
+                            <a class="button border-red" href="{:url('admin/usermanage/yonghu')}
+                            {//:url('admin/userrecycle/recoverSbm',['uid'=>$data['uid']])}">
                                 <span class="icon-trash-o"></span> 恢复
                             </a>
                         </div>

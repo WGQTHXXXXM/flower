@@ -122,11 +122,9 @@
                 <!-- 大图 End -->
                 <!-- 小图 -->
                     <div class="pro-thumb">
-                        <img src="__INDEX__STATIC__/picture/1061006.jpg_80x87.jpg" name="0||http://img01.hua.com/uploadpic/newpic/1061006.jpg" alt="999纯金箔玫瑰+陶瓷花瓶">
-                                <img src="__INDEX__STATIC__/picture/201605191428199375.jpg_80x87.jpg" name="1||http://img01.hua.com/uploadpic/newpic/201605191428199375.jpg">
-                                <img src="__INDEX__STATIC__/picture/201605191428258281.jpg_80x87.jpg" name="2||http://img01.hua.com/uploadpic/newpic/201605191428258281.jpg">
-                                <img src="__INDEX__STATIC__/picture/201605191428320468.jpg_80x87.jpg" name="3||http://img01.hua.com/uploadpic/newpic/201605191428320468.jpg">
-
+                        {foreach $dataPicShow as $i=>$vo}
+                            <img src="__INDEX__SITE__/{$vo->path}" name="{$i}||__INDEX__SITE__/{$vo->path}" >
+                        {/foreach}
                     </div>
                 <!-- 小图 End -->
                 <!-- 箭头 -->
@@ -140,22 +138,22 @@
         </div>
         <div class="product-r">
             <div class="title">
-                <h3 class="product-title">999纯金箔玫瑰+陶瓷花瓶----千足金箔玫瑰 最佳送女友送爱人礼物 结婚纪念礼物</h3>
+                <h3 class="product-title">{$dataPro->title}</h3>
                 <p class="product-subtitle"></p>
             </div>
             <div class="attribute">
                 <dl>
                     <dt>类 别：</dt>
-                    <dd>礼品-金箔花 编 号：1061006</dd>
+                    <dd>礼品-金箔花 编 号：{$dataPro->url_num}</dd>
                 </dl>
                 <dl>
                     <dt>材 料：</dt>
-                    <dd>金箔玫瑰采用纯度99.9%千足金箔制作，花朵、叶片为纯金箔，内部有一个透明骨架作为支撑，绝非镀金工艺，花杆为聚乙烯镀金，轻盈、不易折。<br>
+                    <dd>{$dataPro->material}<br>
 </dd>
                 </dl>
                 <dl>
                     <dt>包 装：</dt>
-                    <dd>粉色包装盒、国家金银质量监督检测中心出具的检验证书、品牌保证卡、防伪标签、搭配手提袋。</dd>
+                    <dd>{$dataPro->packing}</dd>
                 </dl>
                 <dl>
                     <dt>备 注：</dt>
@@ -163,18 +161,17 @@
                 </dl>
                 <dl>
                     <dt>附 送：</dt>
-                    <dd>免费送精美贺卡，代打印您的祝福。(下单时填了留言才赠送)</dd>
+                    <dd>{$dataPro->attach}</dd>
                 </dl>
                 <dl>
                     <dt>配 送：</dt>
                     <dd>
-                        全国
-                                （本商品通过快递公司或邮政EMS寄送，全国可达，包邮）
+                        {$dataPro->allow_city}
                     </dd>
                 </dl>
                     <dl>
                         <dt>说明：</dt>
-                        <dd><span class="text-primary">畅销榜商品，优惠价！</span></dd>
+                        <dd><span class="text-primary">{$dataPro->introduce}</span></dd>
                     </dl>
             </div>
             <div class="attribute" style="display:none;" id="WLT_PROMPT">
@@ -184,9 +181,10 @@
                 </dl>
             </div>
             <div class="price-wrap">
-
+                <div class="price-original">市场价：￥{$dataPro->market_price}</div>
             </div>
             <div class="price" id="ajax_pricebox" style="border:none;">
+            <div class="price-sell">花礼价：<strong><em class="price-sign">¥</em><em class="price-num">{$dataPro->now_price}</em></strong></div>
             </div>
             <div class="btn-buy">
                 <a href="/shopping/AddtoCart?product_code=1061006" class="btn btn-primary btn-lg" id="Btn_AddToCart"><span class="ico ico-cart-white"></span>立即购买</a>
@@ -220,43 +218,10 @@
                 </li>
             </ul>
             <div id="Details" class="tabs-panel">
-                <p align="center"><img alt="" src="__INDEX__STATIC__/picture/201512231841138070361.jpg" border="0" /></p>
-<p align="center"></p>
-<p align="center"></p>
-<p align="center"></p>
-<p align="center"><img alt="" src="__INDEX__STATIC__/picture/201512231841217659198.jpg" border="0" /></p>
-<p align="center"></p>
-<p align="center"><img alt="" src="__INDEX__STATIC__/picture/20165191435591598041.jpg" border="0" /></p>
-<p align="center"></p>
-<p align="center"><img alt="" src="__INDEX__STATIC__/picture/20114291615276031985.jpg" border="0" /></p>
-<p align="center">&nbsp;</p>
-<p align="center"><img alt="" src="__INDEX__STATIC__/picture/2016519143665162005.jpg" border="0" /></p>
-<p align="center"></p>
-<p align="center">&nbsp;</p>
-<p align="center"><img alt="" src="__INDEX__STATIC__/picture/20165191436155519061.jpg" border="0" /></p>
-<p align="center"></p>
-<p align="center">&nbsp;</p>
-<p align="center"><img alt="" src="__INDEX__STATIC__/picture/20165191436211125628.jpg" border="0" /></p>
-<p align="center"><br />
-<img alt="" src="__INDEX__STATIC__/picture/20165191436281350848.jpg" border="0" /></p>
-<p align="center">&nbsp;</p>
-<p align="center"><img alt="" src="__INDEX__STATIC__/picture/20165191436331794146.jpg" border="0" /></p>
-<p align="center">&nbsp;</p>
-<p align="center"><img alt="" src="__INDEX__STATIC__/picture/20165191436476122760.jpg" border="0" /></p>
-<p align="center">&nbsp;</p>
-<p align="center"><img alt="" src="__INDEX__STATIC__/picture/20165191436545694842.jpg" border="0" /></p>
-<p align="center">&nbsp;</p>
-<p align="center"></p>
-<p align="center"><img alt="" src="__INDEX__STATIC__/picture/2011112214091435306.gif" border="0" /></p>
-<p align="center">&nbsp;</p>
-<p align="center"><img alt="" src="__INDEX__STATIC__/picture/2011429201583281009.jpg" border="0" /></p>
-<p align="center">&nbsp;</p>
-<p align="center"><img alt="" src="__INDEX__STATIC__/picture/201142920362119479.jpg" border="0" /></p>
-<p align="center">&nbsp;</p>
-<p align="center"><img alt="" src="__INDEX__STATIC__/picture/2011429152783525042.jpg" border="0" /></p>
-<p align="center">&nbsp;</p>
-<p align="center"><img alt="" src="__INDEX__STATIC__/picture/20114291525455969912.jpg" border="0" /></p>
-<p align="center"><img alt="" src="__INDEX__STATIC__/picture/20114291540132409793.jpg" border="0" /><img alt="" src="__INDEX__STATIC__/picture/2011429153565926928.jpg" border="0" /><img alt="" src="__INDEX__STATIC__/picture/20114291535306694873.jpg" border="0" /></p>
+                {foreach $dataPicDet as $vo}
+                    <p align="center"><img alt="" src="__INDEX__SITE__/{$vo->path}" border="0" /></p>
+                    <p align="center"></p>
+                {/foreach}
             </div>
             <!-- 商品详情 End -->
             <!-- 用户评价 -->
@@ -270,138 +235,31 @@
             <div id="Comment" class="tabs-panel">
                 <div class="comment-bd">
                     <div align="center"><font color="#999999">本商品评价<font color="red" id="curTotal"></font>条，最近所有商品评价<font color="red" id="TotalPL"></font>条</font><br /><br /></div>
-                            <dl>
-                                <dt>
-                                    <a href="/product/1061006.html"><img src="__INDEX__STATIC__/picture/1061006.jpg_80x87.jpg" height="63" width="58"></a>
-                                    5110991*<br />
-                                    巴林右旗大板镇北市*
-                                </dt>
-                                <dd>
-                                    <div class="hd">
-                                        <span class="pull-right">评价时间：2016-11-25  IP：183.148.235.*</span>
-                                        整体评分：
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                                                            </div>
-                                    <div class="bd">
-                                        <h6>花满意</h6>
-                                        <p class="text-justify">评价内容：订的花朋友很满意</p>
-                                    </div>
-                                </dd>
-                            </dl>
-                            <dl>
-                                <dt>
-                                    <a href="/product/1061006.html"><img src="__INDEX__STATIC__/picture/1061006.jpg_80x87.jpg" height="63" width="58"></a>
-                                    1353502*<br />
-                                    广东省河源市龙川县*
-                                </dt>
-                                <dd>
-                                    <div class="hd">
-                                        <span class="pull-right">评价时间：2016-11-21  IP：210.21.86.1*</span>
-                                        整体评分：
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                                                            </div>
-                                    <div class="bd">
-                                        <h6>发货快，礼品漂亮！</h6>
-                                        <p class="text-justify">评价内容：发货快，礼品漂亮！</p>
-                                    </div>
-                                </dd>
-                            </dl>
-                            <dl>
-                                <dt>
-                                    <a href="/product/1061006.html"><img src="__INDEX__STATIC__/picture/1061006.jpg_80x87.jpg" height="63" width="58"></a>
-                                    2474252*<br />
-                                    亮马桥路32-1高*
-                                </dt>
-                                <dd>
-                                    <div class="hd">
-                                        <span class="pull-right">评价时间：2016-11-16  IP：223.104.3.1*</span>
-                                        整体评分：
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                                                            </div>
-                                    <div class="bd">
-                                        <h6></h6>
-                                        <p class="text-justify">评价内容：还不错</p>
-                                    </div>
-                                </dd>
-                            </dl>
-                            <dl>
-                                <dt>
-                                    <a href="/product/1061006.html"><img src="__INDEX__STATIC__/picture/1061006.jpg_80x87.jpg" height="63" width="58"></a>
-                                    weixin_*<br />
-                                    郑州市金水区民航路*
-                                </dt>
-                                <dd>
-                                    <div class="hd">
-                                        <span class="pull-right">评价时间：2016-11-11  IP：112.97.51.*</span>
-                                        整体评分：
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                                                            </div>
-                                    <div class="bd">
-                                        <h6></h6>
-                                        <p class="text-justify">评价内容：发货及时</p>
-                                    </div>
-                                </dd>
-                            </dl>
-                            <dl>
-                                <dt>
-                                    <a href="/product/1061006.html"><img src="__INDEX__STATIC__/picture/1061006.jpg_80x87.jpg" height="63" width="58"></a>
-                                    weixin_*<br />
-                                    海港区建设大街19*
-                                </dt>
-                                <dd>
-                                    <div class="hd">
-                                        <span class="pull-right">评价时间：2016-11-08  IP：101.44.32.*</span>
-                                        整体评分：
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                                                            </div>
-                                    <div class="bd">
-                                        <h6></h6>
-                                        <p class="text-justify">评价内容：很好很快捷</p>
-                                    </div>
-                                </dd>
-                            </dl>
-                            <dl>
-                                <dt>
-                                    <a href="/product/1061006.html"><img src="__INDEX__STATIC__/picture/1061006.jpg_80x87.jpg" height="63" width="58"></a>
-                                    3646035*<br />
-                                    吉林省长春市九台市*
-                                </dt>
-                                <dd>
-                                    <div class="hd">
-                                        <span class="pull-right">评价时间：2016-10-20  IP：182.84.156.1*</span>
-                                        整体评分：
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                            <img src="__INDEX__STATIC__/picture/review_star_fen.gif" align="absmiddle" />
-                                                                            </div>
-                                    <div class="bd">
-                                        <h6></h6>
-                                        <p class="text-justify">评价内容：这评价我说了不算。要女盆友说了才算</p>
-                                    </div>
-                                </dd>
-                            </dl>
+                    {foreach $dataComment as $vo}
+                    <dl>
+                        <dt>
+                            <a href="/product/1061006.html"><img src="__INDEX__SITE__/uploads/20161210/1061006.jpg_80x87.jpg" height="63" width="58"></a>
+                            {$vo->id_user}<br />
+                            巴林右旗大板镇北市*
+                        </dt>
+                        <dd>
+                            <div class="hd">
+                                <span class="pull-right">评价时间：2016-11-25  IP：183.148.235.*</span>
+                                整体评分：
+                                {for start="0" end="$vo->score"}
+                                    <img src="__INDEX__SITE__/static/index/images/review_star_fen.gif" align="absmiddle" />
+                                {/for}
+                                {for start="$vo->score" end="5"}                                    
+                                    <img src="__INDEX__SITE__/static/index/images/review_star_fen_gray.gif" align="absmiddle" />
+                                {/for}
+                            </div>
+                            <div class="bd">
+                                <p class="text-justify">评价内容：{$vo->content}</p>
+                            </div>
+                        </dd>
+                    </dl>
+                    {/foreach}
+                            
                 </div>
                 <div class="comment-ft">
                         <span>
@@ -475,22 +333,22 @@
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane fade in active" id="serverPane01">
-                        <img src="__INDEX__STATIC__/picture/server_01.jpg" height="350" width="910">
+                        <img src="__INDEX__SITE__/uploads/20161210/server_01.jpg" height="350" width="910">
                     </div>
                     <div class="tab-pane fade" id="serverPane02">
-                        <img src="__INDEX__STATIC__/picture/server_02.jpg" height="350" width="910">
+                        <img src="__INDEX__SITE__/uploads/20161210/server_02.jpg" height="350" width="910">
                     </div>
                     <div class="tab-pane fade" id="serverPane03">
-                        <img src="__INDEX__STATIC__/picture/server_03.jpg" height="350" width="910">
+                        <img src="__INDEX__SITE__/uploads/20161210/server_03.jpg" height="350" width="910">
                     </div>
                     <div class="tab-pane fade" id="serverPane04">
-                        <img src="__INDEX__STATIC__/picture/server_04.jpg" height="350" width="910">
+                        <img src="__INDEX__SITE__/uploads/20161210/server_04.jpg" height="350" width="910">
                     </div>
                     <div class="tab-pane fade" id="serverPane05">
-                        <img src="__INDEX__STATIC__/picture/server_05.jpg" height="350" width="910">
+                        <img src="__INDEX__SITE__/uploads/20161210/server_05.jpg" height="350" width="910">
                     </div>
                     <div class="tab-pane fade" id="serverPane06">
-                        <img src="__INDEX__STATIC__/picture/server_06.jpg" height="350" width="910">
+                        <img src="__INDEX__SITE__/uploads/20161210/server_06.jpg" height="350" width="910">
                     </div>
                 </div>
             </div>
@@ -515,7 +373,7 @@
                     <!-- 侧边商品 -->
                             <div class="side-item">
             <div class="img-box">
-                <a href="/product/1061006.html" target="_blank"><img src="__INDEX__STATIC__/picture/1061006.jpg_220x240.jpg" width="180" height="196" alt="999纯金箔玫瑰+陶瓷花瓶"></a>
+                <a href="/product/1061006.html" target="_blank"><img src="__INDEX__SITE__/uploads/20161210/1061006.jpg_220x240.jpg" width="180" height="196" alt="999纯金箔玫瑰+陶瓷花瓶"></a>
             </div>
             <div class="info-cont">
                 <div class="title">
@@ -531,7 +389,7 @@
         </div>
         <div class="side-item">
             <div class="img-box">
-                <a href="/product/1061004.html" target="_blank"><img src="__INDEX__STATIC__/picture/1061004.jpg_220x240.jpg" width="180" height="196" alt="999纯金箔玫瑰"></a>
+                <a href="/product/1061004.html" target="_blank"><img src="__INDEX__SITE__/uploads/20161210/1061004.jpg_220x240.jpg" width="180" height="196" alt="999纯金箔玫瑰"></a>
             </div>
             <div class="info-cont">
                 <div class="title">
@@ -547,7 +405,7 @@
         </div>
         <div class="side-item">
             <div class="img-box">
-                <a href="/product/1061002.html" target="_blank"><img src="__INDEX__STATIC__/picture/1061002.jpg_220x240.jpg" width="180" height="196" alt="999纯金箔康乃馨"></a>
+                <a href="/product/1061002.html" target="_blank"><img src="__INDEX__SITE__/uploads/20161210/1061002.jpg_220x240.jpg" width="180" height="196" alt="999纯金箔康乃馨"></a>
             </div>
             <div class="info-cont">
                 <div class="title">
@@ -563,7 +421,7 @@
         </div>
         <div class="side-item">
             <div class="img-box">
-                <a href="/product/1061005.html" target="_blank"><img src="__INDEX__STATIC__/picture/1061005.jpg_220x240.jpg" width="180" height="196" alt="999纯金箔玫瑰+水晶花瓶"></a>
+                <a href="/product/1061005.html" target="_blank"><img src="__INDEX__SITE__/uploads/20161210/1061005.jpg_220x240.jpg" width="180" height="196" alt="999纯金箔玫瑰+水晶花瓶"></a>
             </div>
             <div class="info-cont">
                 <div class="title">
@@ -579,7 +437,7 @@
         </div>
         <div class="side-item">
             <div class="img-box">
-                <a href="/product/1061003.html" target="_blank"><img src="__INDEX__STATIC__/picture/1061003.jpg_220x240.jpg" width="180" height="196" alt="999纯金箔康乃馨+水晶花瓶"></a>
+                <a href="/product/1061003.html" target="_blank"><img src="__INDEX__SITE__/uploads/20161210/1061003.jpg_220x240.jpg" width="180" height="196" alt="999纯金箔康乃馨+水晶花瓶"></a>
             </div>
             <div class="info-cont">
                 <div class="title">
@@ -595,7 +453,7 @@
         </div>
         <div class="side-item">
             <div class="img-box">
-                <a href="/product/1061013.html" target="_blank"><img src="__INDEX__STATIC__/picture/1061013.jpg_220x240.jpg" width="180" height="196" alt="幸福娃娃/珍珠白"></a>
+                <a href="/product/1061013.html" target="_blank"><img src="__INDEX__SITE__/uploads/20161210/1061013.jpg_220x240.jpg" width="180" height="196" alt="幸福娃娃/珍珠白"></a>
             </div>
             <div class="info-cont">
                 <div class="title">
@@ -744,7 +602,7 @@
                 var cartHtml = '';
                 if (json.productsNum > 0) {
                     $.each(json.datas, function (index, data) {
-                        cartHtml = cartHtml + '<div class="side-item-s"><div class="img-box"><a href="/product/' + data.productCode + '.html"><img src="__INDEX__STATIC__/picture/4f2d403bcd484257b97a1d61295212d8.gif' + data.productCode + '.jpg_80x87.jpg" height="56" width="50"></a></div><div class="info-cont"><a href="/product/' + data.productCode + '.html" class="product-title">' + data.productName + '</a><div class="price"><span class="price-sign">&yen;</span><span class="price-num">&nbsp; ' + data.productPrice + '</span></div></div></div>';
+                        cartHtml = cartHtml + '<div class="side-item-s"><div class="img-box"><a href="/product/' + data.productCode + '.html"><img src="__INDEX__SITE__/uploads/20161210/4f2d403bcd484257b97a1d61295212d8.gif' + data.productCode + '.jpg_80x87.jpg" height="56" width="50"></a></div><div class="info-cont"><a href="/product/' + data.productCode + '.html" class="product-title">' + data.productName + '</a><div class="price"><span class="price-sign">&yen;</span><span class="price-num">&nbsp; ' + data.productPrice + '</span></div></div></div>';
                     });
                 }
                 else { cartHtml = '<div class="side-item-s"><span>暂无浏览记录！</span></div>'; }

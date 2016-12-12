@@ -26,9 +26,10 @@
                     <div class="field">
                         <select name="ffid" class="input w50">
             <option value="0">请选择分类</option>
-            {//volist name="list" id="data"}
-            <option value="{//$data['fid']}">{//$data['fourm_name']}</option>
-            {///volist}
+            <!-- volist 相似于foreach  name要输出的模板变量 id循环变量-->
+            {volist name="bigPlate" id="data"}
+            <option value="{$data['id']}">{$data['name']}</option>
+            {/volist}
           </select>
                         <div class="tips">不选择上级分类默认为一级分类</div>
                     </div>

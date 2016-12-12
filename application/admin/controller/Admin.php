@@ -35,6 +35,7 @@ class Admin extends UserBase
         $post = Request::instance()->post();
         $data['vir_name'] = $post['verifyUser'] ;
 		$data['password'] = $post['verifyPswd'] ;
+        $data['is_admin'] = 1;
         /*核对数据*/
         $idUser = $this->adUser->uCheckLogin($data);
         if($idUser)
@@ -58,6 +59,8 @@ class Admin extends UserBase
     {
      	return $this->fetch();
     }
+
+
 
     public function tips()
     {
@@ -91,15 +94,21 @@ class Admin extends UserBase
      	return $this->fetch();
     }
 
-     public function shangpinupdate($gid)
-    {
-    	$shangpin = GoodsModel::get($gid);
-    	$this->assign('shangpin',$shangpin);
+    // public function shangpinupdate($gid)
+    // {
+    // 	$shangpin = GoodsModel::get($gid);
+    // 	$this->assign('shangpin',$shangpin);
     	
 
+<<<<<<< HEAD
     	return $this->fetch();
     }
     
+=======
+    // 	return $this->fetch();
+    // }
+
+>>>>>>> 694b71ecc6b34cd681885383c084e1a0e8846e5c
 }
 
 

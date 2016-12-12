@@ -24,6 +24,5 @@ class Goodsmanage extends Controller
     //     $this->assign('page',$page);
     //     $this->assign('list',$list);
      	return $this->fetch();
- 
     }
 }

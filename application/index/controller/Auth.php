@@ -21,7 +21,7 @@ class Auth extends Controller
      * @param  [type] $type [1:json; 2:arr; 3:obj;]
      * @return [type]       [description]
      */
-    function getUserInfo($type)
+    protected function getUserInfo($type)
     {
     	if($type == 1)
     		echo json_encode($this->tbUser->hasUser(['id'=>session('idUser')]));

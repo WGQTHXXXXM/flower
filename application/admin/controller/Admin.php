@@ -3,6 +3,9 @@
 namespace app\admin\controller;
 
 use think\Request;
+use app\admin\model\SlideShow;
+
+
 class Admin extends UserBase
 {
     public function login()
@@ -70,6 +73,9 @@ class Admin extends UserBase
     }
     public function adv()
     {
+        $slide = new SlideShow();
+        $data = $slide->getSlideShow();
+        $this->assign('dataSlide',$data);
      	return $this->fetch();
     }
     public function book()
@@ -93,6 +99,7 @@ class Admin extends UserBase
 
     	return $this->fetch();
     }
+    
 }
 
 

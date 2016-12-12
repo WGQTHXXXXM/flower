@@ -16,23 +16,22 @@ class Product extends Controller
 
 
 
-    	// $goods = new Goods();
-    	// $arrGoodsInfo = $goods->getGoods(['url_num'=>$urlNum]);
-    	// $this->assign('dataPro',$arrGoodsInfo);
+    	$goods = new Goods();
+    	$arrGoodsInfo = $goods->getGoods(['url_num'=>$urlNum]);
+    	$this->assign('dataPro',$arrGoodsInfo);
   
-    	// $goods = new PicDetail();
-    	// $arrGoodsPic = $goods->getPIcDetail(['id_goods'=> $arrGoodsInfo->id]);
-    	// $this->assign('dataPicDet',$arrGoodsPic);
+    	$goods = new PicDetail();
+    	$arrGoodsPic = $goods->getPIcDetail(['id_goods'=> $arrGoodsInfo->id]);
+    	$this->assign('dataPicDet',$arrGoodsPic);
 
-    	// $goods = new PicShow();
-    	// $arrGoodsPic = $goods->getPicShow(['id_goods'=> $arrGoodsInfo->id]);
-    	// $this->assign('dataPicShow',$arrGoodsPic);
-
+    	$goods = new PicShow();
+    	$arrGoodsPic = $goods->getPicShow(['id_goods'=> $arrGoodsInfo->id]);
+    	$this->assign('dataPicShow',$arrGoodsPic);
 
     	$goods = new Comment();
-    	// $arrGoodsPic = $goods->getComment(['id_goods'=> $arrGoodsInfo->id]);
-    	// $this->assign('dataComment',$arrGoodsPic);
-    	return $goods->test();
+    	$arrGoodsPic = $goods->getComment(['id_goods'=> $arrGoodsInfo->id]);
+    	$this->assign('dataComment',$arrGoodsPic);
+//        dump($arrGoodsPic[0]->id_user);
 
     	// $goods = new PicTitle();
     	// $arrGoodsPic = $goods->getPicTitle(['id_goods'=> $arrGoodsInfo->id]);

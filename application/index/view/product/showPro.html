@@ -239,12 +239,11 @@
                     <dl>
                         <dt>
                             <a href="/product/1061006.html"><img src="__INDEX__SITE__/uploads/20161210/1061006.jpg_80x87.jpg" height="63" width="58"></a>
-                            {$vo->id_user}<br />
-                            巴林右旗大板镇北市*
+                            {$vo->id_user->vir_name}<br />
                         </dt>
                         <dd>
                             <div class="hd">
-                                <span class="pull-right">评价时间：2016-11-25  IP：183.148.235.*</span>
+                                <span class="pull-right">评价时间：{$vo->add_time} </span>
                                 整体评分：
                                 {for start="0" end="$vo->score"}
                                     <img src="__INDEX__SITE__/static/index/images/review_star_fen.gif" align="absmiddle" />

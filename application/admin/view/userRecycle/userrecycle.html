@@ -31,7 +31,7 @@
                     <th>创建时间</th>
                     <th>会员/管理员/BOSS</th>
                     <!-- <th>创建时间</th> -->
-                    <th width="310">删除时间</th>
+                    <th width="310">删除时间/彻底删除</th>
                 </tr>
                 {volist name="CanRecovenUser" id="data"}
                 <tr>
@@ -57,7 +57,7 @@
                     <td>
                         <div class="button-group">
                            
-                            <a class="button border-red" href="">
+                            <a class="button border-red" href="{:url('admin/userrecycle/userTrueDel',['uid' => $data['id']])}">
                                 <span id="trueDelete" class="icon-trash-o">
                                     {$data['delete_time'|date="y-m-d",###]}
                                 </span>

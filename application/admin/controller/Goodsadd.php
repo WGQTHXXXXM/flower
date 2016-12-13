@@ -45,7 +45,7 @@ class Goodsadd extends Controller
     		$goodsId = $goodsInfo->goodsId($post);
 
     	/*首页展示图*/
-    	if ($goodsIfonTrue) {
+    	// if ($goodsIfonTrue) {
     		$file = request()->file('HomeImg'); 
 	    	$info = $file->move(ROOT_PATH . 'public' . DS . 'uploads');
 	    	if($info){  
@@ -60,10 +60,10 @@ class Goodsadd extends Controller
 	    			'path' => $path,
 	    			'id_goods' => $goodsId
 	    		]);
-    	}
+    	// }
     		
     	/*详情图*/
-    	if ($PicTitleTrue) {
+    	// if ($PicTitleTrue) {
     		$fileImgs = request()->file('image');  
     		foreach($fileImgs as $v){
 				// 移动到框架应用根目录/public/uploads/ 目录下
@@ -85,10 +85,10 @@ class Goodsadd extends Controller
 	    			'id_goods' => $goodsId
 	    		]);
 			} 	
-    	}
+    	// }
 
     	/*商品内容展示图*/
-    	if ($PicDetailTrue) {
+    	//if ($PicDetailTrue) {
     		$fileHomes = request()->file('HomesImg');  
     		foreach($fileHomes as $val){
 		    	$info = $val->move(ROOT_PATH . 'public' . DS . 'uploads');
@@ -104,10 +104,10 @@ class Goodsadd extends Controller
 		    			'id_goods' => $goodsId
 		    		]);
 	    	}
-    	}
+    	//}
 
-    	if ($PicDetailTrue) {
+    	//if ($PicDetailTrue) {
     		echo "<script>alert('添加成功');window.location = 'goodadd';</script>";
-    	}
+    	//}
     }
 }

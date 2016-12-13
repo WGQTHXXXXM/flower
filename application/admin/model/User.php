@@ -60,4 +60,28 @@ class User extends Model
 			}
 		}
 	}
+
+	/*彻底删除*/
+	public function uUserTrueDel($uid)
+	{
+		$Del = User::onlyTrashed()->select($uid);
+		if ($Del) {
+			db('user')->where('id',$uid)->delete();
+		}
+	}
+
+	/*设置管理员*/
+	public function uSetUserManage($uid)
+	{
+		$this->save([
+				'is_admin' => 1,
+			],['id' => $uid]);
+	}
+	/*取消管理员*/
+	public function uOffUserManage($uid)
+	{
+		$this->save([
+				'is_admin' => 0,
+			],['id' => $uid]);
+	}
 }

@@ -54,16 +54,19 @@
                         {case value="1"}<td>管理员</td>{/case}
                         {case value="2"}<td>BOOS</td>{/case}
                     {/switch}
-                    <td>
-                        <div class="button-group">
-                           
-                            <a class="button border-main" href="">
-                                <span id="setManage" class="icon-edit">
-                                    设置管理员
-                                </span>
-                            </a>
-                        </div>
-                    </td>
+                    {switch name=$data['is_admin']}
+                        {case value="0"}
+                            <td>
+                                 <div class="button-group"><a class="button border-main" href="__ADMIN__SITE__/admin/usermanage/setUserManage/uid/{$data['id']}"><span id="setManage" class="icon-edit">设置管理员</span></a></div>
+                            </td>
+                        {/case}
+                        {case value="1"}
+                        <td>
+                             <div class="button-group"><a class="button border-red" href="__ADMIN__SITE__/admin/usermanage/offUserManage/uid/{$data['id']}"><span id="setManage" class="icon-edit">取消管理员</span></a></div>
+                        </td>
+                        {/case}
+                        {case value="2"}<td>BOOS</td>{/case}
+                    {/switch}
                 </tr>
                 {/volist}
 

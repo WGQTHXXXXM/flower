@@ -61,11 +61,23 @@ class Usermanage extends UserBase
         if ($DelUserId) {
             foreach ($DelUserId as $id) {}
             $DelSqlUser = $this->adUser->uDelSqlUser($id);
-        }
-        /*返回当前页面*/
-       echo "<script>alert('删除成功');window.location = 'yonghu';</script>";
+        } 
+        echo "<script>alert('删除成功');window.location = 'yonghu';</script>";   
     }
 
-    /**/
+    /*设置管理员*/
+    public function setUserManage($uid)
+    {
+        //dump($uid);die;
+        $this->adUser->uSetUserManage($uid);
+        $this->redirect('admin/Usermanage/yonghu');
+    }
+    /*取消管理员*/
+    public function offUserManage($uid)
+    {
+        //dump($uid);die;
+        $this->adUser->uOffUserManage($uid);
+        $this->redirect('admin/Usermanage/yonghu');
+    }
 }
    

@@ -12,11 +12,20 @@ class Comment extends Model
 		return $this->all($data);
 	}
 
-
-	function test()
+	//读取器：读出来后修改
+	protected function getAddTimeAttr($time)
 	{
-		dump($this->find(1)->hasOne('User'));
+		return date('Y-m-d',$time);
 	}
+
+	protected function getIdUserAttr($id)
+	{
+		return $this->hasOne('User')->where('id',$id)->find();
+	}
+
+
+
+
 }
 
 

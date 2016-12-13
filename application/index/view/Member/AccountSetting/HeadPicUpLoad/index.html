@@ -88,123 +88,31 @@
             <div class="avatar-preview">
                 <div class="preview-l">
                     <div id="Canvas" class="uploaddiv">
-                        <table id="Crop" style="-moz-user-select: none; cursor: move;" cellspacing="0" cellpadding="0" border="0">
-                            <tbody><tr>
-                                <td style="height: 53px" colspan="3" class="Overlay"></td>
-                            </tr>
-                            <tr>
-                                <td style="width: 63px" class="Overlay"></td>
-                                <td id="headArea" style="width: 140px; height: 140px; border-width: 1px; border-style: solid; border-color: white;"></td>
-                                <td style="width: 62px" class="Overlay"></td>
-                            </tr>
-                            <tr>
-                                <td style="height: 54px" colspan="3" class="Overlay"></td>
-                            </tr>
-                        </tbody></table>
                         <div style="position:relative;top:0px;left:0px;" id="IconContainer">
-                            <img id="ImageIcon" src="__INDEX__STATIC__/images/avatar_default_09.jpg" class="imagePhoto" tooltip="" relativepath="/assets/img/avatar_default_09.jpg" style="width: 150px; height: 150px; left: 68px; top: -209px;">
+                            <img id="ImageIcon" src="__INDEX__SITE__/{$dataUser['head_pic']}" class="imagePhoto" tooltip="" relativepath="__INDEX__SITE__/{$dataUser['head_pic']}" style="width: 150px; height: 150px; left: 68px; top: -209px;">
                         </div>
                     </div>
-                    <div class="uploaddiv">
-                        <table>
-                            <tbody><tr>
-                                <td id="Min">
-                                    <img alt="缩小" src="__INDEX__STATIC__/images/_c.gif" onmouseover="this.src = '__INDEX__STATIC__/images/_c.gif';" onmouseout="this.src = '__INDEX__STATIC__/images/_h.gif';" id="moresmall" class="smallbig">
-                                </td>
-                                <td>
-                                    <div id="bar">
-                                        <div id="barchild" class="child" style="left: 100px; cursor: move;">
-                                        </div>
-                                    </div>
-                                </td>
-                                <td id="Max">
-                                    <img alt="放大" src="__INDEX__STATIC__/images/c.gif" onmouseover="this.src='__INDEX__STATIC__/images/c.gif';" onmouseout="this.src='__INDEX__STATIC__/images/h.gif';" id="morebig" class="smallbig">
-                                </td>
-                            </tr>
-                        </tbody></table>
-                    </div>
 
-                    <div style="display:none;">
-
-                        图片实际宽度： <input name="txt_width" value="1" id="txt_width" type="text"><br>
-                        图片实际高度： <input name="txt_height" value="1" id="txt_height" type="text"><br>
-                        距离顶部： <input name="txt_top" value="63" id="txt_top" type="text"><br>
-                        距离左边： <input name="txt_left" value="54" id="txt_left" type="text"><br>
-                        截取框的宽：<input name="txt_DropWidth" value="150" id="txt_DropWidth" type="text"><br>
-                        截取框的高：<input name="txt_DropHeight" value="150" id="txt_DropHeight" type="text"><br>
-                        放大倍数： <input name="txt_Zoom" id="txt_Zoom" type="text">
-                    </div>
-
-                    <h4>推荐头像</h4>
-                    <ul class="avatar-list">
-                        <li>
-                            <a href="__INDEX__SITE__/Member/AccountSetting/HeadPicUpLoad?Picurl=/assets/img/avatar_default_01.jpg">
-                                <img src="__INDEX__STATIC__/images/avatar_default_01.jpg" width="300" height="300">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="__INDEX__SITE__/Member/AccountSetting/HeadPicUpLoad?Picurl=/assets/img/avatar_default_02.jpg">
-                                <img src="__INDEX__STATIC__/images/avatar_default_02.jpg" width="300" height="300">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="__INDEX__SITE__/Member/AccountSetting/HeadPicUpLoad?Picurl=/assets/img/avatar_default_03.jpg">
-                                <img src="__INDEX__STATIC__/images/avatar_default_03.jpg" width="300" height="300">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="__INDEX__SITE__/Member/AccountSetting/HeadPicUpLoad?Picurl=/assets/img/avatar_default_04.jpg">
-                                <img src="__INDEX__STATIC__/images/avatar_default_04.jpg" width="300" height="300">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="__INDEX__SITE__/Member/AccountSetting/HeadPicUpLoad?Picurl=/assets/img/avatar_default_05.jpg">
-                                <img src="__INDEX__STATIC__/images/avatar_default_05.jpg" width="300" height="300">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="__INDEX__SITE__/Member/AccountSetting/HeadPicUpLoad?Picurl=/assets/img/avatar_default_06.jpg">
-                                <img src="__INDEX__STATIC__/images/avatar_default_06.jpg" width="300" height="300">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="__INDEX__SITE__/Member/AccountSetting/HeadPicUpLoad?Picurl=/assets/img/avatar_default_07.jpg">
-                                <img src="__INDEX__STATIC__/images/avatar_default_07.jpg" width="300" height="300">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="__INDEX__SITE__/Member/AccountSetting/HeadPicUpLoad?Picurl=/assets/img/avatar_default_08.jpg">
-                                <img src="__INDEX__STATIC__/images/avatar_default_08.jpg" width="300" height="300">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="__INDEX__SITE__/Member/AccountSetting/HeadPicUpLoad?Picurl=/assets/img/avatar_default_09.jpg">
-                                <img src="__INDEX__STATIC__/images/avatar_default_09.jpg" width="300" height="300">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="__INDEX__SITE__/Member/AccountSetting/HeadPicUpLoad?Picurl=/assets/img/avatar_default_10.jpg">
-                                <img src="__INDEX__STATIC__/images/avatar_default_10.jpg" width="300" height="300">
-                            </a>
-                        </li>
-                    </ul>
                 </div>
                 <div class="preview-r">
                     <h4>头像预览</h4>
                     <p>您上传的图片会自动生成2种尺寸，请注意大小尺寸的头像是否清晰，您可以在左侧调整后提交保存。</p>
                     <div class="preview-box-100">
-                        <img id="imgPreview100" src="__INDEX__STATIC__/images/avatar_default_09.jpg" width="100" height="100">
+                        <img id="imgPreview100" src="__INDEX__SITE__/{$dataUser['head_pic']}" width="100" height="100">
                     </div>
                     <p>100*100像素</p>
                     <div class="preview-box-50">
-                        <img id="imgPreview50" src="__INDEX__STATIC__/images/avatar_default_09.jpg" width="50" height="50">
+                        <img id="imgPreview50" src="__INDEX__SITE__/{$dataUser['head_pic']}" width="50" height="50">
                     </div>
                     <p>50*50像素</p>
                 </div>
             </div>
             <div class="uploaddiv" style="width:250px;">
-
-                <input class="btn btn-default btn-sm btn-submit" id="save" onclick="savePost();" value="保存头像" type="button">
+                <form action="__INDEX__SITE__/Member/doHeadPicUpload" enctype="multipart/form-data" method="post">
+                    <input type="file" name="image" /> <br>
+                    <input class="btn btn-default btn-sm btn-submit" id="save" value="上传头像" type="submit">
+                    <!-- <input class="btn btn-default btn-sm btn-submit" id="save" onclick="savePost();" value="上传头像" type="button"> -->
+                </form>
 
                 <span id="saveTips" style="color:red; font-size:15px; font-weight:600; float:right; display:none;">
                     保存成功
@@ -222,14 +130,13 @@
     <script src="__INDEX__STATIC__/js/CutPic.js"></script>
     <script src="__INDEX__STATIC__/js/jquery.easydrag.js"></script>
     <script type="text/javascript">
-
         function savePost() {
             picUrl = $('#ImageIcon').attr("relativePath");
             $.ajax({
-                url: '/Member/AccountSetting/HeadPicSave',  //正式环境
+                url: '__INDEX__SITE__/Member/doHeadPicUpload',  //正式环境
                 cache: false,
                 type: 'post',
-                data: "picUrl=" + picUrl + "&p=" + Math.random(),
+                data: "picUrl=" + picUrl,
                 async: false, //默认为true 异步
                 error: function () {
                     alert('error');

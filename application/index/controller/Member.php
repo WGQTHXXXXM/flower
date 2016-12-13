@@ -9,18 +9,40 @@ class Member extends Auth
 {
     public function memberCenter()
     { 
-    	//return view('abc/index.html');
+    	
+        $this->assign('dataUser',$this->getUserInfo(2)); 
     	return $this->fetch("Member/MemberCenter/index");
     }
 
     function personInfoManage()
     { 
+        $this->assign('dataUser',$this->getUserInfo(2)); 
     	return $this->fetch('Member/accountSetting/PersonInfoManage/index');
     }
 
     function headPicUpload()
     {
+        $this->assign('dataUser',$this->getUserInfo(2)); 
     	return $this->fetch('Member/accountSetting/HeadPicUpload/index');
+    }
+
+    function doHeadPicUpload()
+    {
+        // 获取表单上传文件 例如上传了001.jpg
+        $file = request()->file('image');
+        // 移动到框架应用根目录/public/uploads/ 目录下
+        $info = $file->move(ROOT_PATH . 'public' . DS . 'uploads');
+        if($info)
+        {
+            $this->tbUser->updateUser(['head_pic'=>'uploads/'.$info->getSaveName()],session('idUser')); 
+        }
+        else
+        {
+            // 上传失败获取错误信息
+            echo $file->getError();
+        }
+        $this->assign('dataUser',$this->getUserInfo(2)); 
+        return $this->fetch('Member/accountSetting/HeadPicUpload/index');
     }
 
     function personInfoSave()

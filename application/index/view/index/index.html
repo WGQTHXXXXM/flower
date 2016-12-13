@@ -317,34 +317,16 @@
 <!-- 大图轮翻 -->
 <div id="fullCarousel" class="carousel slide carousel-fade">
     <ol class="carousel-indicators">
-        <li data-target="#fullCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#fullCarousel" data-slide-to="1"></li>
-        <li data-target="#fullCarousel" data-slide-to="2"></li>
-        <li data-target="#fullCarousel" data-slide-to="3"></li>
-        <li data-target="#fullCarousel" data-slide-to="4"></li>
+    {foreach $dataSlide as $key=>$obj}    
+        <li data-target="#fullCarousel" data-slide-to="{$key}" {if $key == 0}class="active"{/if}></li>
+    {/foreach}
     </ol>
     <div class="carousel-inner">
-        <div class="item active">
-            <div class="fill" style="background-image:url('__INDEX__STATIC__/images/16_xmas_pc.jpg');"><a href="/theme/xmas/" target="_blank"></a></div>
+    {foreach $dataSlide as $key=>$obj}    
+        <div class="item {if $key == 0}active{/if}">
+            <div class="fill" style="background-image:url('__INDEX__SITE__/{$obj->pic}');"><a href="{$obj->pic}" target="_blank"></a></div>
         </div>
-        <div class="item">
-            <div class="fill" style="background-image:url('__INDEX__STATIC__/images/16_xingzuo_csz_pc.jpg');"><a href="/theme/xingzuo/" target="_blank"></a></div>
-        </div>
-        <!--         <div class="item active">
-                    <div class="fill" style="background-image:url(__INDEX__STATIC__/'images/16_music_banner_pc.jpg');"><a href="/yongganai/music/" target="_blank"></a></div>
-                </div> -->
-        <!--         <div class="item">
-                    <div class="fill" style="background-image:url(__INDEX__STATIC__/'images/yga_pc.jpg');"><a href="/yongganai/" target="_blank"></a></div>
-                </div> -->
-        <div class="item">
-            <div class="fill" style="background-image:url('__INDEX__STATIC__/images/longtou.jpg');"><a href="/profile/12545.html" target="_blank"></a></div>
-        </div>
-        <div class="item">
-            <div class="fill" style="background-image:url('__INDEX__STATIC__/images/banner_lpk.jpg');"><a href="/qiyetuangou/gift_card.html" target="_blank"></a></div>
-        </div>
-        <div class="item">
-            <div class="fill" style="background-image:url('__INDEX__STATIC__/images/index_banner04_pc.jpg');"><a href="/yongshenghua/" target="_blank"></a></div>
-        </div>
+    {/foreach}
     </div>
     <div class="control-wrapper">
         <a class="left carousel-control" href="#fullCarousel" data-slide="prev">
@@ -357,10 +339,8 @@
     <div class="focus-wrapper">
         <div class="bd">
             <a href="/product/9010938.html" target="_blank"><img src="__INDEX__STATIC__/picture/rightbox_1_161202.jpg" height="140" width="210"></a>
-            <!-- <a href="product/9012128.html" target="_blank"><img src="__INDEX__STATIC__/picture/rightbox_2_160714.jpg" height="140" width="210"></a> -->
             <a href="/product/9012041.html" target="_blank"><img src="__INDEX__STATIC__/picture/rightbox_2_161202.jpg" height="140" width="210"></a>
             <a class="last-child" href="/product/9012088.html" target="_blank"><img src="__INDEX__STATIC__/picture/rightbox_3_161202.jpg" height="140" width="210"></a>
-            <!-- <a class="last-child" href="/product/9012126.html" target="_blank"><img src="__INDEX__STATIC__/picture/rightbox_2_160920.jpg" height="140" width="210"></a> -->
         </div>
     </div>
 </div>

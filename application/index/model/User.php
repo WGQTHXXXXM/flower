@@ -2,9 +2,12 @@
 
 namespace app\index\model;
 use think\Model;
+use traits\model\SoftDelete;
 
 class User extends Model
 {
+	use SoftDelete;
+	protected static $deleteTime = 'delete_time';
 	//  检查用户是否存在
 	function hasUser($email)
 	{
@@ -26,7 +29,8 @@ class User extends Model
 
 	function test()
     {
-    	return 1;
+  	 	// $this->destroy(3);
+    	// dump($this->getLastSql());
     }
 
 }

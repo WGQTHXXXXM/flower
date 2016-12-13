@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="panel admin-panel">
-  <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
+  <div class="panel-head"><strong class="icon-reorder"> 轮播图设置 </strong></div>
   <div class="padding border-bottom">  
   <button type="button" class="button border-yellow" onclick="window.location.href='#add'"><span class="icon-plus-square-o"></span> 添加内容</button>
   </div>
@@ -109,6 +109,67 @@ function del(id,mid){
     </form>
   </div>
 </div>
+<div class="panel admin-panel">
+
+</div>
+  <div class="panel-head"><strong class="icon-reorder"> 首页板块一 </strong></div>
+  <form method="post" enctype="multipart/form-data" class="form-x" action="__ADMIN__SITE__/Admin/SlideManage/doAddSlide">    
+      <div class="form-group">
+        <div class="label">
+          <label>标题：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" value="" name="title" data-validate="required:请输入标题" />
+          <div class="tips"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>URL：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" name="url" value=""  />
+          <div class="tips"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>图片：</label>
+        </div>
+        <div class="field">
+          <!-- <input type="text" id="url1" name="img" class="input tips" style="width:25%; float:left;"  value="" data-toggle="hover" data-place="right" data-image="" /> -->
+          <input name="imgUpload" type="file" class="button bg-blue margin-left" id="image1" value="+ 浏览上传"  style="float:left;">
+          <div class="tipss">图片尺寸：243*438</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>描述：</label>
+        </div>
+        <div class="field">
+          <textarea type="text" class="input" name="note" style="height:120px;" value=""></textarea>
+          <div class="tips"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>排序：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" name="sort" value="0"  data-validate="required:,number:排序必须为数字" />
+          <div class="tips"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label></label>
+        </div>
+        <div class="field">
+          <button id="sbtSlide" class="button bg-main icon-check-square-o" type="submit"> 提交</button>
+        </div>
+      </div>
+    </form>
+
 </body>
 </html>
 

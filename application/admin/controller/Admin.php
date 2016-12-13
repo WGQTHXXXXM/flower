@@ -98,17 +98,6 @@ class Admin extends UserBase
     // {
     // 	$shangpin = GoodsModel::get($gid);
     // 	$this->assign('shangpin',$shangpin);
-    	
-
-<<<<<<< HEAD
-    	return $this->fetch();
-    }
-    
-=======
-    // 	return $this->fetch();
-    // }
-
->>>>>>> 694b71ecc6b34cd681885383c084e1a0e8846e5c
 }
 
 

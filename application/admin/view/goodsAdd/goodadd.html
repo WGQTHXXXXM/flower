@@ -19,8 +19,8 @@
         <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>增加商品</strong></div>
         <div class="body-content">
             <!-- <form method="post" class="form-x" action="">  -->
-            <form action="{:url('admin/admin/goodcreate')}" class="form-x" enctype="multipart/form-data" method="post">
-                <input type="hidden" name="id" value="" />
+            <form action="{:url('admin/goodsadd/Addgoods')}" class="form-x" enctype="multipart/form-data" method="post">
+               <!--  <input type="hidden" name="id" value="" /> -->
                 <div class="form-group">
                     <div class="label">
                         <label>栏目名称：</label>
@@ -28,22 +28,20 @@
 
                     <div class="field">
                         <select name="fid" class="input w50">
-            <option value="0">请选择分类</option>
-            {//volist name="list" id="data"}
-            <option value="{//$data['fid']}">{//$data['fourm_name']}</option>
-            {///volist}
-          </select>
+                            <option value="0">请选择分类</option>
+                            <option value="1">鲜花</option>
+                        </select>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="label">
-                        <label>栏目图片：</label>
+                        <label>首页展示图：</label>
                     </div>
                     <div class="field">
 
-                        <input type="file" name="picturepath" id="url1" class="input tips" style="width:25%; float:left;" value="" data-toggle="hover" data-place="right" data-image="" />
-                        <!--  <input type="button" class="button bg-blue margin-left" id="image1" value="+ 浏览上传"  style="float:left;"> -->
-                        <!-- <div class="tipss">图片尺寸：1920*200</div> -->
+                      <!--   <input type="text" name="picturepath" id="url1" class="input tips" style="width:25%; float:left;" value="" data-toggle="hover" data-place="right" data-image="" /> -->
+                         <input type="file" class="button bg-blue margin-left" name="HomeImg" id="image1" value=""  style="float:left;">
+                        <div class="tipss">图片尺寸：1920*200</div>
                     </div>
                 </div>
                 <div class="form-group">
@@ -51,173 +49,206 @@
                         <label>商品名：</label>
                     </div>
                     <div class="field">
-                        <input type="text" class="input w50" name="goodsname" value="" />
+                        <input type="text" class="input w100" name="goodsname" value="" />
                         <div class="tips"></div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>花礼价：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input w100" name="hualijia" value="" />
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>花礼价：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input w100" name="hualijia" value="" />
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>说明：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input w100" name="shuoming" value="" />
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>材料：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input w100" name="cailiao" value="" />
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>包装：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input w100" name="baozhuang" value="" />
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>花语：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input w100" name="huayu" value="" />
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>附送：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input w100" name="fusong" value="" />
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>配送：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input w100" name="peisong" value="" />
+                        <div class="tips"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>小贴士：</label>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="input w100" name="tishi" value="" />
+                        <div class="tips"></div>
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <div class="label">
                         <label>价格：</label>
                     </div>
                     <div class="field">
-                        <input type="text" class="input w50" name="price" value="" />
+                        <input type="text" class="input w100" name="price" value="" />
                         <div class="tips"></div>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="label">
-                        <label>关键字：</label>
+                        <label></label>
+                    </div>
+                    商品详细情况图片上传
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>详情图1：</label>
                     </div>
                     <div class="field">
-                        <input type="text" class="input" name="goods_key" value="" />
+                         <input type="file" class="button bg-blue margin-left" id="image1" name="image[]" value=""  style="float:left;">
+                        <div class="tipss">图片尺寸：1920*200</div>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="label">
-                        <label>描述：</label>
+                        <label>详情图2：</label>
                     </div>
                     <div class="field">
-                        <textarea type="text" class="input" name="goods_desc" style="height:100px;"></textarea>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="label">
-                        <label>热销：</label>
-                    </div>
-                    <div class="field">
-                        <div class="button-group radio">
-
-                            <label class="button active">
-         	  <span class="icon icon-check"></span>             
-              <input name="ishot" value="1" type="radio" checked="checked">是             
-          </label>
-
-                            <label class="button active"><span class="icon icon-times"></span>          	
-              <input name="ishot" value="0"  type="radio" checked="checked">否
-          </label>
-                        </div>
+                         <input type="file" class="button bg-blue margin-left" id="image1" name="image[]" value=""  style="float:left;">
+                        <div class="tipss">图片尺寸：1920*200</div>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="label">
-                        <label>生日礼物：</label>
+                        <label>详情图3：</label>
                     </div>
                     <div class="field">
-                        <div class="button-group radio">
-
-                            <label class="button active">
-            <span class="icon icon-check"></span>             
-              <input name="isborn" value="1" type="radio" checked="checked">是             
-          </label>
-
-                            <label class="button active"><span class="icon icon-times"></span>            
-              <input name="isborn" value="0"  type="radio" checked="checked">否
-          </label>
-                        </div>
+                         <input type="file" class="button bg-blue margin-left" name="image[]" id="image1" value=""  style="float:left;">
+                        <div class="tipss">图片尺寸：1920*200</div>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="label">
-                        <label>新品：</label>
+                        <label>详情图4：</label>
                     </div>
                     <div class="field">
-                        <div class="button-group radio">
-
-                            <label class="button active">
-            <span class="icon icon-check"></span>             
-              <input name="isnew" value="1" type="radio" checked="checked">是             
-          </label>
-
-                            <label class="button active"><span class="icon icon-times"></span>            
-              <input name="isnew" value="0"  type="radio" checked="checked">否
-          </label>
-                        </div>
+                         <input type="file" class="button bg-blue margin-left" name="image[]" id="image1" value=""  style="float:left;">
+                        <div class="tipss">图片尺寸：1920*200</div>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="label">
-                        <label>送女朋友：</label>
+                        <label>详情图5：</label>
                     </div>
                     <div class="field">
-                        <div class="button-group radio">
-
-                            <label class="button active">
-            <span class="icon icon-check"></span>             
-              <input name="isgirl" value="1" type="radio" checked="checked">是             
-          </label>
-
-                            <label class="button active"><span class="icon icon-times"></span>            
-              <input name="isgirl" value="0"  type="radio" checked="checked">否
-          </label>
-                        </div>
+                         <input type="file" class="button bg-blue margin-left" name="image[]" id="image1" value=""  style="float:left;">
+                        <div class="tipss">图片尺寸：1920*200</div>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="label">
-                        <label>送男朋友：</label>
+                        <label>详情图6：</label>
                     </div>
                     <div class="field">
-                        <div class="button-group radio">
-
-                            <label class="button active">
-            <span class="icon icon-check"></span>             
-              <input name="isboy" value="1" type="radio" checked="checked">是             
-          </label>
-
-                            <label class="button active"><span class="icon icon-times"></span>            
-              <input name="isboy" value="0"  type="radio" checked="checked">否
-          </label>
-                        </div>
+                         <input type="file" class="button bg-blue margin-left" name="image[]" id="image1" value=""  style="float:left;">
+                        <div class="tipss">图片尺寸：1920*200</div>
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <div class="label">
+                        <label></label>
+                    </div>
+                    商品出售页面轮播图上传
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>展示图1：</label>
+                    </div>
+                    <div class="field">
+                         <input type="file" class="button bg-blue margin-left" name="HomesImg[]" id="image1" value=""  style="float:left;">
+                        <div class="tipss">图片尺寸：1920*200</div>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="label">
-                        <label>情侣：</label>
+                        <label>展示图2：</label>
                     </div>
                     <div class="field">
-                        <div class="button-group radio">
-
-                            <label class="button active">
-            <span class="icon icon-check"></span>             
-              <input name="isdouble" value="1" type="radio" checked="checked">是             
-          </label>
-
-                            <label class="button active"><span class="icon icon-times"></span>            
-              <input name="isdouble" value="0"  type="radio" checked="checked">否
-          </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="label">
-                        <label>DIY：</label>
-                    </div>
-                    <div class="field">
-                        <div class="button-group radio">
-
-                            <label class="button active">
-            <span class="icon icon-check"></span>             
-              <input name="isdiy" value="1" type="radio" checked="checked">是             
-          </label>
-
-                            <label class="button active"><span class="icon icon-times"></span>            
-              <input name="isdiy" value="0"  type="radio" checked="checked">否
-          </label>
-                        </div>
+                         <input type="file" class="button bg-blue margin-left" name="HomesImg[]" id="image1" value=""  style="float:left;">
+                        <div class="tipss">图片尺寸：1920*200</div>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="label">
-                        <label>友情提示：</label>
+                        <label>展示图3：</label>
                     </div>
                     <div class="field">
-                        <input type="text" class="input w50" name="sort" value="谨慎添加商品" />
-                        <div class="tips"></div>
+                         <input type="file" class="button bg-blue margin-left" name="HomesImg[]" id="image1" value=""  style="float:left;">
+                        <div class="tipss">图片尺寸：1920*200</div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label>展示图4：</label>
+                    </div>
+                    <div class="field">
+                         <input type="file" class="button bg-blue margin-left" name="HomesImg[]" id="image1" value=""  style="float:left;">
+                        <div class="tipss">图片尺寸：1920*200</div>
+                    </div>
+                </div>
+              
                 <div class="form-group">
                     <div class="label">
                         <label></label>

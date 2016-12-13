@@ -56,12 +56,14 @@ class Usermanage extends UserBase
     /*用户删除*/
     public function UserDelete()
     {
+        
         $DelUserId = Request::instance()->post();
         if ($DelUserId) {
             foreach ($DelUserId as $id) {}
             $DelSqlUser = $this->adUser->uDelSqlUser($id);
         }
-        return $this->fetch('userrecycle/userrecycle');
+        /*返回当前页面*/
+       echo "<script>alert('删除成功');window.location = 'yonghu';</script>";
     }
 
     /**/

@@ -47,7 +47,7 @@
                     <td>
                         <font color="#00CC99">{$data['email']}</font>
                     </td>
-                    <td>{$data['reg_time']}</td>
+                    <td>{$data['reg_time']|date="y-m-d",###}</td>
                     <!-- 会员判断 -->
                     {switch name=$data['is_admin']}
                         {case value="0"}<td>普通会员</td>{/case}
@@ -98,6 +98,13 @@
                 }
             });
         })
+
+
+
+
+
+
+        
     </script>
 </body>
 

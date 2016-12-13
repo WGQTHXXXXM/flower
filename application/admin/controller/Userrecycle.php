@@ -1,19 +1,32 @@
 <?php
 
 namespace app\admin\controller;
-use think\Controller;
-
-class Userrecycle extends Controller
+use think\Request;
+class Userrecycle extends UserBase
 {
-    /*用户管理*/
+    /*删除的用户管理*/
 	public function userrecycle()
     {
-    	// $list = UserModel::onlyTrashed()->paginate(4);
-    	// // $list = $user->paginate(6);
-        // $page = $list->render();
-        // $this->assign('page',$page);
-        // $this->assign('list',$list);
+    	 /*删除的用户信息*/
+        $CanRecovenUser = $this->adUser->uCanRecovenUser();
+        $this->assign('CanRecovenUser', $CanRecovenUser);
+        /*分页*/
+        $userPage = $CanRecovenUser->render();
+        $this->assign('userPage', $userPage);
+        return $this->fetch();
 
-     	return $this->fetch();
+    }
+    /*恢复用户*/
+    public function userTheRecoven()
+    {
+        $RecovenId = Request::instance()->post();
+
+
+        if ($RecovenId) 
+        {
+            $RecovenSqlUser = $this->adUser->uUserRecoven($RecovenId['id']);
+        }
+        /*返回当前页面*/
+        echo "<script>alert('恢复成功');window.location = 'userrecycle';</script>"; 
     }
 }

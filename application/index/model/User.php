@@ -21,8 +21,6 @@ class User extends Model
 	//更新成员信息
 	function updateUser($data,$id)
 	{
-		dump($id);
-		dump($data);
 		return $this->save($data,['id'=>$id]);
 	}
 

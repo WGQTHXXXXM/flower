@@ -29,4 +29,12 @@ class Userrecycle extends UserBase
         /*返回当前页面*/
         echo "<script>alert('恢复成功');window.location = 'userrecycle';</script>"; 
     }
+
+    /*彻底删除*/
+    public function userTrueDel($uid)
+    {
+        //dump($uid);die;
+        $this->adUser->uUserTrueDel($uid);
+        $this->success('已彻底删除', 'admin/Userrecycle/userrecycle');
+    }
 }

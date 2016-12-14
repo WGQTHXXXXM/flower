@@ -26,6 +26,7 @@ return [
         'huayu' => 'index/Huayu',
         'Member' => 'index/Member',
         'Passport' => 'index/Passport',
+        'Shopping' => 'index/Shopping',
         'plant' => 'index/Plant',
         'product' => 'index/Product',
         'productpj' => 'index/Productpj',

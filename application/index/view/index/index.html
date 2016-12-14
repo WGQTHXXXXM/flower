@@ -406,121 +406,39 @@
         </div>
     </div>
     <!-- 限时推荐 End -->
+    {foreach $dataBlock as $block}
     <!-- 楼层01 -->
     <div class="floor f1">
         <div class="hd">
-            <a class="more" href="/aiqingxianhua/" target="_blank">更多爱情鲜花 &gt;&gt;</a>
-            <h3><a href="/aiqingxianhua/" target="_blank">爱情鲜花</a><span>送·让你怦然心动的人</span></h3>
+            <a class="more" href="/aiqingxianhua/" target="_blank">更多{$block['name']} &gt;&gt;</a>
+            <h3><a href="/aiqingxianhua/" target="_blank">{$block['name']}</a><span>{$block['introduce']}</span></h3>
         </div>
         <div class="bd">
             <div class="bd-l">
                 <div class="banner-box">
                     <a href="/aiqingxianhua/" target="_blank"><img src="__INDEX__STATIC__/picture/banner_love.jpg" height="438" width="243"></a>
                 </div>
-                <a class="banner-link" href="/aiqingxianhua/" target="_blank">爱情鲜花专区 &gt;&gt;</a>
+                <a class="banner-link" href="/aiqingxianhua/" target="_blank">{$block['name']}专区 &gt;&gt;</a>
             </div>
             <ul class="floor-products">
-
-                    <li>
-        <a href="/product/showPro/urlNum/11481074237" target="_blank">
-            <span class="img-box" href="/product/9010966.html">
-                <img src="__INDEX__STATIC__/picture/9010966.jpg_220x240.jpg" height="240" width="220">
-            </span>
-            <span class="product-title">鲜花 · 一往情深</span>
-            <p class="price">
-                <span class="price-sign">&yen;</span>
-                <span class="price-num">239</span>
-            </p>
-        </a>
-    </li>
-    <li>
-        <a href="/product/9010011.html" target="_blank">
-            <span class="img-box" href="/product/9010011.html">
-                <img src="__INDEX__STATIC__/picture/9010011.jpg_220x240.jpg" height="240" width="220">
-            </span>
-            <span class="product-title">鲜花 · 一心一意</span>
-            <p class="price">
-                <span class="price-sign">&yen;</span>
-                <span class="price-num">126</span>
-            </p>
-        </a>
-    </li>
-    <li>
-        <a href="/product/9012062.html" target="_blank">
-            <span class="img-box" href="/product/9012062.html">
-                <img src="__INDEX__STATIC__/picture/9012062.jpg_220x240.jpg" height="240" width="220">
-            </span>
-            <span class="product-title">鲜花 · 心上人</span>
-            <p class="price">
-                <span class="price-sign">&yen;</span>
-                <span class="price-num">388</span>
-            </p>
-        </a>
-    </li>
-    <li>
-        <a href="/product/9012143.html" target="_blank">
-            <span class="img-box" href="/product/9012143.html">
-                <img src="__INDEX__STATIC__/picture/9012143.jpg_220x240.jpg" height="240" width="220">
-            </span>
-            <span class="product-title">鲜花 · 倾城月色</span>
-            <p class="price">
-                <span class="price-sign">&yen;</span>
-                <span class="price-num">138</span>
-            </p>
-        </a>
-    </li>
-    <li>
-        <a href="/product/9012011.html" target="_blank">
-            <span class="img-box" href="/product/9012011.html">
-                <img src="__INDEX__STATIC__/picture/9012011.jpg_220x240.jpg" height="240" width="220">
-            </span>
-            <span class="product-title">鲜花 · 阳光海岸</span>
-            <p class="price">
-                <span class="price-sign">&yen;</span>
-                <span class="price-num">219</span>
-            </p>
-        </a>
-    </li>
-    <li>
-        <a href="/product/9012089.html" target="_blank">
-            <span class="img-box" href="/product/9012089.html">
-                <img src="__INDEX__STATIC__/picture/9012089.jpg_220x240.jpg" height="240" width="220">
-            </span>
-            <span class="product-title">鲜花 · 爱在心头</span>
-            <p class="price">
-                <span class="price-sign">&yen;</span>
-                <span class="price-num">338</span>
-            </p>
-        </a>
-    </li>
-    <li>
-        <a href="/product/9010668.html" target="_blank">
-            <span class="img-box" href="/product/9010668.html">
-                <img src="__INDEX__STATIC__/picture/9010668.jpg_220x240.jpg" height="240" width="220">
-            </span>
-            <span class="product-title">鲜花 · LOVE 99</span>
-            <p class="price">
-                <span class="price-sign">&yen;</span>
-                <span class="price-num">495</span>
-            </p>
-        </a>
-    </li>
-    <li>
-        <a href="/product/9012126.html" target="_blank">
-            <span class="img-box" href="/product/9012126.html">
-                <img src="__INDEX__STATIC__/picture/9012126.jpg_220x240.jpg" height="240" width="220">
-            </span>
-            <span class="product-title">鲜花 · 情有独钟</span>
-            <p class="price">
-                <span class="price-sign">&yen;</span>
-                <span class="price-num">338</span>
-            </p>
-        </a>
-    </li>
-
+            {foreach $block['product'] as $goods}
+                <li>
+                    <a href="__INDEX__SITE__/product/showPro/urlNum/{$goods->url_num}" target="_blank">
+                        <span class="img-box" href="__INDEX__SITE__/product/showPro/urlNum/{$goods->url_num}">
+                            <img src="__INDEX__SITE__/uploads/{$goods->picTitle->path}" height="240" width="220">
+                        </span>
+                        <span class="product-title">{$goods->title}</span>
+                        <p class="price">
+                            <span class="price-sign">&yen;</span>
+                            <span class="price-num">{$goods->market_price}</span>
+                        </p>
+                    </a>
+                </li>
+            {/foreach}
             </ul>
         </div>
     </div>
+    {/foreach}
     <!-- 楼层01 End -->
     <!-- 楼层02 -->
     <div class="floor f2">

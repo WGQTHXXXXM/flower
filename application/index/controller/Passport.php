@@ -3,6 +3,9 @@
  * 注册登录
  */
 namespace app\index\controller;
+use app\admin\model\SlideShow;
+use app\index\model\Block;
+
 
 
 class Passport extends Auth
@@ -70,6 +73,14 @@ class Passport extends Auth
     function logout()
     {
         session(null);
+        $slide = new SlideShow();
+        $data = $slide->getSlideShow();
+        $this->assign('dataSlide',$data);
+        //板块
+        $block = new Block();
+        $dataBlock = $block->getShowBlcok();
+        $this->assign('dataBlock',$dataBlock);
+
         return $this->fetch('index/index');
     }
     

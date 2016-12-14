@@ -123,7 +123,7 @@
                 <!-- 小图 -->
                     <div class="pro-thumb">
                         {foreach $dataPicShow as $i=>$vo}
-                            <img src="__INDEX__SITE__/{$vo->path}" name="{$i}||__INDEX__SITE__/{$vo->path}" >
+                            <img src="__INDEX__SITE__/uploads/{$vo->path}" name="{$i}||__INDEX__SITE__/uploads/{$vo->path}" >
                         {/foreach}
                     </div>
                 <!-- 小图 End -->
@@ -187,7 +187,7 @@
             <div class="price-sell">花礼价：<strong><em class="price-sign">¥</em><em class="price-num">{$dataPro->now_price}</em></strong></div>
             </div>
             <div class="btn-buy">
-                <a href="__INDEX__SITE__/Shopping/AddtoCart" class="btn btn-primary btn-lg" id="Btn_AddToCart"><span class="ico ico-cart-white"></span>立即购买</a>
+                <a href="__INDEX__SITE__/Shopping/AddtoCart/urlNum/{$dataPro->url_num}" class="btn btn-primary btn-lg" id="Btn_AddToCart"><span class="ico ico-cart-white"></span>立即购买</a>
                 <a href="javascript:DoGuanZhu('1061006')" class="btn btn-link" id="Btn_GuanZhu"><span class="ico ico-heart"></span>关 注</a>
             </div>
             <div class="share">
@@ -219,7 +219,7 @@
             </ul>
             <div id="Details" class="tabs-panel">
                 {foreach $dataPicDet as $vo}
-                    <p align="center"><img alt="" src="__INDEX__SITE__/{$vo->path}" border="0" /></p>
+                    <p align="center"><img alt="" src="__INDEX__SITE__/uploads/{$vo->path}" border="0" /></p>
                     <p align="center"></p>
                 {/foreach}
             </div>

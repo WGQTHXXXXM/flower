@@ -33,4 +33,5 @@ class User extends Model
     	// dump($this->getLastSql());
     }
 
+
 }

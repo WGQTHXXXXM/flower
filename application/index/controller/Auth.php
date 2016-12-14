@@ -5,6 +5,7 @@
 namespace app\index\controller;
 use think\Controller;
 use app\index\model\User;
+use app\admin\model\SlideShow;
 
 class Auth extends Controller
 {
@@ -28,6 +29,9 @@ class Auth extends Controller
     	else if($type == 2)
     		return $this->tbUser->hasUser(['id'=>session('idUser')]);
     }
+
+
+    
 
 }
 

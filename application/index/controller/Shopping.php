@@ -7,7 +7,7 @@ use app\index\model\ShopCart;
 
 class Shopping extends Controller
 {
-
+	//添加购物车
 	public function AddtoCart($urlNum)
 	{
 		if(!session('?idUser'))
@@ -30,6 +30,35 @@ class Shopping extends Controller
 		$this->assign('sum',$sum);	
 		return $this->fetch();
 	}
+
+	//显示购物车
+	public function showCart()
+	{
+		$shopCart = new ShopCart();
+		//得到当前用户的购物车信息
+		$data = $shopCart->getItem(['id_user'=>session('idUser')]);
+		$this->assign('dataCart',$data);	
+		$sum = $shopCart->getSumPrice(['id_user'=>session('idUser')]);
+		$this->assign('sum',$sum);	
+		return $this->fetch("Shopping/AddtoCart");		
+	}
+
+	//进入定单页
+	function sendInfo()
+	{
+
+		$this->view->engine->layout(false);
+		return $this->fetch();
+	}
+
+	//成功保存确定定单
+	function orderSave()
+	{
+
+		$this->view->engine->layout(false);
+		return $this->fetch();
+	}
+
 
 	function delGoods($id)
 	{

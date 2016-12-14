@@ -16,7 +16,7 @@ $.getJSON("/Passport/loginState?rmd="+Math.random(), function(json){    //登陆
 		if($("#LoginInfo").length>0){$("#LoginInfo").html(loginInfo);}
 });
 
-$.getJSON("/shopping/getcartjson?rmd="+Math.random(), function(json){    //购物车信息显示
+$.getJSON("/Shopping/GetCartJson?rmd="+Math.random(), function(json){    //购物车信息显示
 		if($("#gwcCount").length>0){
 			$("#gwcCount").html("("+json.productsNum+")");
 		}

@@ -7,6 +7,7 @@ use \think\Request;
 
 class Member extends Auth
 {
+    //会员中心
     public function memberCenter()
     { 
     	
@@ -14,18 +15,21 @@ class Member extends Auth
     	return $this->fetch("Member/MemberCenter/index");
     }
 
+    //个人信息管理
     function personInfoManage()
     { 
         $this->assign('dataUser',$this->getUserInfo(2)); 
     	return $this->fetch('Member/accountSetting/PersonInfoManage/index');
     }
 
+    //头像上传
     function headPicUpload()
     {
         $this->assign('dataUser',$this->getUserInfo(2)); 
     	return $this->fetch('Member/accountSetting/HeadPicUpload/index');
     }
 
+    //执行头像上传
     function doHeadPicUpload()
     {
         // 获取表单上传文件 例如上传了001.jpg
@@ -45,6 +49,7 @@ class Member extends Auth
         return $this->fetch('Member/accountSetting/HeadPicUpload/index');
     }
 
+    //保存个人信息
     function personInfoSave()
     {
         $Request = Request::instance()->post();
@@ -61,5 +66,14 @@ class Member extends Auth
         else
             $this->error('修改出错');
     }
+
+    //个人定单
+    function order()
+    {
+
+        $this->view->engine->layout(false);
+        return $this->fetch();
+    }
+
 
 }

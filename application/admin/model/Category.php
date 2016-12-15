@@ -5,8 +5,8 @@ use think\Model;
 
 class Category extends Model
 {
-	public function getBigPlate()
+	public function getTwoPlate()
 	{
-		return Category::where('parent_id','=',0)->select();
+		return Category::where('parent_id','>',0)->select();
 	}
 }

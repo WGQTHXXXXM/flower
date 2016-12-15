@@ -17,23 +17,50 @@
 
     <div class="panel admin-panel margin-top">
         <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>添加板块</strong></div>
-        <div class="body-content">
-            <form method="post" class="form-x" action="{:url('admin/admin/createfourm')}">
-                <div class="form-group">
+        
+            <form method="post" class="form-x" action="{:url('admin/platemanage/sanPlateAdd')}">
+            <div class="body-content">
+            <div class="form-group">
                     <div class="label">
-                        <label>上级分类：</label>
+                        <label>一级分类：</label>
                     </div>
-                    <div class="field">
-                        <select name="ffid" class="input w50">
-            <option value="0">请选择分类</option>
-            <!-- volist 相似于foreach  name要输出的模板变量 id循环变量-->
-            {volist name="bigPlate" id="data"}
-            <option value="{$data['id']}">{$data['name']}</option>
-            {/volist}
-          </select>
-                        <div class="tips">不选择上级分类默认为一级分类</div>
+                <div class="field"></div>
+                <select name="oneid" class="input w50">
+                    <option>请选择分类</option>
+                     {volist name="BigPlate" id="data"}
+                    <option value="{$data['id']}">{$data['one_name']}</option>
+                    {/volist}
+                 </select>
+            </div>
+            <div class="body-content">
+            
+        
+            <div class="form-group">
+                    <div class="label">
+                        <label>二级分类：</label>
                     </div>
-                </div>
+                <div class="field"></div>
+                <select name="twoid" class="input w50">
+                    <option>请选择分类</option>
+                    {volist name="twoPlate" id="data"}
+                    <option value="{$data['id']}">{$data['name']}</option>
+                    {/volist}
+                 </select>
+            </div>
+            <div class="form-group">
+                    <div class="label">
+                        <label>显示顺序</label>
+                    </div>
+                <div class="field"></div>
+                <select name="shuxu" class="input w50">
+                    <option>请选择</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                 </select>
+            </div>
+        </div>
                 <div class="form-group">
                     <div class="label">
                         <label>分类名字：</label>
@@ -43,31 +70,12 @@
                         <div class="tips"></div>
                     </div>
                 </div>
-
-
-                <div class="form-group">
-                    <div class="label">
-                        <label>分类关键字：</label>
-                    </div>
-                    <div class="field">
-                        <input type="text" class="input" name="fourm_key" />
-                    </div>
-                </div>
                 <div class="form-group">
                     <div class="label">
                         <label>分类描述：</label>
                     </div>
                     <div class="field">
                         <input type="text" class="input" name="fourm_dec" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label>提示下：</label>
-                    </div>
-                    <div class="field">
-                        <input type="text" class="input w50" value="板块添加需谨慎" />
-                        <div class="tips"></div>
                     </div>
                 </div>
                 <div class="form-group">
@@ -82,5 +90,4 @@
         </div>
     </div>
 </body>
-
 </html>

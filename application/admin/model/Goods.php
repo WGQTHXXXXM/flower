@@ -17,7 +17,7 @@ class Goods extends Model
 		return $goodsid;
 	}
 
-	/*商品展示查询*/
+/*商品展示*/
 	public function GoodsSelect()
 	{
 		$GoodsSelShow = Goods::name('goods')->alias('g')
@@ -45,7 +45,7 @@ class Goods extends Model
 	}
 
 
-	/*商品回收站*/
+/*商品回收站*/
 	public function CanRecovenGoods()
 	{
 		$RecovenGoodsShow = Goods::onlyTrashed('goods')->alias('g')
@@ -74,7 +74,28 @@ class Goods extends Model
 		if ($TrueDels) {
 			db('goods')->where('id',$Tgid)->delete();
 			
-		}
-		
+		}	
 	}
+
+/*商品信息修改*/
+	/*商品旧信息显示*/
+	public function gOldGoodsMessage($gid)
+	{
+		$OldGoodsMessage = Goods::get($gid);
+		return $OldGoodsMessage;
+	}
+	/*修改商品信息*/
+	public function gAlterGoodsMessage($post)
+	{
+		$this->save([
+				'title' => $post['title'],
+				'market_price' => $post['shichangjia'],
+				'now_price' => $post['hualijia'],
+				'meaning' => $post['huayu'],
+				'packing' => $post['baozhuang'],
+				'attach' => $post['fusong'],
+				'allow_city' => $post['peisong'],
+			],['id'=>$post['id']]);
+	}
+
 }

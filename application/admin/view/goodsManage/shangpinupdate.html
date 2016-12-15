@@ -16,204 +16,121 @@
 <div class="panel admin-panel margin-top">
   <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>修改商品内容</strong></div>
   <div class="body-content">
-    <!-- <form method="post" class="form-x" action="">  -->
-    <form action="{:url('admin/admin/shangpin_update_create')}" class="form-x" enctype="multipart/form-data" method="post">   
-      <input type="hidden" name="id"  value="" />  
+    <form action="{:url('admin/goodsmanage/goodsAlter')}" class="form-x" enctype="multipart/form-data" method="post">  
+    <input type="hidden" name="id"  value="{$OldGoodsMessage['id']}" />
       <div class="form-group">
         <div class="label">
           <label>商品名称：</label>
         </div>
-         <div class="field">
-           <select name="fid" class="input w50">
-            <option >{//$shangpin['goodsname']}</option>
-            
-          </select>
-        </div>
-       
-      </div> 
-      <div class="form-group">
-        <div class="label">
-          <label>商品图片：</label>
-        </div>
         <div class="field">
-        
-          <input type="file"  name="picturepath" id="url1"  class="input tips" style="width:25%; float:left;"  value="" data-toggle="hover" data-place="right" data-image="" />
-         <!--  <input type="button" class="button bg-blue margin-left" id="image1" value="+ 浏览上传"  style="float:left;"> -->
-          <!-- <div class="tipss">图片尺寸：1920*200</div> -->
-        </div>
-      </div>
-       <div class="form-group">
-        <div class="label">
-          <label>商品名：</label>
-        </div>
-        <div class="field">
-          <input type="text" class="input w50" name="goodsname" value="" />         
+        <input type="text" class="input w50"  style="color:red;" name="title" value="{$OldGoodsMessage['title']}" />       
           <div class="tips"></div>
         </div>
-      </div>  
-       <div class="form-group">
+      </div>
+      <div class="form-group">
+          <div class="label">
+              <label>首页展示图：</label>
+          </div>
+          <div class="field">
+               <input type="file" class="button bg-blue margin-left" name="HomeImg" id="image1" value=""  style="float:left;">
+              <div class="tipss">原图片：<img src="/uploads/{$HomeImg[0]['path']}" alt="图片已删除" width="140" height="50" /></div>
+          </div>
+      </div>
+
+      <div class="form-group">
         <div class="label">
-          <label>价格：</label>
+          <label>市场价：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" name="price" value="" />         
+          <input type="text" style="color:red;" class="input w50" name="shichangjia" value="{$OldGoodsMessage['market_price']}" />         
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>花礼价：</label>
+        </div>
+        <div class="field">
+          <input type="text" style="color:red;" class="input w50" name="hualijia" value="{$OldGoodsMessage['now_price']}" />         
           <div class="tips"></div>
         </div>
       </div>      
       
       <div class="form-group">
         <div class="label">
-          <label>关键字：</label>
+          <label>花语：</label>
         </div>
         <div class="field">
-          <input type="text" class="input" name="goods_key" value=""/>         
+          <input type="text" style="color:red;" class="input" name="huayu" value="{$OldGoodsMessage['meaning']}"/>       
         </div>
       </div>
       <div class="form-group">
         <div class="label">
-          <label>描述：</label>
+          <label>包装：</label>
         </div>
         <div class="field">
-          <textarea type="text" class="input" name="goods_desc" style="height:100px;" ></textarea>        
-        </div>
-     </div>
-    
-     <div class="form-group">
-        <div class="label">
-          <label>热销：</label>
-        </div>
-        <div class="field">
-          <div class="button-group radio">
-          
-          <label class="button active">
-         	  <span class="icon icon-check"></span>             
-              <input name="ishot" value="1" type="radio" checked="checked">是             
-          </label>             
-        
-          <label class="button active"><span class="icon icon-times"></span>          	
-              <input name="ishot" value="0"  type="radio" checked="checked">否
-          </label>         
-           </div>       
+          <textarea type="text" style="color:red;" class="input" name="baozhuang" style="height:100px;">{$OldGoodsMessage['packing']}</textarea>        
         </div>
      </div>
      <div class="form-group">
         <div class="label">
-          <label>生日礼物：</label>
+          <label>附送：</label>
         </div>
         <div class="field">
-          <div class="button-group radio">
-          
-          <label class="button active">
-            <span class="icon icon-check"></span>             
-              <input name="isborn" value="1" type="radio" checked="checked">是             
-          </label>             
-        
-          <label class="button active"><span class="icon icon-times"></span>            
-              <input name="isborn" value="0"  type="radio" checked="checked">否
-          </label>         
-           </div>       
+          <textarea type="text" style="color:red;" class="input" name="fusong" style="height:100px;" >{$OldGoodsMessage['attach']}</textarea>        
         </div>
      </div>
      <div class="form-group">
         <div class="label">
-          <label>新品：</label>
+          <label>配送：</label>
         </div>
         <div class="field">
-          <div class="button-group radio">
-          
-          <label class="button active">
-            <span class="icon icon-check"></span>             
-              <input name="isnew" value="1" type="radio" checked="checked">是             
-          </label>             
-        
-          <label class="button active"><span class="icon icon-times"></span>            
-              <input name="isnew" value="0"  type="radio" checked="checked">否
-          </label>         
-           </div>       
+          <textarea type="text" style="color:red;" class="input" name="peisong" style="height:100px;" >{$OldGoodsMessage['allow_city']}</textarea>        
         </div>
      </div>
-        <div class="form-group">
+
+     <div class="form-group">
         <div class="label">
-          <label>送女朋友：</label>
+          <label></label>
         </div>
         <div class="field">
-          <div class="button-group radio">
-          
-          <label class="button active">
-            <span class="icon icon-check"></span>             
-              <input name="isgirl" value="1" type="radio" checked="checked">是             
-          </label>             
-        
-          <label class="button active"><span class="icon icon-times"></span>            
-              <input name="isgirl" value="0"  type="radio" checked="checked">否
-          </label>         
-           </div>       
-        </div>
-     </div>
-        <div class="form-group">
-        <div class="label">
-          <label>送男朋友：</label>
-        </div>
-        <div class="field">
-          <div class="button-group radio">
-          
-          <label class="button active">
-            <span class="icon icon-check"></span>             
-              <input name="isboy" value="1" type="radio" checked="checked">是             
-          </label>             
-        
-          <label class="button active"><span class="icon icon-times"></span>            
-              <input name="isboy" value="0"  type="radio" checked="checked">否
-          </label>         
-           </div>       
-        </div>
-     </div>
-        <div class="form-group">
-        <div class="label">
-          <label>情侣：</label>
-        </div>
-        <div class="field">
-          <div class="button-group radio">
-          
-          <label class="button active">
-            <span class="icon icon-check"></span>             
-              <input name="isdouble" value="1" type="radio" checked="checked">是             
-          </label>             
-        
-          <label class="button active"><span class="icon icon-times"></span>            
-              <input name="isdouble" value="0"  type="radio" checked="checked">否
-          </label>         
-           </div>       
-        </div>
-     </div>
-     
-        <div class="form-group">
-        <div class="label">
-          <label>DIY：</label>
-        </div>
-        <div class="field">
-          <div class="button-group radio">
-          
-          <label class="button active">
-            <span class="icon icon-check"></span>             
-              <input name="isdiy" value="1" type="radio" checked="checked">是             
-          </label>             
-        
-          <label class="button active"><span class="icon icon-times"></span>            
-              <input name="isdiy" value="0"  type="radio" checked="checked">否
-          </label>         
-           </div>       
-        </div>
-     </div>
-      <div class="form-group">
-        <div class="label">
-          <label>友情提示：</label>
-        </div>
-        <div class="field">
-          <input type="text" class="input w50" name="sort" value="修改商品需谨慎"   />
-          <div class="tips"></div>
+          <div class="button bg-red icon-check-square-o">商品展示图</div>
         </div>
       </div>
+     {volist name="HomesImg" id="data"}
+      <div class="form-group">
+          <div class="label">
+              <label>展示图：</label>
+          </div>
+          <div class="field">
+              <input type="file"  id="showpic" class="button bg-blue margin-left" name="HomesImg[]"  value=""  style="float:left;">
+              <input type="display:none" name="sid[]"  value="{$data['id']}" style="display:none;"/>
+              <div class="tipss">原图片：<img src="/uploads/{$data['path']}" alt="图片已删除" width="140" height="50" /></div>
+          </div>
+      </div>
+      {/volist}
+        
+      <div class="form-group">
+        <div class="label">
+          <label></label>
+        </div>
+        <div class="field">
+          <div class="button bg-red icon-check-square-o">商品详情图</div>
+        </div>
+      </div>
+      {volist name="images" id="data"}
+      <div class="form-group">
+          <div class="label">
+              <label>详情图：</label>
+          </div>
+          <div class="field">
+               <input type="file" class="button bg-blue margin-left" name="images[]" id="image1" value=""  style="float:left;">
+               <input type="hidden" name="did[]"  value="{$data['id']}" style="display:none;"/>
+              <div class="tipss">原图片：<img src="/uploads/{$data['path']}" alt="图片已删除" width="140" height="50" /></div>
+          </div>
+      </div>
+      {/volist}  
      <div class="form-group">
         <div class="label">
           <label></label>
@@ -225,4 +142,10 @@
     </form>
   </div>
 </div>
-</body></html>
+</body>
+</html>
+<!-- <script>
+  $("#showpic").click(function({
+     alert(11);
+  }));
+</script> -->

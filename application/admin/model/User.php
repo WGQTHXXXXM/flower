@@ -84,4 +84,14 @@ class User extends Model
 				'is_admin' => 0,
 			],['id' => $uid]);
 	}
+
+
+	public function Order()
+	{
+		return $this->hasMany('Order');
+	}
+	public function goods()
+	{
+		return $this->hasMany('Goods');
+	}
 }

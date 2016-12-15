@@ -85,23 +85,10 @@ class Admin extends UserBase
     {
      	return $this->fetch();
     }
-    //  public function list()
-    // {
-    //  	return $this->fetch();
-    // }
     public function cateedit()
     {
      	return $this->fetch();
     }
-
-    // public function shangpinupdate($gid)
-    // {
-    // 	$shangpin = GoodsModel::get($gid);
-    // 	$this->assign('shangpin',$shangpin);
-    	
-
-    // 	return $this->fetch();
-    // }
 
 }
 

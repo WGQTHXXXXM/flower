@@ -243,7 +243,31 @@
             </form>
             <!-- 大图轮播 End -->
                 <p style="color:#666666; text-align:center;">&nbsp;</p><hr>
-                <p style="color:#666666; text-align:center;">暂无搜索结果</p>
+    {foreach $dataGoods as $flower}
+        <div class="grid-item">
+            <div class="grid-panel">
+                <div class="img-box">
+                    <a href="/product/9012154.html" target="_blank"><img width="220" height="240" src="__INDEX__SITE__/uploads/{$flower->picTitle->path}" alt="甜美公主"></a>
+                </div>
+                <div class="info-cont">
+                    <div class="price">
+                        <span class="price-sign">&yen;</span>
+                        <span class="price-num">{$flower->now_price}</span>
+                    </div>
+                    <div class="title">
+                        <a href="/product/9012154.html" target="_blank">
+                            <span class="product-title">{$flower->title}</span>
+                            <span class="feature">新品</span>
+                        </a>
+                    </div>
+                    <div class="operate">
+                        <a href="javascript:DoGuanZhu('9012154')" class="attention"><span class="ico ico-heart-d"></span>关注</a>
+                            <a href="/shopping/AddtoCart?product_code=9012154" class="add-cart" style="margin-left:-5px;"><span class="ico ico-cart-d"></span>加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {/foreach}
         </div>
         <div class="pull-left w210 r970">
             <!-- 分类 -->

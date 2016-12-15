@@ -87,7 +87,7 @@
         <div class="pay-info">
             <div class="info-l">
                 <h5>订单提交成功，请您尽快付款！</h5>
-                <p><i>订单号：171467946</i><i>应付金额：<em><b>617</b> 元</em></i></p>
+                <p><i>订单号：{$num_order}</i><i>应付金额：<em><b>{$sum}</b> 元</em></i></p>
                 <p>
                     <a href="javascript:void(0);" class="order-btn">订单详情 <span class="glyphicon glyphicon-triangle-bottom"></span></a>
                 </p>
@@ -105,9 +105,11 @@
         </div>
         <div class="order-details">
 
-            收货地址：北京东城区天丰利    收货人：宋崴  18366188150 配送时间：2016-12-16<br>
+            收货地址：{$dataAddr->province}{$dataAddr->city}{$dataAddr->address}    收货人：{$dataAddr->name}  {$dataAddr->phone} 配送时间：2016-12-16<br>
 
-            商品名称：一往情深,精品玫瑰礼盒:19枝红玫瑰，勿忘我适量;浪漫絮语,（戴安娜粉玫瑰或者玛利亚粉玫瑰）32枝，白玫瑰6枝，香槟玫瑰6枝，红玫瑰6枝新品
+            商品名称：<br/>{foreach $dataGoods as $val}
+                            {$val->goods->title}<br/>
+                      {/foreach}
         </div>
     </div>
             <div class="cart-panel">

@@ -215,25 +215,18 @@
                             </div>
                             <div class="item-bd">
                                 <div id="showAddress">
-                                            <div class="address-bar">
-                                                <div class="operate">
-                                                    <a href="javascript:AddressOper('1500545','edit')">编辑</a>
-                                                </div>
-                                                <div class="name active" id="address1500545">宋崴 <i class="ico ico-check"></i></div>
-                                                <div class="address">
-                                                    <i class="wzsj_1" id="address1500545_0">宋崴 </i><i class="wzsj"><span id="address1500545_1">北京</span> <span id="address1500545_2">东城区</span> <span id="address1500545_3">天丰利</span></i><i><span id="address1500545_4">18366188150</span> <span id="address1500545_5"></span></i><i style="color: #fff;background: #b8b8b8;line-height: 22px;padding: 0 5px;margin-top: 4px;"> 默认地址</i><span id="address1500545_6" style="display:none;">0</span>
-                                                </div>
-                                            </div>
-                                            <div class="address-bar">
-                                                <div class="operate">
-                                                    <a href="javascript:AddressOper('1500548', 'default')">设为默认地址</a><a href="javascript:AddressOper('1500548','edit')">编辑</a><a href="javascript:if (confirm('确认删除吗？')) { AddressOper('1500548', 'del')}">删除</a>
-                                                </div>
-                                                <div class="name " id="address1500548">李小城<i class="ico ico-check"></i></div>
-                                                <div class="address">
-                                                    <i class="wzsj_1" id="address1500548_0">李小城</i><i class="wzsj"><span id="address1500548_1">北京</span> <span id="address1500548_2">东城区</span> <span id="address1500548_3">上地三午</span></i><i><span id="address1500548_4">18612344321</span> <span id="address1500548_5"></span></i><span id="address1500548_6" style="display:none;">0</span>
-                                                </div>
-                                            </div>
-
+                                {foreach $dataUser->address as $val}
+                                <input type="radio" name="id_addr" id="add{$val->id}" value="{$val->id}" />
+                                    <div class="address-bar">
+                                        <div class="operate">
+                                            <a href="javascript:AddressOper('1500545','edit')">编辑</a>
+                                        </div>
+                                        <label for="add{$val->id}" style="display:block;"><div class="name active" id="address1500545">{$val->name} <i class="ico ico-check"></i></div></label>
+                                        <div class="address">
+                                            <i class="wzsj_1" id="address1500545_0">{$val->name} </i><i class="wzsj"><span id="address1500545_1">{$val->province}</span> <span id="address1500545_2">{$val->city}</span> <span id="address1500545_3">{$val->address}</span></i><i><span id="address1500545_4">{$val->phone}</span> <span id="address1500545_5"></span></i><i style="color: #fff;background: #b8b8b8;line-height: 22px;padding: 0 5px;margin-top: 4px;"> </i><span id="address1500545_6" style="display:none;">0</span>
+                                        </div>
+                                    </div>                                           
+                                {/foreach}
                                 </div>
                             </div>
                         </div>
@@ -254,18 +247,18 @@
                     <div class="item-bd">
                         <div class="form-inline order-form" style="display:none;" id="OrderPersonInfo">
                             <div class="form-group">
-                                <input class="form-control input-sm" id="realname" name="realname" value="李小城" placeholder="您的姓名" style="width:140px;" maxlength="15" type="text">
+                                <input class="form-control input-sm" id="realname" name="realname" value="{$dataUser->vir_name}" placeholder="您的姓名" style="width:140px;" maxlength="15" type="text">
                             </div>
                             <div class="form-group">
-                                <input class="form-control input-sm" id="phone" name="phone" value="18366188150" placeholder="手机号码或电话" style="width:140px;" maxlength="25" type="text">
+                                <input class="form-control input-sm" id="phone" name="phone" value="{$dataUser->mphone}" placeholder="手机号码或电话" style="width:140px;" maxlength="25" type="text">
                             </div>
                             <div class="form-group">
-                                    <input class="form-control input-sm" id="Email" name="Email" value="wgqthxxxxm@163.com" readonly="" style="width:200px;" type="text">
+                                    <input class="form-control input-sm" id="Email" name="Email" value="{$dataUser->email}" readonly="" style="width:200px;" type="text">
                             </div>
                             <button class="btn btn-primary btn-sm" type="button" onclick="DoOrderPersonInfo()">确定</button>
                         </div>
                         <div class="order-info" id="OrderPersonInfoText">
-                            <span id="M_RealName">李小城</span> <span id="M_Phone">18366188150</span> <span id="M_Email">wgqthxxxxm@163.com</span> <a href="javascript:EditOrderPersonInfo()">编辑</a>
+                            <span id="M_RealName">{$dataUser->vir_name}</span> <span id="M_Phone">{$dataUser->mphone}</span> <span id="M_Email">{$dataUser->email}</span> <a href="javascript:EditOrderPersonInfo()">编辑</a>
                         </div>
                     </div>
                 </div>
@@ -546,33 +539,21 @@
         <div class="cart-panel check">
             <div class="hd"><h3>核对购物清单</h3></div>
             <div class="bd" id="Products">
-                        <ul class="order-list">
-                            <li class="img-box"><a href="/product/9010966.html" target="_blank"><img src="http://img01.hua.com/uploadpic/newpic/9010966.jpg_80x87.jpg" width="50" height="56"></a></li>
-                            <li class="product">
-                                <a href="/product/9010966.html">
-                                    <span class="product-title">一往情深一精品玫瑰礼盒:19枝红玫瑰，勿忘我适量</span>
-                                </a>
-                                <div class="price">
-                                    <span class="price-sign">¥</span>
-                                    <span class="price-num" id="pro9010966">239</span>
-                                </div>
-                                x1
-                            </li>
-                        </ul>
-                        <ul class="order-list">
-                            <li class="img-box"><a href="/product/9012153.html" target="_blank"><img src="http://img01.hua.com/uploadpic/newpic/9012153.jpg_80x87.jpg" width="50" height="56"></a></li>
-                            <li class="product">
-                                <a href="/product/9012153.html">
-                                    <span class="product-title">浪漫絮语一（戴安娜粉玫瑰或者玛利亚粉玫瑰）32枝，白玫瑰6枝，香槟玫瑰6枝，红玫瑰6枝</span>
-                                </a>
-                                <div class="price">
-                                    <span class="price-sign">¥</span>
-                                    <span class="price-num" id="pro9012153">378</span>
-                                </div>
-                                x1
-                            </li>
-                        </ul>
-
+            {foreach $dataUser->cart as $val}
+                <ul class="order-list">
+                    <li class="img-box"><a href="/product/9010966.html" target="_blank"><img src="__INDEX__SITE__/uploads/{$val->goods->picTitle->path}" width="50" height="56"></a></li>
+                    <li class="product">
+                        <a href="/product/9010966.html">
+                            <span class="product-title">{$val->goods->title}</span>
+                        </a>
+                        <div class="price">
+                            <span class="price-sign">¥</span>
+                            <span class="price-num" id="pro9010966">{$val->goods->now_price}</span>
+                        </div>
+                        x{$val->num_goods}
+                    </li>
+                </ul>
+            {/foreach}
             </div>
         </div>
         <!-- 核对购物清单 End -->
@@ -617,7 +598,7 @@
                 提交订单应付总额：
                 <div class="price">
                     <span class="price-sign">¥</span>
-                    <span class="price-num" id="order_total_money">617</span>
+                    <span class="price-num" id="total_money">{$sum}</span>
                 </div>
             </div>
             <input name="tt_flag" id="tt_flag" value="1" type="hidden">

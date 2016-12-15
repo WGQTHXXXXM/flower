@@ -8,6 +8,23 @@ class User extends Model
 {
 	use SoftDelete;
 	protected static $deleteTime = 'delete_time';
+
+	function address()
+	{
+		return $this->hasMany('ReceiveAddress','id_user');
+	}
+
+	function cart()
+	{
+		return $this->hasMany('ShopCart','id_user');
+	}
+
+
+	function getItem($data)
+	{
+		return $this->get(1);
+	}
+
 	//  检查用户是否存在
 	function hasUser($email)
 	{
@@ -27,11 +44,6 @@ class User extends Model
 		return $this->save($data,['id'=>$id]);
 	}
 
-	function test()
-    {
-  	 	// $this->destroy(3);
-    	// dump($this->getLastSql());
-    }
 
 
 }

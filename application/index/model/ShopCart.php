@@ -5,6 +5,11 @@ use think\Model;
 
 class ShopCart extends Model
 {
+	public function goods()
+	{
+		return $this->hasOne('Goods','url_num','id_goods');
+	}
+
 	//获得商品信息
 	function getItem($data)
 	{
@@ -34,10 +39,11 @@ class ShopCart extends Model
 		return $this->where('id','<>',0)->select();
 	}
 
-	public function goods()
+	function updataItem($data,$id)
 	{
-		return $this->hasOne('Goods','url_num','id_goods');
+		$this->save($data,$id);	
 	}
+
 
 }
 

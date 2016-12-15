@@ -1,11 +1,11 @@
 <html><head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>会员中心-中国鲜花礼品网</title>
+    <title>中国鲜花礼品网-会员中心</title>
     <meta name="description" content="会员中心-中国鲜花礼品网,专业提供鲜花礼品网上购物,全国连锁网上花店,鲜花蛋糕礼品3小时送达1000多城市">
     <meta name="keywords" content="中国鲜花礼品网会员中心">
     <meta name="author">
-        <script charset="utf-8" src="https://trust.baidu.com/vcard/v.js?siteid=7081887&amp;url=http%3A%2F%2Fwww.hua.com%2FMember%2FOrder%2F&amp;source=&amp;rnd=2070006462&amp;hm=1"></script><script src="//hm.baidu.com/hm.js?5f4aa36509ee08b412f4647f6d4f1749"></script><script type="text/javascript" src="/home/CheckAgent"></script>
+        <script charset="utf-8" src="https://trust.baidu.com/vcard/v.js?siteid=7081887&amp;url=http%3A%2F%2Fwww.hua.com%2FMember%2FAccountSetting%2FAddressList&amp;source=&amp;rnd=1474039399&amp;hm=1"></script><script src="//hm.baidu.com/hm.js?5f4aa36509ee08b412f4647f6d4f1749"></script><script type="text/javascript" src="/home/CheckAgent"></script>
     
     
 
@@ -15,66 +15,6 @@
     <link type="text/css" rel="stylesheet" href="http://img02.hua.com/pc/assets/css/public.css">
     
     
-    <style>
-        .box-border .order-panel .order-list .img-box {
-            width: 95px;
-        }
-
-        .box-border .order-panel .order-list .number {
-            width: 155px;
-        }
-
-        div.digg {
-            padding: 3px;
-            margin: 10px 3px 15px;
-            text-align: center;
-        }
-
-            div.digg a {
-                border: #DDDDDD 1px solid;
-                padding: 3px 8px;
-                margin: 4px;
-                text-decoration: none;
-                color: #737373;
-            }
-
-                div.digg a:hover {
-                    border: #cccccc 1px solid;
-                    color: #FF6A00;
-                    background-color: #D9D9D9;
-                }
-
-                div.digg a:active {
-                    border: #DDDDDD 1px solid;
-                    color: #737373;
-                    background-color: #737373;
-                }
-
-            div.digg span.current {
-                border: solid 1px #bbbbbb;
-                padding: 3px 8px;
-                font-weight: bold;
-                margin: 2px;
-                color: #fff;
-                background-color: #FF6A00;
-            }
-
-            div.digg span.disabled {
-                border: #DDDDDD 1px solid;
-                padding: 3px 8px;
-                margin: 2px;
-                color: #ddd;
-            }
-
-        .v_align {
-            width: 90px;
-            height: 50px;
-            display: table-cell;
-            text-align: center;
-            vertical-align: middle;
-        }
-    </style>
-
 
 
     <!--[if lt IE 9]>
@@ -133,7 +73,7 @@
                 <li class="site-nav-pipe">|</li>
                 <!--购物车信息显示start-->
                 <li class="menu dropdown">
-                    <a href="__INDEX__SITE__/Shopping/showcart" data-hover="dropdown" data-delay="0" rel="nofollow" target="_blank"><span class="ico ico-cart"></span>购物车<span class="text-primary" id="gwcCount">(0)</span><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                    <a href="/shopping/showcart/" data-hover="dropdown" data-delay="0" rel="nofollow" target="_blank"><span class="ico ico-cart"></span>购物车<span class="text-primary" id="gwcCount">(0)</span><span class="glyphicon glyphicon-triangle-bottom"></span></a>
                     <div class="dropdown-menu dropdown-cart" id="CartInfo"><div class="empty">您的购物车中没有商品，<a href="/">先去选购吧</a>！</div></div>
                 </li><!--购物车信息显示end-->
                 <li class="site-nav-pipe">|</li>
@@ -246,74 +186,60 @@
     <div class="wrapper about">
         
 
-
-
 <div class="pull-left w970 l230">
     <div class="box-border member-r">
-        <div class="order-wrap">
-            <div class="title">
-                <h3>我的订单</h3>
-                <select class="form-control input-sm" id="sj" onchange="DoSelectSJ()">
-                    <option value="0">最近订单</option>
-                    <option value="1">2016-01-01以前订单</option>
-                </select>
+        <div class="address-wrap">
+            <div class="address-add">
+                <a href="javascript:AddressOper('ismember','add')" class="btn btn-default btn-sm btn-big">新增收货地址</a>
+                <span>您已创建 <b>2</b> 个收货地址，最多可建 <b>20</b> 个</span>
             </div>
 
-            <!-- 订单列表 -->
-            <div class="order-panel">
-                <div class="hd">
-                    <ul class="order-title">
-                        <li class="number">订单编号</li>
-                        <li class="consignee">收货人</li>
-                        <li class="order-price">订单金额</li>
-                        <li class="date">配送时间</li>
-                        <li class="state">
-                            <select class="form-control input-sm" id="zt" onchange="DoSelectZT()">
-                                <option value="0">全部状态</option>
-                                <option value="1">待付款</option>
-                                <option value="2">送货完毕</option>
-                                <option value="3">今日配送</option>
-                                <option value="4">待评价</option>
-                                <option value="-1">已取消</option>
-                            </select>
-                        </li>
-                        <li class="operate">操作</li>
-                    </ul>
-                </div>
-                <div class="bd">
-                {foreach $dataOrder as $order}
-                    <ul class="order-list">
-                        <li class="img-box">
-                            <a href="/Member/Order/Detail?orderid=171467946&amp;pt=2016-12-16"><img src="http://img01.hua.com/uploadpic/newpic/9010966.jpg_80x87.jpg" width="50" height="56"></a>
-                        </li>
-                        <li class="number"><a href="/Member/Order/Detail?orderid=171467946&amp;pt=2016-12-16">{$order->num_order}</a></li>
-                        <li class="consignee">{$order->address->name} </li>
-                        <li class="order-price">
-                            <?php $total = 0;?>
-                            {foreach $order->cart as $cart}
-                                <?php $total += $cart->goods->now_price;?>
-                            {/foreach}
-                            <span class="price-sign">¥</span>
-                            <span class="price-num">
-                            {$total}
-                            </span>
-                                }
-                        </li>
-                        <li class="date">2016-12-16</li>
-                        <li class="state">{$order->status}</li>
-                        <li class="operate">
-                                <a href="/Member/Order/Detail?orderid=171467946&amp;pt=2016-12-16">查看</a><span>|</span><a href="javascript:OrderOper('171467946','cancel');"> 取消 </a>
-                                <a href="/Member/Payment/BalanceFill?orderid=171467946&amp;orderamount=617" class="btn btn-primary btn-sm">付款</a>
-                        </li>
-                    </ul>
-                {/foreach}
-                </div>
-
-                <div class="digg">
-                    
-                </div>
+                    <div class="address-info">
+                        <button type="button" class="close" onclick="if(confirm('确认删除吗？')){AddressOper('1500545','del')}"><span>×</span></button>
+                        <h5>宋崴 </h5>
+                        <ul class="address-list">
+                            <li><b>收货人：</b>宋崴 </li>
+                            <li><b>所在地区：</b>北京东城区</li>
+                            <li><b>地址：</b>天丰利</li>
+                            <li><b>手机：</b>18366188150</li>
+                            <li><b>固定电话：</b></li>
+                        </ul>
+                        <div class="operate">
+                                默认&nbsp;<a href="javascript:AddressOper('1500545','edit')"><text>编辑</text> </a>
+                        </div>
+                    </div>
+                    <div class="address-info">
+                        <button type="button" class="close" onclick="if(confirm('确认删除吗？')){AddressOper('1500548','del')}"><span>×</span></button>
+                        <h5>李小城</h5>
+                        <ul class="address-list">
+                            <li><b>收货人：</b>李小城</li>
+                            <li><b>所在地区：</b>北京东城区</li>
+                            <li><b>地址：</b>上地三午</li>
+                            <li><b>手机：</b>18612344321</li>
+                            <li><b>固定电话：</b></li>
+                        </ul>
+                        <div class="operate">
+                                <a href="javascript:AddressOper('1500548','default')">设为默认</a> <a href="javascript:AddressOper('1500548','edit')"><text>编辑</text> </a>
+                        </div>
+                    </div>
+            <div class="address-add">
+                <a href="javascript:AddressOper('ismember','add')" class="btn btn-default btn-sm btn-big">新增收货地址</a>
+                <span>您已创建 <b>2</b> 个收货地址，最多可建 <b>20</b> 个</span>
             </div>
-            <!-- 订单列表 End -->
+        </div>
+    </div>
+</div>
+
+<div class="modal fade com-modal" id="consigneeModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="attNotice">新增收货人信息</h4>
+            </div>
+            <div class="modal-body">
+                <iframe src="" id="attPage" frameborder="0" width="100%" height="340"></iframe>
+            </div>
         </div>
     </div>
 </div>
@@ -325,7 +251,7 @@
                     <li>
                         <span class="ico ico-member2"></span>订单信息
                         <ul>
-                            <li id="myOrderItem" class="active"><a href="/Member/Order/">我的订单</a></li>
+                            <li id="myOrderItem"><a href="/Member/Order/">我的订单</a></li>
                             <li id="cancelOrderItem"><a href="/Member/Order/?zt=-1">已取消订单</a></li>
                             <li id="myEvaluationItem"><a href="/Member/Order/ReviewList">我的评价</a></li>
                             <li id="myAttentionItem"><a href="/Member/Order/MyAttention">我的关注</a></li>
@@ -342,10 +268,10 @@
                     <li>
                         <span class="ico ico-member4"></span>账户设置
                         <ul>
-                            <li id="personInfoItem"><a href="/Member/PersonInfoManage">个人信息</a></li>
-                            <li id="addressListItem"><a href="/Member/AddressList">常用收货人</a></li>
-                            <li id="changePwdItem"><a href="/Member/ChangePwd">修改密码</a></li>
-                            <li id="changeEmailItem"><a href="/Member/ChangeEmail">修改登录名</a></li>
+                            <li id="personInfoItem"><a href="/Member/AccountSetting/PersonInfoManage">个人信息</a></li>
+                            <li id="addressListItem" class="active"><a href="/Member/AccountSetting/AddressList">常用收货人</a></li>
+                            <li id="changePwdItem"><a href="/Member/AccountSetting/ChangePwd">修改密码</a></li>
+                            <li id="changeEmailItem"><a href="/Member/AccountSetting/ChangeEmail">修改登录名</a></li>
                             <li id="remindItem"><a href="/Member/Remind/">生日/纪念日提醒</a></li>
                         </ul>
                     </li>
@@ -439,7 +365,7 @@
     <footer>
         <div class="auth">
             <span style="margin-right:8px;">
-                <script src="http://kxlogo.knet.cn/seallogo.dll?sn=e15041744030058395oqbo000000&amp;size=4"></script><a href="https://ss.knet.cn/verifyseal.dll?sn=e15041744030058395oqbo000000&amp;ct=df&amp;a=1&amp;pa=0.5824569153669182" target="_blank" kx_type="缩放式" style="display:inline-block;position:relative;width:102px;height:37px;"><img src="http://rr.knet.cn/static/images/logo/cnnic.png" h="37" w="102" onmouseover="showFull(this)" onmouseout="showMin(this)" style="left:0;position:absolute;top:0;border:none;" width="102" height="37"></a>
+                <script src="http://kxlogo.knet.cn/seallogo.dll?sn=e15041744030058395oqbo000000&amp;size=4"></script><a href="https://ss.knet.cn/verifyseal.dll?sn=e15041744030058395oqbo000000&amp;ct=df&amp;a=1&amp;pa=0.6940246692049282" target="_blank" kx_type="缩放式" style="display:inline-block;position:relative;width:102px;height:37px;"><img src="http://rr.knet.cn/static/images/logo/cnnic.png" h="37" w="102" onmouseover="showFull(this)" onmouseout="showMin(this)" style="left:0;position:absolute;top:0;border:none;" width="102" height="37"></a>
             </span>
             <a href="https://search.szfw.org/cert/l/CX20130306002238002312" target="_blank"><img src="http://img02.hua.com/pc/assets/img/cxwz.gif" width="112" height="40"></a>
             <a href="http://www.anquan.org/authenticate/cert/?site=www.hua.com&amp;at=realname" rel="nofollow" target="_blank"><img src="http://img02.hua.com/pc/assets/img/smyz.gif" width="106" height="40"></a>
@@ -471,56 +397,47 @@
     
     
     <script type="text/javascript">
-        function request(paras) {
-            var url = location.href;
-            var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");
-            var paraObj = {}
-            for (i = 0; j = paraString[i]; i++) {
-                paraObj[j.substring(0, j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=") + 1, j.length);
-            }
-            var returnValue = paraObj[paras.toLowerCase()];
-            if (typeof (returnValue) == "undefined") {
-                return "";
-            } else {
-                return returnValue;
-            }
-        }
 
-        $(function () {
-            var zt = request("zt");
-            var sj = request("sj");
-            $("#sj").find("option[value='" + sj + "']").attr("selected", true);
-            $("#zt").find("option[value='" + zt + "']").attr("selected", true);
+        //窗口操作开始
+        $('#consigneeModal').modal({ backdrop: 'static', keyboard: false, show: false });
+        $('#consigneeModal').on('shown.bs.modal', function () {
+            var $this = $(this);
+            var $modal_dialog = $this.find('.modal-dialog');
+            $this.css('display', 'block');
+            $modal_dialog.css({ 'margin-top': Math.max(0, ($(window).height() - $modal_dialog.height()) / 2) });
+        });
+        $('#consigneeModal').on('hidden.bs.modal', function () {
+            $("#attPage").attr("src", "");
         });
 
-        function DoSelectZT() {
-            var sj = request("sj");
-            var zt = $("#zt").val();
-            location.href = "/Member/Order/?zt=" + zt + "&sj=" + sj;
-        }
-
-        function DoSelectSJ() {
-            var zt = request("zt");
-            var sj = $("#sj").val();
-            location.href = "/Member/Order/?zt=" + zt + "&sj=" + sj;
-        }
-
-        function OrderOper(oid, op, pt) {
-            if (op == "cancel" && confirm("您确认要取消该订单?")) {
-                $.get("/Member/Order/OrderOperation", { op: op, id: oid, pt: pt }, function (data) { if (data.toString() == "0") { alert("取消订单成功！"); location.href = location.href; } else { alert("取消订单失败请重试或请联系客服！"); } });
+        function AddressOper(ids, op) {
+            var sjs = Math.random();
+            if (op == "add") {
+                //判断地址是否大于20个
+                var addCount = parseInt('2');
+                if (addCount > 20) {
+                    alert('你收货人的地址数量已经达到上限20个，请删除一些之后再添加！');
+                    return;
+                }
+                $("#attNotice").html("新增收货人地址");
+                $('#consigneeModal').modal('show');
+                $("#attPage").attr('src', '/Member/AccountSetting/WinAddress?op=' + op + "&ca=" + ids + "&sjs=" + sjs)
             }
-            else if (op == "hide") {
-                $.get("/Member/Order/OrderOperation", { op: op, id: oid, pt: pt }, function (data) { if (data.toString() == "0") { alert("删除订单成功！"); location.href = location.href; } else { alert("删除订单失败请重试或请联系客服！"); } });
+            else if (op == "edit") {
+                $("#attNotice").html("修改收货人地址");
+                $('#consigneeModal').modal('show');
+                $("#attPage").attr('src', '/Member/AccountSetting/WinAddress?op=' + op + "&ca=" + ids + "&sjs=" + sjs)
             }
-            else if (op == "restore") {
-                $.get("/Member/Order/OrderOperation", { op: op, id: oid, pt: pt }, function (data) { if (data.toString() == "0") { alert("恢复订单成功！"); location.href = location.href; } else { alert("恢复订单失败请重试或请联系客服！"); } });
+            else  //设置默认收货地址和删除收货人地址
+            {
+                $.get("/Member/AccountSetting/AddressOper", { op: op, id: ids }, function (data) { if (data.toString() == "0") { location.href = location.href; } else { alert("操作失败，请联系客服！"); } });
             }
         }
     </script>
 
 
     <script>
-        var activeItem = 'myOrderItem';
+        var activeItem = 'addressListItem';
         $("#containerBody").find('li').each(function () {
             $(this).removeClass("active");
             if ($(this).attr('id') == activeItem) {
@@ -529,7 +446,7 @@
         })
     </script>
 
-        <script type="text/javascript" src="__INDEX__STATIC__/js/statesandright.js"></script>
+        <script type="text/javascript" src="http://img02.hua.com/pc/js/statesandright.js"></script>
     <script src="http://img02.hua.com/pc/js/layerpc/layer.js"></script>
     <script type="text/javascript">
         function reqUrlParam(paras) {
@@ -569,4 +486,4 @@
                 }
             }, "json");
         });
-    </script>
+    </script>yy

@@ -300,7 +300,7 @@
             </div>
         </div>
         <ul class="nav">
-            <li><a href="__INDEX__SITE__/flower/" target="_blank">鲜花</a></li>
+            <li><a href="__INDEX__SITE__/flower/index" target="_blank">鲜花</a></li>
             <li><a href="__INDEX__SITE__/yongshenghua/" target="_blank">永生花</a></li>
             <li><a href="/cake/" target="_blank">蛋糕</a></li>
             <li><a href="/gifts/" target="_blank">礼品</a></li>
@@ -324,7 +324,7 @@
     <div class="carousel-inner">
     {foreach $dataSlide as $key=>$obj}    
         <div class="item {if $key == 0}active{/if}">
-            <div class="fill" style="background-image:url('__INDEX__SITE__/{$obj->pic}');"><a href="{$obj->pic}" target="_blank"></a></div>
+            <div class="fill" style="background-image:url('__INDEX__SITE__/{$obj->pic}');"><a href="{$obj->url}" target="_blank"></a></div>
         </div>
     {/foreach}
     </div>

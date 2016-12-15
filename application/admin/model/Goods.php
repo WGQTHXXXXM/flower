@@ -10,6 +10,8 @@ class Goods extends Model
 	use SoftDelete;
 	protected static $deleteTime = 'delete_time';
 
+	
+
 	/*插入的当前物品的ID*/
 	public function goodsId($post)
 	{

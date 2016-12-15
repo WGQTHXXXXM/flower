@@ -52,7 +52,7 @@ class Admin extends UserBase
 	public function logout()
 	{
 			session(null);
-			$this->success('退出成功','admin/admin/login');
+			$this->redirect('admin/admin/login');
 	}
     /*主页 欢迎界面*/
     public function info()

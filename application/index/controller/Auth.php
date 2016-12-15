@@ -5,6 +5,7 @@
 namespace app\index\controller;
 use think\Controller;
 use app\index\model\User;
+use app\admin\model\SlideShow;
 
 class Auth extends Controller
 {
@@ -20,14 +21,17 @@ class Auth extends Controller
      * 返回用户信息
      * @param  [type] $type [1:json; 2:arr; 3:obj;]
      * @return [type]       [description]
-     */
-    protected function getUserInfo($type)
+     */                
+    public function getUserInfo($type)
     {
     	if($type == 1)
     		echo json_encode($this->tbUser->hasUser(['id'=>session('idUser')]));
     	else if($type == 2)
     		return $this->tbUser->hasUser(['id'=>session('idUser')]);
     }
+
+
+    
 
 }
 

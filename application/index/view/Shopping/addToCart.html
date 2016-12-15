@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>空购物车-花礼网</title>
+    <meta name="description" />
+    <meta name="keywords" />
+    <link rel="icon" href="/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="__INDEX__STATIC__/css/common.css">
+    <link type="text/css" rel="stylesheet" href="__INDEX__STATIC__  /css/public.css">
+    
+<style>
+    .empty_info{text-align:center;position:relative;}
+    .empty_info a{position:absolute;left:479px;top:105px;color:#fff;background: #f60;display: inline-block;padding: 3px 10px 3px 13px;border-radius: 6px;}
+    .empty_info a:hover{text-decoration: none;background: #ff5800;}
+    .empty_info a span{font-size: 12px;}
+    .tab-pane{border: 1px solid #ddd;overflow: hidden;margin-bottom: 30px;padding: 10px;}
+    .member-panel .grid-item .grid-panel, .cart-tabs-wrap .grid-item .grid-panel{width: 170px;}
+    .member-panel .grid-item .img-box, .cart-tabs-wrap .grid-item .img-box{width: 170px;height: 185px;}
+    .member-panel .grid-item .img-box img, .cart-tabs-wrap .grid-item .img-box img{width: 100%;height:auto;}
+</style>
+
+    <!--[if lt IE 9]>
+        <script src="__INDEX__STATIC__/js/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body class="cart-flow">
+    <!-- 顶部导航 -->
+    <div class="site-nav">
+        <div class="container">
+            <ul class="site-nav-l">
+                <li class="menu">
+                    <a href="/" onClick="addfavorite();return false;"><span class="ico ico-star"></span>收藏花礼网</a>
+                </li>
+                <li class="menu dropdown">
+                    <a href="javascript:void(0)" data-hover="dropdown" data-delay="0"><span class="ico ico-weixin"></span>关注微信</a>
+                    <div class="dropdown-menu dropdown-weixin">
+                        <img src="__INDEX__STATIC__/picture/wechat_qrcode.jpg" height="124" width="124">
+                        <p>扫一扫 有惊喜</p>
+                    </div>
+                </li>
+                <li class="menu dropdown">
+                    <a href="/mobile/" data-hover="dropdown" data-delay="0" target="_blank"><span class="ico ico-mobile"></span>手机花礼</a>
+                    <div class="dropdown-menu dropdown-weixin">
+                        <img src="__INDEX__STATIC__/picture/app_qrcode.jpg" height="124" width="124">
+                        <p>APP首单减20元！<br>(需下单时输入券号9920)</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="site-nav-r">
+                <li class="menu login" id="LoginInfo">
+                    <a href="__INDEX__SITE__/Passport/Login/" rel="nofollow" id="btn-login">你好，请登录</a><a href="__INDEX__SITE__/Passport/Register/" rel="nofollow" id="btn-reg">注册</a>
+                </li>
+                <li class="site-nav-pipe">|</li>
+                <li class="menu">
+                    <a href="__INDEX__SITE__/help/ordercx/">订单查询</a>
+                </li>
+                <li class="site-nav-pipe">|</li>
+                <li class="menu dropdown">
+                    <a href="__INDEX__SITE__/help/" data-hover="dropdown" data-delay="0">客户服务<span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                    <div class="dropdown-menu dropdown-service">
+                        <a href="__INDEX__SITE__/member/payment/balancefill">在线付款</a>
+                        <a href="__INDEX__SITE__/help/">帮助中心</a>
+                        <a href="__INDEX__SITE__/help/afterservice.htm">售后服务</a>
+                        <a href="__INDEX__SITE__/help/sendRange.htm">配送范围</a>
+                        <a href="__INDEX__SITE__/chat/">留言反馈</a>
+                    </div>
+                </li>
+                <li class="site-nav-pipe">|</li>
+                <li class="menu dropdown">
+                    <a href="__INDEX__SITE__/Shopping/showcart" data-hover="dropdown" data-delay="0"><span class="ico ico-cart"></span>购物车<span class="text-primary" id="gwcCount"></span><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                    <div class="dropdown-menu dropdown-cart" id="CartInfo"></div>
+                </li>
+                <li class="site-nav-pipe">|</li>
+                <li class="menu slogan">
+                    中国鲜花礼品网:中国鲜花网领先品牌
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 顶部导航 End -->
+    <!-- 头部 -->
+    <header>
+        <div class="logo">
+            <h1><a href="/" class="logo-bd">花礼网</a></h1>
+            <i></i>
+            <h2>中国鲜花礼品网 开始2005，简称花礼网</h2>
+        </div>
+        <div class="service">
+            <span class="ico ico-phone"></span>400-889-8188
+            <a href="__INDEX__SITE__/chat/" target="_blank"><span class="ico ico-headset"></span>在线客服</a>
+        </div>
+    </header>
+    <!-- 头部 End -->
+    
+
+<div class="container">
+        <div class="cart-panel">
+            <div class="hd">
+                <ul class="order-title">
+                    <li class="product">商品名称</li>
+                    <li class="market-price">市场价</li>
+                    <li class="order-price">订购价</li>
+                    <li class="num">数量</li>
+                    <li class="operate">操作</li>
+                </ul>
+            </div>
+            {foreach $dataCart as $cart}
+            <div class="bd">
+                <ul class="order-list">
+                    <li class="img-box">
+                    <a href="__INDEX__SITE__/product/showPro/urlNum/{$cart->id_goods}" target="_blank"><img src="__INDEX__SITE__/uploads/{$cart->goods->picTitle->path}" width="50" height="56"></a></li>
+                    <li class="product">
+                        <a href="__INDEX__SITE__/product/showPro/urlNum/{$cart->id_goods}" target="_blank">
+                            <span class="product-title">{$cart->goods->title}</span>
+                            <span class="feature"></span>
+                        </a>
+                    </li>
+                    <li class="market-price">
+                        <span class="price-sign">¥</span>
+                        <span class="price-num">{$cart->goods->market_price}</span>
+                    </li>
+                    <li class="order-price">
+                        <span class="price-sign">¥</span>
+                        <span class="price-num">{$cart->goods->now_price}</span>
+                    </li>
+                    <li class="num">
+                        <div class="input-num">
+                            <a href="javascript:SetNum('Q_2708','minus');" class="btn btn-default"><i class="ico ico-minus"></i></a>
+                            <input class="form-control input-sm" name="Q_2708" id="Q_2708" value="1" maxlength="2" type="text">
+                            <a href="javascript:SetNum('Q_2708','add');" class="btn btn-default"><i class="ico ico-add"></i></a>
+                        </div>
+                    </li>
+                    <li class="operate"><a href="__INDEX__SITE__/Shopping/delGoods/id/{$cart->id}">删除</a><br><a href="javascript:DoGuanZhu('9010966')">移到我的关注</a></li>
+                </ul>
+            </div>
+            {/foreach}
+         </div>
+        <div class="set-bar">
+            <div class="set-info">
+                <a class="back" href="/" style="width:90px;"><span class="ico ico-back"></span>继续挑选</a>
+                <div class="set-stat">
+                    应付金额:
+                    <div class="price">
+                        <span class="price-sign">¥</span>
+                        <span class="price-num">{$sum}</span>
+                    </div>
+                </div>
+            </div>
+            <!-- <button class="btn btn-primary btn-lg" type="button" onclick="javascript:DoSubmit();">去结算</button> -->
+            <a href="__INDEX__SITE__/Shopping/sendInfo"><button class="btn btn-primary btn-lg" type="button">去结算</button></a> 
+        </div>
+        <!-- 结算 End -->
+        <input name="type" id="type" type="hidden">    
+    <!-- <div class="empty_info">   
+        <img src="__INDEX__STATIC__/picture/gwc_k2.jpg" alt="你的购物车还是空的" border="0" />
+        <a href="__INDEX__SITE__/theme/xmas/">圣诞节鲜花礼物<span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div> -->
+</div>
+
+    <!--底部-->
+    <!-- 服务 -->
+    <div class="cart-server">
+        <div class="toper-server">
+            <ul>
+                <li>
+                    <span class="ico ico-server-o1"></span>
+                    <h4>鲜花电商龙头</h4>
+                    <p>销量领先，权威认证龙头企业</p>
+                </li>
+                <li>
+                    <span class="ico ico-server-o2"></span>
+                    <h4>10年品牌 真实口碑</h4>
+                    <a href="__INDEX__SITE__/productpj/"><p>最近评价<font id="pjCount"></font>条</p></a>
+                </li>
+                <li>
+                    <span class="ico ico-server-o3"></span>
+                    <h4>鲜花送前实拍展示</h4>
+                    <p>展现送前实拍的鲜花网</p>
+                </li>
+                <li>
+                    <span class="ico ico-server-o4"></span>
+                    <h4>3小时送达</h4>
+                    <p>全国连锁，3小时送1000城市</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 服务 End -->
+    <!-- 尾部导航 -->
+    <div class="footer-nav">
+        <a href="/">首页</a> <b>|</b> <a href="__INDEX__SITE__/profile/about.htm" target="_blank">关于我们</a> <b>|</b> <a href="__INDEX__SITE__/profile/media.html" target="_blank">媒体报道</a> <b>|</b> <a href="__INDEX__SITE__/profile/contact.htm" target="_blank">联系方式</a> <b>|</b> <a href="__INDEX__SITE__/qiyetuangou/" target="_blank">企业团购</a> <b>|</b> <a href="__INDEX__SITE__/liansuo/" target="_blank">花店加盟</a> <b>|</b> <a href="__INDEX__SITE__/member/payment/balancefill" target="_blank">在线补款</a> <b>|</b> <a class="last-child" href="__INDEX__SITE__/profile/why_choose_us.htm" target="_blank">为什么选择中国鲜花礼品网</a>
+    </div>
+    <!-- 尾部导航 End -->
+    <!-- 通用尾部 -->
+    <footer>
+        <div class="auth">
+            <span style="margin-right:8px;">
+                <script src="__INDEX__STATIC__/js/seallogo.js"></script>
+            </span>
+            <a href="https://search.szfw.org/cert/l/CX20130306002238002312" target="_blank"><img src="__INDEX__STATIC__/picture/cxwz.gif" height="40" width="112"></a>
+            <a href="http://www.anquan.org/authenticate/cert/?site=www.hua.com&at=realname" rel="nofollow" target="_blank"><img src="__INDEX__STATIC__/picture/smyz.gif" height="40" width="106"></a>
+            <img src="__INDEX__STATIC__/picture/slogan.png" height="50" width="212">
+            <a href="__INDEX__SITE__/member/payment/fillbyalipay?order_no=&total_fee=" rel="nofollow" target="_blank"><img src="__INDEX__STATIC__/picture/zfb.gif" height="49" width="96"></a>
+            <a href="__INDEX__SITE__/profile/news_20111110.htm" target="_blank"><img src="__INDEX__STATIC__/picture/100.jpg" height="49" width="150"></a>
+        </div>
+        <p><a href="__INDEX__SITE__/profile/ChinaFlowerAssociation.htm" rel="nofollow" target="_blank" title="中国花卉协会会员">中国花卉协会会员</a> <a href="__INDEX__SITE__/profile/chinaECA.htm" rel="nofollow" target="_blank">中国电子商务协会会员</a> ICP经营许可证：<a href="__INDEX__SITE__/profile/ICP.htm" rel="nofollow" target="_blank">粤B2-20050744</a> <b>|</b> <a href="http://www.miibeian.gov.cn" rel="nofollow" target="_blank">粤ICP备09171662号</a> Copyright &copy; 2005-2016</p>
+        <p>中国鲜花礼品网 <a href="/">www.hua.com</a> 中国鲜花网领先品牌，鲜花速递专家！</p>
+    </footer>
+    <!-- 通用尾部 End -->
+    <script type="text/javascript" src="__INDEX__STATIC__/js/common.js"></script>
+    <script type="text/javascript">
+        $(function () {      
+            $.get("__INDEX__SITE__/Passport/loginState", null, function (data) {
+                if (data != null && data.Logined == true) {
+                    $("#btn-login").text(data.ShowName).attr("href", "/Member/MemberCenter/");
+                    $("#btn-reg").text("退出").attr("href", "/Passport/Logout");
+                }
+
+            }, "json");
+            $.getJSON("__INDEX__SITE__/Shopping/GetCartJson", function (json) {    //购物车信息显示
+                if ($("#gwcCount").length > 0) {
+                    $("#gwcCount").html("(" + json.productsNum + ")");
+                }
+                if ($("#cart_num").length > 0) {
+                    $("#cart_num").html(json.productsNum);
+                }
+
+                var cartInfo = '';
+                if (json.productsNum == 0) {
+                    cartInfo = '<div class="empty">您的购物车中没有商品，<a href="/">先去选购吧</a>！</div>'
+                }
+                else {
+                    cartInfo = '<div class="cargo">'
+                    $.each(json.datas, function (index, data) {
+                        cartInfo = cartInfo + '<div class="com-list"><div class="img-box"><a href="/product/' + data.productCode + '.html" target="_blank"><img src="__INDEX__STATIC__/picture/b87fae51b24f4cf3b71784aff852d608.gif' + data.productCode + '.jpg_80x87.jpg" width="50" height="53"></a></div><div class="title"><a href="/product/' + data.productCode + '.html" target="_blank">' + data.productName + '</a></div><div class="num">' + data.productNum + '</div><div class="price"><span class="price-sign text-primary">&yen; </span><span class="price-num text-primary strong"> ' + data.productPrice + '</span></div></div>';
+                    });
+                    cartInfo = cartInfo + '<div class="settlement"><div class="total-price"><span><strong class="text-primary">' + json.productsNum + '</strong> 件总计:</span><span class="price-sign text-primary strong">&yen; </span><span class="price-num text-primary strong"> ' + json.productsMoney + '</span></div><a href="/shopping/showcart" class="btn btn-primary btn-sm" target="_blank">去购物车结算</a></div></div>';
+                }
+                if ($("#CartInfo").length > 0) 
+                    { $("#CartInfo").html(cartInfo); }
+            });
+            if ($("#pjCount").length > 0) {
+                $.get("/productpj/GetPJCount", function (data) {
+                    $("#pjCount").text(data);
+                })
+            }
+        });
+    </script>
+    
+</body>
+</html>

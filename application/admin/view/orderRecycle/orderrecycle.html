@@ -17,15 +17,15 @@
     <form method="post" action="" id="listform">
         <div class="panel admin-panel">
             <div class="panel-head"><strong class="icon-reorder">订单列表</strong> <a href="" style="float:right; display:none;">添加字段</a></div>
-           
+
             <table class="table table-hover text-center">
                 <tr>
                     <th width="100" style="text-align:left; padding-left:20px;">订单ID</th>
                     <th>订单编号</th>
-                    <th>收货信息</th>
+                    <th>删除时间</th>
                     <th width="12%">商品id/名</th>
                     <th>单价/数量/金额</th>
-                    <th>购买用户</th>
+                    <th>删除状态</th>
                     <!-- <th width="10%">更新时间</th> -->
                     <th width="310">状态</th>
                 </tr>
@@ -33,50 +33,35 @@
                 {volist name="orderMsg" id="data"}
                 <tr>
                     <td style="color:red;text-align:left; padding-left:20px;">
-                        {$data['id']}
+                        {$data->id}
                     </td>
                     <td style="color:red;">{$data->num_order}</td>
                     
                     <!-- 收货地址 -->
                     <td style="color:red;">
-                            {$data->receive->name} <br/>
-                            {$data->receive->phone} <br/>
-                            {$data->receive->province}{$data->receive->city}{$data->receive->address}
+                            {$data->delete_time}
                     </td>
                     <td></td>
                     <td></td>
-                    <!-- 关联USER表 -->
+                    <!-- 关联USER -->
                     <td style="color:red;">
-                        {$data->user->vir_name}
+                        {switch name="$data->status"}
+                            {case value="0"}<div style="color:green;">买家取消</div>{/case}
+                            {case value="1"}<div style="color:red;">卖家取消</div>{/case}
+                            {case value="2"}<div style="color:blue;">交易成功</div>{/case}
+                        {/switch}
                     </td>
 
-                    <!-- 订单状态 -->
-                    {switch name="$data->status"} 
-                        {case value="0"}
-                        <td style="color:red;">
-                            <a class="button border-red" href="{:url('admin/Ordermanage/OrderStatus0',['id'=>$data['id']])}">
-                                <span class="icon-edit"></span> 待发货
-                            </a>
-                        </td>
-                        {/case}
-                        {case value="1"}
+                    <!-- 订单恢复/彻底删除 -->
                         <td style="color:green;">
-                            <a class="button border-main" href="{:url('admin/Ordermanage/OrderStatus1',['id'=>$data['id']])}">
-                                <span class="icon-edit"></span> 已发货
+                            <a class="button border-main" href="{:url('admin/orderRecycle/orderRecove',['id'=>$data['id']])}">
+                                <span class="icon-edit"></span> 恢复
                             </a>
-                            <a class="button border-blank" href="{:url('admin/Ordermanage/OrderDel',['id'=>$data['id']])}">
-                                <span class="icon-trash-o"></span> 取消订单
+                            <a class="button border-red" href="{:url('admin/orderRecycle/orderTrueDel',['id'=>$data['id']])}">
+                                <span class="icon-trash-o"></span> 删除
                             </a>
+
                         </td>
-                        {/case}
-                        {case value="2"}
-                        <td style="color:blue;">
-                            <a class="button border-blue" href="{:url('admin/Ordermanage/OrderDel',['id'=>$data['id']])}">
-                                <span class="icon-trash-o"></span> 交易成功
-                            </a>
-                        </td>
-                        {/case}
-                    {/switch}
                 </tr>
 
                 <!-- 遍历 订单对应的购物车 -->

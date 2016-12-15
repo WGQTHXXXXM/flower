@@ -1,52 +1,201 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="renderer" content="webkit">
-    <title></title>
-    <link rel="stylesheet" href="__ADMIN__STATIC__ /css/pintuer.css">
-    <link rel="stylesheet" href="__ADMIN__STATIC__ /css/boot.css">
-
-    <link rel="stylesheet" href="__ADMIN__STATIC__ /css/admin.css">
-    <script src="__ADMIN__STATIC__ /js/jquery.js"></script>
-    <script src="__ADMIN__STATIC__ /js/pintuer.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="__ADMIN__STATIC__ /css/pintuer.css">
+<link rel="stylesheet" href="__ADMIN__STATIC__ /css/admin.css">
+<script src="__ADMIN__STATIC__ /js/jquery.js"></script>
+<script src="__ADMIN__STATIC__ /js/pintuer.js"></script>
 </head>
-
 <body>
-    <div class="panel admin-panel">
-        <div class="panel-head"><strong class="icon-reorder">板块列表</strong></div>
-        <div class="padding border-bottom">
-
-        </div>
-        <table class="table table-hover text-center">
-            <tr>
-                <th width="5%">ID</th>
-                <th width="15%">分类级别</th>
-
-                <th width="10%">分类名</th>
-            </tr>
-
-            <tr>
-                <td>aaa</td>
-                <td>aaa</td>
-                <td>aaa</td>
-            </tr>
-
-        </table>
-
-    </div>
-    <script type="text/javascript">
-        function del(id, mid) {
-            if (confirm("您确定要删除吗?")) {
-
-            }
-        }
-    </script>
-
-
+<div class="panel admin-panel"> 
+  <div class="panel-head"><strong class="icon-reorder"> 板块设置 </strong></div>
+  <div class="padding border-bottom">  
+  <button type="button" class="button border-yellow"><span class="icon-plus-square-o"></span> 添加内容</button>
+  </div>
+  <table class="table table-hover text-center">
+    <tr>
+      <th width="10%">板块名</th>
+      <th width="15%">说明</th>
+      <th width="5%">顺序</th>
+      <th width="7%">产品编号1</th>
+      <th width="7%">产品编号2</th>
+      <th width="7%">产品编号3</th>
+      <th width="7%">产品编号4</th>
+      <th width="7%">产品编号5</th>
+      <th width="7%">产品编号6</th>
+      <th width="7%">产品编号7</th>
+      <th width="7%">产品编号8</th>
+      <th width="16%">操作</th>
+    </tr>
+    {foreach $dataBlock as $key=>$obj}
+    <tr>
+      <td>{$obj->name}</td>     
+      <td>{$obj->introduce}</td>     
+      <td>{$obj->shu_xu}</td>     
+      <td>{$obj->id_product1}</td>
+      <td>{$obj->id_product2}</td>
+      <td>{$obj->id_product3}</td>
+      <td>{$obj->id_product4}</td>
+      <td>{$obj->id_product5}</td>
+      <td>{$obj->id_product6}</td>
+      <td>{$obj->id_product7}</td>
+      <td>{$obj->id_product8}</td>
+      <td><div class="button-group">
+      <a class="button border-main" href="#mdf" onclick="modify({$obj->id})"><span class="icon-edit"></span> 修改</a>
+      <a class="button border-red" href="javascript:void(0)" onclick="del({$obj->id})"><span class="icon-trash-o"></span> 删除</a>
+      </div></td>
+    </tr>
+    {/foreach}
+  </table>
+</div>
+<script type="text/javascript">
+function del(id)
+{
+    if(confirm("您确定要删除吗?"))
+  {
+      window.location.href="__ADMIN__SITE__/Admin/Plateshow/delItem/id/"+id;
+    }
+}
+</script>
+<div class="panel admin-panel margin-top">
+  <div class="panel-head"><span class="icon-pencil-square-o"></span><strong > 修改内容</strong></div> 
+    <table class="table table-hover text-center">
+        <tr>
+          <th width="10%">板块名</th>
+          <th width="15%">说明</th>
+          <th width="5%">顺序</th>
+          <th width="7%">产品编号1</th>
+          <th width="7%">产品编号2</th>
+          <th width="7%">产品编号3</th>
+          <th width="7%">产品编号4</th>
+          <th width="7%">产品编号5</th>
+          <th width="7%">产品编号6</th>
+          <th width="7%">产品编号7</th>
+          <th width="7%">产品编号8</th>
+          <th width="16%">操作</th>
+        </tr>
+        <tr>
+          <td><input type="text" name="mdfNmae"><input type="hidden" name="mdfid"></td>     
+          <td><input type="text" name="mdfItd" size="30"></td>     
+          <td><input type="text" name="mdfshu_xu" size="3"></td>     
+          <td><input type="text" name="mdfPro1" size="10"></td>
+          <td><input type="text" name="mdfPro2" size="10"></td>
+          <td><input type="text" name="mdfPro3" size="10"></td>
+          <td><input type="text" name="mdfPro4" size="10"></td>
+          <td><input type="text" name="mdfPro5" size="10"></td>
+          <td><input type="text" name="mdfPro6" size="10"></td>
+          <td><input type="text" name="mdfPro7" size="10"></td>
+          <td><input type="text" name="mdfPro8" size="10"></td>
+          <td><button id="btnMdf" class="button bg-main icon-check-square-o" type="submit">修改</button></td>
+          </tr>
+    </table> 
+</div>
+<div class="panel admin-panel margin-top">
+  <div class="panel-head"><span class="icon-pencil-square-o"></span><strong > 增加内容</strong></div>
+    <table class="table table-hover text-center">
+        <tr>
+            <th width="10%">板块名</th>
+            <th width="15%">说明</th>
+            <th width="5%">顺序</th>
+            <th width="7%">产品编号1</th>
+            <th width="7%">产品编号2</th>
+            <th width="7%">产品编号3</th>
+            <th width="7%">产品编号4</th>
+            <th width="7%">产品编号5</th>
+            <th width="7%">产品编号6</th>
+            <th width="7%">产品编号7</th>
+            <th width="7%">产品编号8</th>
+            <th width="16%">操作</th>
+        </tr>
+        <tr>
+          <td><input type="text" name="addNmae"></td>     
+          <td><input type="text" name="addItd" size="30"></td>     
+          <td><input type="text" name="addshu_xu" size="3"></td>     
+          <td><input type="text" name="addPro1" size="10"></td>
+          <td><input type="text" name="addPro2" size="10"></td>
+          <td><input type="text" name="addPro3" size="10"></td>
+          <td><input type="text" name="addPro4" size="10"></td>
+          <td><input type="text" name="addPro5" size="10"></td>
+          <td><input type="text" name="addPro6" size="10"></td>
+          <td><input type="text" name="addPro7" size="10"></td>
+          <td><input type="text" name="addPro8" size="10"></td>
+          <td><button id="addItem" class="button bg-main icon-check-square-o">增加</button></td>
+        </tr>
+    </table> 
+</div>
 </body>
-
 </html>
+<script>
+
+    function modify(id)
+    {
+        $.post("__ADMIN__SITE__/Admin/Plateshow/getOneblock/id/"+id,
+            function(data)
+            {
+                $("input[name='mdfNmae']").val(data.name),
+                $("input[name='mdfItd']").val(data.introduce),
+                $("input[name='mdfid']").val(id),
+                $("input[name='mdfshu_xu']").val(data.shu_xu),
+                $("input[name='mdfPro1']").val(data.id_product1),
+                $("input[name='mdfPro2']").val(data.id_product2),
+                $("input[name='mdfPro3']").val(data.id_product3),
+                $("input[name='mdfPro4']").val(data.id_product4),
+                $("input[name='mdfPro5']").val(data.id_product5),
+                $("input[name='mdfPro6']").val(data.id_product6),
+                $("input[name='mdfPro7']").val(data.id_product7),
+                $("input[name='mdfPro8']").val(data.id_product8)
+            },'json');
+    }
+
+    $("#btnMdf").click(function(){
+        $.ajaxSetup({
+          async: false
+        });
+        var id = $("input[name='mdfid']").val();
+        if(!id)
+            alert('没有选中');
+        $.post("__ADMIN__SITE__/Admin/Plateshow/updataItem/id/"+id,
+       {
+            name:$("input[name='mdfNmae']").val(),
+            introduce:$("input[name='mdfItd']").val(),
+            shu_xu:$("input[name='mdfshu_xu']").val(),
+            id_product1:$("input[name='mdfPro1']").val(),
+            id_product2:$("input[name='mdfPro2']").val(),
+            id_product3:$("input[name='mdfPro3']").val(),
+            id_product4:$("input[name='mdfPro4']").val(),
+            id_product5:$("input[name='mdfPro5']").val(),
+            id_product6:$("input[name='mdfPro6']").val(),
+            id_product7:$("input[name='mdfPro7']").val(),
+            id_product8:$("input[name='mdfPro8']").val()
+       });
+
+        window.location.href="__ADMIN__SITE__/Admin/Plateshow/fourmshow";
+    });
+
+
+    $("#addItem").click(function(){
+        $.post("__ADMIN__SITE__/Admin/Plateshow/addItem",
+        { 
+            name:$("input[name='addNmae']").val(),
+            introduce:$("input[name='addItd']").val(),
+            shu_xu:$("input[name='addshu_xu']").val(),
+            id_product1:$("input[name='addPro1']").val(),
+            id_product2:$("input[name='addPro2']").val(),
+            id_product3:$("input[name='addPro3']").val(),
+            id_product4:$("input[name='addPro4']").val(),
+            id_product5:$("input[name='addPro5']").val(),
+            id_product6:$("input[name='addPro6']").val(),
+            id_product7:$("input[name='addPro7']").val(),
+            id_product8:$("input[name='addPro8']").val()}
+        );
+        window.location.href="__ADMIN__SITE__/Admin/Plateshow/fourmshow";
+    });
+
+</script>
+
+

@@ -2,17 +2,22 @@
 /**
  * 鲜花
  */
-namespace app\index\controller;
+namespace app\index\Controller;
+use app\index\model\Goods;
+use think\Controller;
 
-class Flower extends Auth
+class Flower extends Controller
 {
-	public function _initialize()
-	{
-		
-	}
-
-    public function index()
+    public function index($odr = 0)
     { 
+    	$goods = new Goods();
+    	$dataGoods = $goods->getAllItem($odr);
+    	$this->assign('dataGoods',$dataGoods);
+
     	return $this->fetch();
     }
 }
+
+
+
+

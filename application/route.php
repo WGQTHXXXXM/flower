@@ -33,7 +33,7 @@ return [
         'profile' => 'index/Profile',
         'qiyetuangou' => 'index/Qiyetuangou',
         'quickselect' => 'index/Quickselect',
-        'search' => 'index/Search',
+        'Search' => 'index/Search',
         'theme' => 'index/Theme',
         'toys' => 'index/Toys',
         'xianhuashipai' => 'index/Xianhuashipai',

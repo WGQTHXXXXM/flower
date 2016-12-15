@@ -1,0 +1,132 @@
+<html><head>
+    <title>收货人地址管理 - 花礼网</title>
+    <link type="text/css" rel="stylesheet" href="http://img02.hua.com/pc/assets/css/common.css">
+    <link type="text/css" rel="stylesheet" href="http://img02.hua.com/pc/assets/css/public.css">
+</head>
+<body>
+    <div id="consigneeModal">
+        <input id="hdnMsgContent" type="hidden">
+        <form class="form-horizontal form-group-sm" id="addressOper" action="/Member/AccountSetting/WinAddress" method="post">
+            <div class="form-group">
+                <label for="name" class="col-xs-2 control-label">收货人姓名:</label>
+                <div class="col-xs-2">
+                    <input class="form-control" id="to_name" name="to_name" type="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="moblie" class="col-xs-2 control-label">收货人手机:</label>
+                <div class="col-xs-3">
+                    <input class="form-control" id="to_mobile" name="to_mobile" type="text">
+                </div>
+                <label for="phone" class="col-xs-1 control-label">或电话:</label>
+                <div class="col-xs-3">
+                    <input class="form-control" id="to_tel" name="to_tel" type="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-2 control-label">省 市 区:</label>
+                <div class="col-xs-9" id="city_1">
+                    <div class="col-xs-4">
+                        <select class="form-control" id="to_state" name="to_state"><option value="请选择省份">请选择省份</option><option value="北京">北京</option><option value="天津">天津</option><option value="河北">河北</option><option value="山西">山西</option><option value="内蒙古">内蒙古</option><option value="辽宁">辽宁</option><option value="吉林">吉林</option><option value="黑龙江">黑龙江</option><option value="上海">上海</option><option value="江苏">江苏</option><option value="浙江">浙江</option><option value="安徽">安徽</option><option value="福建">福建</option><option value="江西">江西</option><option value="山东">山东</option><option value="河南">河南</option><option value="湖北">湖北</option><option value="湖南">湖南</option><option value="广东">广东</option><option value="广西">广西</option><option value="海南">海南</option><option value="重庆">重庆</option><option value="四川">四川</option><option value="贵州">贵州</option><option value="云南">云南</option><option value="西藏">西藏</option><option value="陕西">陕西</option><option value="甘肃">甘肃</option><option value="青海">青海</option><option value="宁夏">宁夏</option><option value="新疆">新疆</option><option value="香港">香港</option><option value="澳门">澳门</option><option value="台湾">台湾</option><option value="国外">国外</option></select>
+                    </div>
+                    <div class="col-xs-4">
+                        <select class="form-control" id="to_city" name="to_city" disabled="disabled" style="display: none;"></select>
+                    </div>
+                    <span class="help-block col-xs-12">注：县级及以上城市均可配送 (新/藏/青/甘/内蒙偏远地区的县城例外)</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="address" class="col-xs-2 control-label">详细地址:</label>
+                <div class="col-xs-10">
+                    <input class="form-control" id="to_address" name="to_address" type="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-2 control-label">选配送费用:</label>
+                <div class="col-xs-10">
+                    <ul class="selects-list" id="distrExpenses">
+                        <li class="active" id="0">市区(免费)<i class="ico ico-check"></i></li>
+                        <li class="" id="30">郊区(+30元)<i class="ico ico-check"></i></li>
+                        <li class="" id="50">远区(+50元)<i class="ico ico-check"></i></li>
+                    </ul>
+                    <span class="help-block">注：偏远地区请咨询客服，<a href="/help/send_zone.htm" target="_blank">市区/郊区列表</a></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-10">
+                    <input name="peisongfei" id="peisongfei" value="0" type="hidden">
+                    <input name="op" id="op" value="add" type="hidden">
+                    <input name="ca" id="ca" value="ismember" type="hidden">
+                    <input name="id" value="0" type="hidden">
+                    <input name="act" id="act" value="save" type="hidden">
+                    <button type="submit" class="btn btn-default btn-tinge" onclick="return confirmForm();">保存收货人信息</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script charset="utf-8" src="https://trust.baidu.com/vcard/v.js?siteid=7081887&amp;url=http%3A%2F%2Fwww.hua.com%2FMember%2FAccountSetting%2FWinAddress%3Fop%3Dadd%26ca%3Dismember%26sjs%3D0.9933004632388547&amp;source=&amp;rnd=403542080&amp;hm=1"></script><script src="//hm.baidu.com/hm.js?5f4aa36509ee08b412f4647f6d4f1749"></script><script type="text/javascript" src="http://img02.hua.com/pc/assets/js/common.js"></script>
+    <script type="text/javascript" src="http://img02.hua.com/pc/js/jquery.cityselect.js?v=1.0"></script>
+    <script>
+        $(function () {
+            var info = $("#hdnMsgContent").val();
+            if (info != "") {
+                alert(info);
+            }
+            var op = $("#op").val();
+            if (op == "add") {
+                $("#to_name").focus();
+            }
+
+            $("#city_1").citySelect({
+                prov: "请选择身份",
+                city: "请选择城市",
+                nodata: "none"
+
+            });
+
+            var selects = function (select) {
+                select.click(function () {
+                    select.removeClass('active');
+                    $(this).addClass('active');
+                    $("#peisongfei").val($(this).attr("id"));
+                })
+            };
+            selects($("#distrExpenses > li"));
+
+        });
+
+        function confirmForm() {
+            if ($("#to_name").val().length < 1) {
+                alert("请填写收货人");
+                $("#to_name").focus();
+                return false;
+            }
+            if ($("#to_mobile").val() == "" && $("#to_tel").val() == "") {
+                alert("请填写收货人手机号或电话！");
+                $("#to_mobile").focus();
+                return false;
+            }
+            if ($("#to_mobile").val().length > 0 && $("#to_mobile").val().length < 11) {
+                alert("请填写正确的手机号码！");
+                $("#to_mobile").focus();
+                return false;
+            }
+
+            if ($("#to_state").val() == "请选择省份") {
+                alert("请选择收货人省份！");
+                return false;
+            }
+            if ($("#to_city").val() == "请选择城市") {
+                alert("请选择收货人城市！");
+                return false;
+            }
+            if ($("#to_address").val().length < 2) {
+                alert("请填写收货人详细地址！");
+                $("#to_address").focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+</body></html>

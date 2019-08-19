@@ -19,7 +19,7 @@ class Auth extends Controller
     }
 
 	
-	//tag标签
+	//加tag标签
 }
 
 

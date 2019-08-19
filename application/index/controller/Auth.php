@@ -18,6 +18,8 @@ class Auth extends Controller
     	return 'Auth';
     }
 
+	
+	//tag标签
 }
 
 
